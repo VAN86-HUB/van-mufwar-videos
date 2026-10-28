@@ -1,0 +1,108 @@
+{
+  "file": "Ventes.xlsx",
+  "hook": "2 conditions en même temps ? SOMME.SI ne suffit plus…",
+  "question": "Total des pagnes vendus à Lubumbashi uniquement",
+  "headers": [
+    "Vendeur",
+    "Ville",
+    "Produit",
+    "Montant (FC)"
+  ],
+  "col_ratio": [
+    0.25,
+    0.27,
+    0.2,
+    0.28
+  ],
+  "right_cols": [
+    3
+  ],
+  "rows": [
+    [
+      "Christelle",
+      "Lubumbashi",
+      "Pagne",
+      "85 000"
+    ],
+    [
+      "Héritier",
+      "Kinshasa",
+      "Pagne",
+      "60 000"
+    ],
+    [
+      "Christelle",
+      "Lubumbashi",
+      "Savon",
+      "12 000"
+    ],
+    [
+      "Fiston",
+      "Kisangani",
+      "Pagne",
+      "70 000"
+    ],
+    [
+      "Héritier",
+      "Lubumbashi",
+      "Pagne",
+      "95 000"
+    ],
+    [
+      "Nathalie",
+      "Kinshasa",
+      "Savon",
+      "15 000"
+    ],
+    [
+      "Fiston",
+      "Lubumbashi",
+      "Pagne",
+      "40 000"
+    ],
+    [
+      "Nathalie",
+      "Lubumbashi",
+      "Savon",
+      "18 000"
+    ]
+  ],
+  "criteria": [
+    [
+      1,
+      "Lubumbashi"
+    ],
+    [
+      2,
+      "Pagne"
+    ]
+  ],
+  "sum_col": 3,
+  "label_col": 2,
+  "result_label": "Total",
+  "result_col": 3,
+  "formula": "=SOMME.SI.ENS(D2:D9;B2:B9;\"Lubumbashi\";C2:C9;\"Pagne\")",
+  "typing_caption": "La formule magique : SOMME.SI.ENS",
+  "result": "220 000",
+  "result_caption": "220 000 FC avec 2 critères !",
+  "explain": [
+    [
+      "D2:D9 → la colonne à additionner",
+      "blue"
+    ],
+    [
+      "B2:B9 ; \"Lubumbashi\" → 1er critère",
+      "yellow"
+    ],
+    [
+      "C2:C9 ; \"Pagne\" → 2e critère",
+      "yellow"
+    ],
+    [
+      "Ajoute autant de critères que tu veux",
+      "green"
+    ]
+  ],
+  "cta": "Abonne-toi pour une astuce Excel chaque jour !",
+  "next": "Prochaine astuce demain à 6h"
+}

@@ -1,0 +1,99 @@
+{
+  "file": "Frais_scolaires.xlsx",
+  "hook": "Tu comptes encore à la main qui n'a pas payé ?",
+  "question": "Combien d'élèves n'ont pas encore payé les frais ?",
+  "headers": [
+    "Élève",
+    "Classe",
+    "Frais (FC)",
+    "Statut"
+  ],
+  "col_ratio": [
+    0.28,
+    0.18,
+    0.27,
+    0.27
+  ],
+  "right_cols": [
+    2
+  ],
+  "rows": [
+    [
+      "Exaucé",
+      "5e",
+      "150 000",
+      "Payé"
+    ],
+    [
+      "Gloire",
+      "6e",
+      "150 000",
+      "Non payé"
+    ],
+    [
+      "Rachel",
+      "5e",
+      "150 000",
+      "Payé"
+    ],
+    [
+      "Dieumerci",
+      "4e",
+      "120 000",
+      "Non payé"
+    ],
+    [
+      "Bénédicte",
+      "6e",
+      "150 000",
+      "Payé"
+    ],
+    [
+      "Plamedi",
+      "4e",
+      "120 000",
+      "Non payé"
+    ],
+    [
+      "Josué",
+      "5e",
+      "150 000",
+      "Payé"
+    ],
+    [
+      "Ornella",
+      "6e",
+      "150 000",
+      "Non payé"
+    ]
+  ],
+  "criteria_col": 3,
+  "criteria_value": "Non payé",
+  "label_col": 2,
+  "result_label": "Non payés :",
+  "result_col": 3,
+  "formula": "=NB.SI(D2:D9;\"Non payé\")",
+  "typing_caption": "Une seule formule : NB.SI",
+  "result": "4",
+  "result_caption": "4 élèves à relancer, compté en 1 seconde !",
+  "explain": [
+    [
+      "D2:D9 → la colonne à vérifier",
+      "yellow"
+    ],
+    [
+      "\"Non payé\" → ce que tu comptes",
+      "white"
+    ],
+    [
+      "NB.SI compte les cellules trouvées",
+      "blue"
+    ],
+    [
+      "Change le critère : \"Payé\", \"6e\"…",
+      "green"
+    ]
+  ],
+  "cta": "Abonne-toi pour une astuce Excel chaque jour !",
+  "next": "Prochaine astuce à 18h"
+}

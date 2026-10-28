@@ -69,6 +69,9 @@ def main(spec_path, out_path):
     res_row = len(rows) + 3          # numéro de ligne Excel de la cellule résultat
     res_col = s.get("result_col", ncols - 1)
     hl_col, hl_val, sum_col = s.get("criteria_col"), s.get("criteria_value"), s.get("sum_col")
+    # plusieurs critères possibles : "criteria": [[col, valeur], ...] (ligne retenue si tous correspondent)
+    crit = s.get("criteria") or ([[hl_col, hl_val]] if hl_col is not None else [])
+    crit_cols = {c for c, _ in crit}
 
     def cell_xy(col, row):  # row : 0 = ligne des lettres
         x = wx + rown_w + sum(colw[:col]); y = grid_top + row * rowh
@@ -76,6 +79,12 @@ def main(spec_path, out_path):
 
     fcell, fbold, fsmall = font(30), font(30, True), font(24)
     ffx = font(34, mono=True)
+    fx_max = ww - 85 - 30  # largeur disponible dans la barre de formule
+    _tmp = ImageDraw.Draw(Image.new("RGB", (10, 10)))
+    fsz = 34
+    while fsz > 20 and _tmp.textlength(formula + "|", font=font(fsz, mono=True)) > fx_max:
+        fsz -= 1
+    ffx = font(fsz, mono=True)
     proc = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
                              "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-", "-c:v", "libx264", "-preset", "veryfast",
                              "-pix_fmt", "yuv420p", "-crf", "20", "silent.mp4"], stdin=subprocess.PIPE)
@@ -103,7 +112,7 @@ def main(spec_path, out_path):
             n = int(min(len(formula), (t - t_type) / 6.0 * len(formula) + 1))
             typed = formula[:n]
         cursor = "|" if (t >= t_type and t < t_res and int(t * 3) % 2 == 0) else ""
-        d.text((wx + 85, fy + 16), typed + cursor, font=ffx, fill=TXT)
+        d.text((wx + 85, fy + 16 + (34 - fsz) // 2), typed + cursor, font=ffx, fill=TXT)
         # grille
         for r in range(nrows_total + 1):
             for c in range(ncols):
@@ -112,10 +121,10 @@ def main(spec_path, out_path):
                 if r == 1: fill = (226, 239, 218)
                 excel_row = r
                 data_i = r - 2
-                if t_q <= t < t_exp + 6 and hl_col is not None and 0 <= data_i < len(rows):
-                    if rows[data_i][hl_col] == hl_val:
+                if t_q <= t < t_exp + 6 and crit and 0 <= data_i < len(rows):
+                    if all(rows[data_i][cc] == vv for cc, vv in crit):
                         a = ease((t - t_q) / 0.6)
-                        if c == hl_col: fill = tuple(int(255 - (255 - v) * a) for v in (255, 236, 150))
+                        if c in crit_cols: fill = tuple(int(255 - (255 - v) * a) for v in (255, 236, 150))
                         if c == sum_col and t >= t_exp: fill = (205, 228, 255)
                 d.rectangle([x0, y0, x1, y1], fill=fill, outline=GRID)
                 if r == 0:
