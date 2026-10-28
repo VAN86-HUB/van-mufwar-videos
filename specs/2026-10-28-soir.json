@@ -1,0 +1,100 @@
+{
+  "file": "Ventes.xlsx",
+  "hook": "Tu additionnes encore les ventes ville par ville… à la main ?",
+  "question": "Je veux le total des ventes de Kinshasa uniquement",
+  "headers": [
+    "Vendeur",
+    "Ville",
+    "Produit",
+    "Montant (FC)"
+  ],
+  "col_ratio": [
+    0.25,
+    0.27,
+    0.2,
+    0.28
+  ],
+  "right_cols": [
+    3
+  ],
+  "rows": [
+    [
+      "Grâce",
+      "Kinshasa",
+      "Riz",
+      "45 000"
+    ],
+    [
+      "Patrick",
+      "Lubumbashi",
+      "Huile",
+      "32 000"
+    ],
+    [
+      "Divine",
+      "Goma",
+      "Sucre",
+      "28 000"
+    ],
+    [
+      "Junior",
+      "Kinshasa",
+      "Farine",
+      "51 000"
+    ],
+    [
+      "Merveille",
+      "Kinshasa",
+      "Riz",
+      "39 000"
+    ],
+    [
+      "Patrick",
+      "Lubumbashi",
+      "Riz",
+      "47 000"
+    ],
+    [
+      "Grâce",
+      "Goma",
+      "Huile",
+      "33 000"
+    ],
+    [
+      "Junior",
+      "Kinshasa",
+      "Sucre",
+      "26 000"
+    ]
+  ],
+  "criteria_col": 1,
+  "criteria_value": "Kinshasa",
+  "sum_col": 3,
+  "label_col": 2,
+  "result_label": "Total Kin",
+  "result_col": 3,
+  "formula": "=SOMME.SI(B2:B9;\"Kinshasa\";D2:D9)",
+  "typing_caption": "Une seule formule : SOMME.SI",
+  "result": "161 000",
+  "result_caption": "161 000 FC en 1 seconde !",
+  "explain": [
+    [
+      "B2:B9 → où chercher (la ville)",
+      "yellow"
+    ],
+    [
+      "\"Kinshasa\" → ce que tu cherches",
+      "white"
+    ],
+    [
+      "D2:D9 → ce qu'il faut additionner",
+      "blue"
+    ],
+    [
+      "Marche aussi pour un vendeur ou un produit !",
+      "green"
+    ]
+  ],
+  "cta": "Abonne-toi pour une astuce Excel chaque jour !",
+  "next": "Prochaine astuce à 18h"
+}
