@@ -187,6 +187,10 @@ def main(spec_path, out_path):
             d.rounded_rectangle([W/2 - bw/2, 1250 - bh/2, W/2 + bw/2, 1250 + bh/2], 55, fill=(254, 44, 85, int(255 * a)))
             fb = font(int(50 * p), True); tx = "+ S'abonner"
             d.text((W/2 - d.textlength(tx, font=fb)/2, 1250 - 30 * p), tx, font=fb, fill=(255, 255, 255, int(255 * a)))
+            # question d'engagement (invite à commenter)
+            q = s.get("comment_cta", "Quelle formule veux-tu demain ?\nÉcris-la en commentaire !")
+            if q:
+                caption(d, q, 1380, 46, YELLOW, a, box=False)
         # signature
         sig = "Ingénieur Van MUFWAR"; fs = font(34, True)
         d.text(((W - d.textlength(sig, font=fs)) / 2, H - 200), sig, font=fs, fill=(255, 255, 255, 200))
