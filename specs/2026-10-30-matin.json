@@ -1,0 +1,101 @@
+{
+  "file": "Recettes_motos.xlsx",
+  "hook": "Calculer une moyenne pour une seule ville ? Facile !",
+  "question": "Recette moyenne des motards de Goma uniquement",
+  "headers": [
+    "Motard",
+    "Ville",
+    "Courses",
+    "Recette (FC)"
+  ],
+  "col_ratio": [
+    0.25,
+    0.21,
+    0.24,
+    0.3
+  ],
+  "right_cols": [
+    2,
+    3
+  ],
+  "rows": [
+    [
+      "Mbuyi",
+      "Goma",
+      "12",
+      "45 000"
+    ],
+    [
+      "Kalala",
+      "Bukavu",
+      "9",
+      "30 000"
+    ],
+    [
+      "Amani",
+      "Goma",
+      "15",
+      "60 000"
+    ],
+    [
+      "Tshibanda",
+      "Bukavu",
+      "10",
+      "38 000"
+    ],
+    [
+      "Furaha",
+      "Goma",
+      "8",
+      "33 000"
+    ],
+    [
+      "Ilunga",
+      "Uvira",
+      "11",
+      "40 000"
+    ],
+    [
+      "Byamungu",
+      "Goma",
+      "14",
+      "52 000"
+    ],
+    [
+      "Neema",
+      "Bukavu",
+      "7",
+      "25 000"
+    ]
+  ],
+  "criteria_col": 1,
+  "criteria_value": "Goma",
+  "sum_col": 3,
+  "label_col": 2,
+  "result_label": "Moyenne :",
+  "result_col": 3,
+  "formula": "=MOYENNE.SI(B2:B9;\"Goma\";D2:D9)",
+  "typing_caption": "La formule : MOYENNE.SI",
+  "result": "47 500",
+  "result_caption": "47 500 FC de moyenne à Goma !",
+  "explain": [
+    [
+      "B2:B9 → la colonne des villes",
+      "yellow"
+    ],
+    [
+      "\"Goma\" → le critère choisi",
+      "white"
+    ],
+    [
+      "D2:D9 → les montants à moyenner",
+      "blue"
+    ],
+    [
+      "Essaie avec \"Bukavu\" ou \"Uvira\" !",
+      "green"
+    ]
+  ],
+  "cta": "Abonne-toi pour une astuce Excel chaque jour !",
+  "next": "Prochaine astuce à 18h"
+}

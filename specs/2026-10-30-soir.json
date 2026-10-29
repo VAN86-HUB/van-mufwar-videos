@@ -1,0 +1,104 @@
+{
+  "file": "Personnel.xlsx",
+  "hook": "Encore RECHERCHEV ? Passe à la version moderne !",
+  "question": "Retrouver le salaire de l'agent M-106 en 1 formule",
+  "headers": [
+    "Matricule",
+    "Nom",
+    "Service",
+    "Salaire (FC)"
+  ],
+  "col_ratio": [
+    0.25,
+    0.24,
+    0.2,
+    0.31
+  ],
+  "right_cols": [
+    3
+  ],
+  "rows": [
+    [
+      "M-101",
+      "Kabeya",
+      "Compta",
+      "650 000"
+    ],
+    [
+      "M-102",
+      "Lukusa",
+      "Stock",
+      "480 000"
+    ],
+    [
+      "M-103",
+      "Mwamba",
+      "Ventes",
+      "520 000"
+    ],
+    [
+      "M-104",
+      "Nsimba",
+      "RH",
+      "850 000"
+    ],
+    [
+      "M-105",
+      "Mputu",
+      "Compta",
+      "560 000"
+    ],
+    [
+      "M-106",
+      "Kanku",
+      "Ventes",
+      "495 000"
+    ],
+    [
+      "M-107",
+      "Lokwa",
+      "Stock",
+      "430 000"
+    ],
+    [
+      "M-108",
+      "Masika",
+      "RH",
+      "610 000"
+    ]
+  ],
+  "criteria": [
+    [
+      0,
+      "M-106"
+    ]
+  ],
+  "sum_col": 3,
+  "label_col": 2,
+  "result_label": "Salaire :",
+  "result_col": 3,
+  "formula": "=RECHERCHEX(\"M-106\";A2:A9;D2:D9;\"Introuvable\")",
+  "typing_caption": "La formule : RECHERCHEX",
+  "result": "495 000",
+  "result_caption": "495 000 FC trouvé en 1 seconde !",
+  "explain": [
+    [
+      "\"M-106\" → la valeur cherchée",
+      "yellow"
+    ],
+    [
+      "A2:A9 → où la chercher",
+      "yellow"
+    ],
+    [
+      "D2:D9 → ce qu'on renvoie",
+      "blue"
+    ],
+    [
+      "\"Introuvable\" → si absent",
+      "green"
+    ]
+  ],
+  "cta": "Abonne-toi pour une astuce Excel chaque jour !",
+  "next": "Prochaine astuce demain à 6h"
+}
