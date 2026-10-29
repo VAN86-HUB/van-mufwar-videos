@@ -230,6 +230,23 @@ def main(spec_path, out_path):
         if L > 0: audio[h0:h0 + L] += 0.04 * rng.standard_normal(L) * np.exp(-np.arange(L) / sr * 80)
     fade = np.ones(n); fl = int(1.5 * sr); fade[:fl] = np.linspace(0, 1, fl); fade[-fl:] = np.linspace(1, 0, fl)
     audio = audio * fade; audio = audio / (np.max(np.abs(audio)) + 1e-9) * 0.5
+    # voix off facultative sur l'écran de fin ("voice": chemin d'un fichier audio, relatif au dépôt)
+    vpath = s.get("voice")
+    if vpath:
+        import os
+        root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        vpath = vpath if os.path.isabs(vpath) else os.path.join(root, vpath)
+        raw = subprocess.run(["ffmpeg", "-loglevel", "error", "-i", vpath, "-ac", "1", "-ar", str(sr), "-f", "s16le", "-"],
+                             capture_output=True, check=True).stdout
+        v = np.frombuffer(raw, np.int16).astype(float) / 32768
+        v = v / (np.max(np.abs(v)) + 1e-9) * 0.9
+        v0 = int((t_cta + s.get("voice_delay", 0.4)) * sr); v1 = min(n, v0 + len(v))
+        # baisse la musique pendant la voix
+        duck = np.ones(n); r = int(0.25 * sr)
+        duck[max(0, v0 - r):v0] = np.linspace(1, 0.3, v0 - max(0, v0 - r)); duck[v0:v1] = 0.3
+        e2 = min(n, v1 + r); duck[v1:e2] = np.linspace(0.3, 1, e2 - v1)
+        audio = audio * duck; audio[v0:v1] += v[:v1 - v0]
+        audio = np.clip(audio, -0.98, 0.98)
     pcm = (audio * 32767).astype(np.int16)
     with wave.open("music.wav", "wb") as wf:
         wf.setnchannels(1); wf.setsampwidth(2); wf.setframerate(sr); wf.writeframes(pcm.tobytes())
