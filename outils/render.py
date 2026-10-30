@@ -73,6 +73,18 @@ def main(spec_path, out_path):
     crit = s.get("criteria") or ([[hl_col, hl_val]] if hl_col is not None else [])
     crit_cols = {c for c, _ in crit}
 
+    def match(cell, vv):  # égalité, ou comparaison numérique si le critère commence par > < >= <= <>
+        if isinstance(vv, str):
+            for op in (">=", "<=", "<>", ">", "<"):
+                if vv.startswith(op):
+                    try:
+                        a = float(str(cell).replace("\u00a0", "").replace(" ", "").replace(",", "."))
+                        b = float(vv[len(op):].replace(" ", "").replace(",", "."))
+                    except ValueError:
+                        return False
+                    return {">=": a >= b, "<=": a <= b, "<>": a != b, ">": a > b, "<": a < b}[op]
+        return cell == vv
+
     def cell_xy(col, row):  # row : 0 = ligne des lettres
         x = wx + rown_w + sum(colw[:col]); y = grid_top + row * rowh
         return x, y, x + colw[col], y + rowh
@@ -122,7 +134,7 @@ def main(spec_path, out_path):
                 excel_row = r
                 data_i = r - 2
                 if t_q <= t < t_exp + 6 and crit and 0 <= data_i < len(rows):
-                    if all(rows[data_i][cc] == vv for cc, vv in crit):
+                    if all(match(rows[data_i][cc], vv) for cc, vv in crit):
                         a = ease((t - t_q) / 0.6)
                         if c in crit_cols: fill = tuple(int(255 - (255 - v) * a) for v in (255, 236, 150))
                         if c == sum_col and t >= t_exp: fill = (205, 228, 255)

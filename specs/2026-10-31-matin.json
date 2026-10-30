@@ -1,0 +1,104 @@
+{
+  "file": "Ventes_quincaillerie.xlsx",
+  "hook": "Trouver la plus grosse vente d'une ville ? En 3 secondes !",
+  "question": "La meilleure vente à Kisangani, sans chercher ligne par ligne",
+  "headers": [
+    "Vendeur",
+    "Ville",
+    "Produit",
+    "Vente (FC)"
+  ],
+  "col_ratio": [
+    0.22,
+    0.24,
+    0.26,
+    0.28
+  ],
+  "right_cols": [
+    3
+  ],
+  "rows": [
+    [
+      "Mbuyi",
+      "Kisangani",
+      "Ciment",
+      "185 000"
+    ],
+    [
+      "Ilunga",
+      "Kindu",
+      "Tôles",
+      "240 000"
+    ],
+    [
+      "Tshala",
+      "Kisangani",
+      "Fer à béton",
+      "312 000"
+    ],
+    [
+      "Kasongo",
+      "Bunia",
+      "Ciment",
+      "198 000"
+    ],
+    [
+      "Ngalula",
+      "Kisangani",
+      "Peinture",
+      "96 000"
+    ],
+    [
+      "Kalonji",
+      "Kindu",
+      "Ciment",
+      "275 000"
+    ],
+    [
+      "Mbombo",
+      "Kisangani",
+      "Tôles",
+      "264 000"
+    ],
+    [
+      "Mukendi",
+      "Bunia",
+      "Fer à béton",
+      "330 000"
+    ]
+  ],
+  "criteria": [
+    [
+      1,
+      "Kisangani"
+    ]
+  ],
+  "sum_col": 3,
+  "label_col": 2,
+  "result_label": "Max :",
+  "result_col": 3,
+  "formula": "=MAX.SI.ENS(D2:D9;B2:B9;\"Kisangani\")",
+  "typing_caption": "La formule : MAX.SI.ENS",
+  "result": "312 000",
+  "result_caption": "312 000 FC : record de Kisangani !",
+  "explain": [
+    [
+      "D2:D9 → les ventes à comparer",
+      "blue"
+    ],
+    [
+      "B2:B9 → la colonne des villes",
+      "yellow"
+    ],
+    [
+      "\"Kisangani\" → la ville choisie",
+      "white"
+    ],
+    [
+      "Le plus petit ? MIN.SI.ENS !",
+      "green"
+    ]
+  ],
+  "cta": "Abonne-toi pour une astuce Excel chaque jour !",
+  "next": "Prochaine astuce à 18h"
+}

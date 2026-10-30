@@ -1,0 +1,112 @@
+{
+  "file": "Commandes.xlsx",
+  "hook": "Compter avec 3 conditions ? Une seule formule !",
+  "question": "Combien de commandes livrées à Matadi d'au moins 100 000 FC ?",
+  "headers": [
+    "Client",
+    "Ville",
+    "Statut",
+    "Montant (FC)"
+  ],
+  "col_ratio": [
+    0.22,
+    0.22,
+    0.25,
+    0.31
+  ],
+  "right_cols": [
+    3
+  ],
+  "rows": [
+    [
+      "Amani",
+      "Matadi",
+      "Livrée",
+      "145 000"
+    ],
+    [
+      "Bahati",
+      "Boma",
+      "En cours",
+      "92 000"
+    ],
+    [
+      "Furaha",
+      "Matadi",
+      "Livrée",
+      "68 000"
+    ],
+    [
+      "Neema",
+      "Matadi",
+      "Livrée",
+      "210 000"
+    ],
+    [
+      "Baraka",
+      "Boma",
+      "Livrée",
+      "175 000"
+    ],
+    [
+      "Imani",
+      "Matadi",
+      "En cours",
+      "130 000"
+    ],
+    [
+      "Zawadi",
+      "Matadi",
+      "Livrée",
+      "100 000"
+    ],
+    [
+      "Riziki",
+      "Boma",
+      "Livrée",
+      "54 000"
+    ]
+  ],
+  "criteria": [
+    [
+      1,
+      "Matadi"
+    ],
+    [
+      2,
+      "Livrée"
+    ],
+    [
+      3,
+      ">=100000"
+    ]
+  ],
+  "sum_col": 3,
+  "label_col": 2,
+  "result_label": "Nombre :",
+  "result_col": 3,
+  "formula": "=NB.SI.ENS(B2:B9;\"Matadi\";C2:C9;\"Livrée\";D2:D9;\">=100000\")",
+  "typing_caption": "La formule : NB.SI.ENS",
+  "result": "3",
+  "result_caption": "3 commandes trouvées !",
+  "explain": [
+    [
+      "B2:B9 ; \"Matadi\" → la ville",
+      "yellow"
+    ],
+    [
+      "C2:C9 ; \"Livrée\" → le statut",
+      "white"
+    ],
+    [
+      "D2:D9 ; \">=100000\" → le montant",
+      "blue"
+    ],
+    [
+      "Ajoute autant de conditions que tu veux !",
+      "green"
+    ]
+  ],
+  "cta": "Abonne-toi pour une astuce Excel chaque jour !",
+  "next": "Prochaine astuce demain à 6h"
+}
