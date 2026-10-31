@@ -1,0 +1,94 @@
+{
+  "file": "Tontine.xlsx",
+  "hook": "Compter les cases remplies ? En 1 seconde !",
+  "question": "Combien de membres ont déjà payé leur cotisation ?",
+  "headers": [
+    "Membre",
+    "Commune",
+    "Cotisation (FC)"
+  ],
+  "col_ratio": [
+    0.32,
+    0.32,
+    0.36
+  ],
+  "right_cols": [
+    2
+  ],
+  "rows": [
+    [
+      "Kabeya",
+      "Lemba",
+      "20 000"
+    ],
+    [
+      "Mwamba",
+      "Ngaliema",
+      ""
+    ],
+    [
+      "Kapinga",
+      "Limete",
+      "20 000"
+    ],
+    [
+      "Lukusa",
+      "Lemba",
+      ""
+    ],
+    [
+      "Mujinga",
+      "Masina",
+      "20 000"
+    ],
+    [
+      "Tshimanga",
+      "Limete",
+      "20 000"
+    ],
+    [
+      "Nsimba",
+      "Ngaliema",
+      ""
+    ],
+    [
+      "Makiese",
+      "Masina",
+      "20 000"
+    ]
+  ],
+  "criteria": [
+    [
+      2,
+      "<>"
+    ]
+  ],
+  "sum_col": 2,
+  "label_col": 1,
+  "result_label": "Ont payé :",
+  "result_col": 2,
+  "formula": "=NBVAL(C2:C9)",
+  "typing_caption": "La formule : NBVAL",
+  "result": "5",
+  "result_caption": "5 membres ont déjà payé !",
+  "explain": [
+    [
+      "NBVAL → compte les cases non vides",
+      "yellow"
+    ],
+    [
+      "C2:C9 → la colonne des cotisations",
+      "blue"
+    ],
+    [
+      "Les vides ? NB.VIDE(C2:C9) → 3",
+      "white"
+    ],
+    [
+      "Marche aussi avec du texte !",
+      "green"
+    ]
+  ],
+  "cta": "Abonne-toi pour une astuce Excel chaque jour !",
+  "next": "Prochaine astuce à 18h"
+}

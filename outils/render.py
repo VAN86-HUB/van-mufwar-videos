@@ -75,6 +75,8 @@ def main(spec_path, out_path):
 
     def match(cell, vv):  # égalité, ou comparaison numérique si le critère commence par > < >= <= <>
         if isinstance(vv, str):
+            if vv == "<>":  # critère « non vide » (comme NB.SI(...;"<>"))
+                return str(cell).strip() != ""
             for op in (">=", "<=", "<>", ">", "<"):
                 if vv.startswith(op):
                     try:

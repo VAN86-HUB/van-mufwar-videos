@@ -1,0 +1,104 @@
+{
+  "file": "Ventes_Katanga.xlsx",
+  "hook": "Quelle part du total pour une ville ? Calcule le % !",
+  "question": "Quel pourcentage des ventes vient de Lubumbashi ?",
+  "headers": [
+    "Vendeur",
+    "Ville",
+    "Produit",
+    "Vente (FC)"
+  ],
+  "col_ratio": [
+    0.22,
+    0.26,
+    0.22,
+    0.3
+  ],
+  "right_cols": [
+    3
+  ],
+  "rows": [
+    [
+      "Kabongo",
+      "Lubumbashi",
+      "Farine",
+      "320 000"
+    ],
+    [
+      "Mutombo",
+      "Kolwezi",
+      "Huile",
+      "180 000"
+    ],
+    [
+      "Ngoy",
+      "Lubumbashi",
+      "Sucre",
+      "250 000"
+    ],
+    [
+      "Kyungu",
+      "Likasi",
+      "Farine",
+      "340 000"
+    ],
+    [
+      "Mwenze",
+      "Lubumbashi",
+      "Riz",
+      "130 000"
+    ],
+    [
+      "Kalenga",
+      "Kolwezi",
+      "Sucre",
+      "260 000"
+    ],
+    [
+      "Banza",
+      "Likasi",
+      "Huile",
+      "420 000"
+    ],
+    [
+      "Ilunga",
+      "Lubumbashi",
+      "Riz",
+      "100 000"
+    ]
+  ],
+  "criteria": [
+    [
+      1,
+      "Lubumbashi"
+    ]
+  ],
+  "sum_col": 3,
+  "label_col": 2,
+  "result_label": "Part :",
+  "result_col": 3,
+  "formula": "=SOMME.SI(B2:B9;\"Lubumbashi\";D2:D9)/SOMME(D2:D9)",
+  "typing_caption": "Formule : SOMME.SI÷SOMME",
+  "result": "40 %",
+  "result_caption": "40 % des ventes à Lubumbashi !",
+  "explain": [
+    [
+      "SOMME.SI → ventes de Lubumbashi",
+      "yellow"
+    ],
+    [
+      "÷ SOMME(D2:D9) → le total général",
+      "blue"
+    ],
+    [
+      "Format % : Ctrl+Maj+% → 40 %",
+      "white"
+    ],
+    [
+      "Change la ville, le % suit !",
+      "green"
+    ]
+  ],
+  "cta": "Abonne-toi pour une astuce Excel chaque jour !",
+  "next": "Prochaine astuce demain à 6h"
+}
