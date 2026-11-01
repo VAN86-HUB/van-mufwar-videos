@@ -72,6 +72,7 @@ def main(spec_path, out_path):
     # plusieurs critères possibles : "criteria": [[col, valeur], ...] (ligne retenue si tous correspondent)
     crit = s.get("criteria") or ([[hl_col, hl_val]] if hl_col is not None else [])
     crit_cols = {c for c, _ in crit}
+    sum_cols = set(sum_col) if isinstance(sum_col, list) else {sum_col}  # une ou plusieurs colonnes surlignées
 
     def match(cell, vv):  # égalité, ou comparaison numérique si le critère commence par > < >= <= <>
         if isinstance(vv, str):
@@ -139,7 +140,7 @@ def main(spec_path, out_path):
                     if all(match(rows[data_i][cc], vv) for cc, vv in crit):
                         a = ease((t - t_q) / 0.6)
                         if c in crit_cols: fill = tuple(int(255 - (255 - v) * a) for v in (255, 236, 150))
-                        if c == sum_col and t >= t_exp: fill = (205, 228, 255)
+                        if c in sum_cols and t >= t_exp: fill = (205, 228, 255)
                 d.rectangle([x0, y0, x1, y1], fill=fill, outline=GRID)
                 if r == 0:
                     L = chr(65 + c); d.text((x0 + (x1 - x0 - d.textlength(L, font=fsmall)) / 2, y0 + 18), L, font=fsmall, fill=(90, 90, 90))

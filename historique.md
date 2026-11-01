@@ -11,3 +11,5 @@
 | 2026-10-31 | 18h | NB.SI.ENS – compter avec 3 conditions dont un seuil « >=100000 » | videos/2026-10-31-soir.mp4 |
 | 2026-11-01 | 6h | NBVAL – compter les membres qui ont payé la tontine (+ NB.VIDE) | videos/2026-11-01-matin.mp4 |
 | 2026-11-01 | 18h | Pourcentage – part d'une ville dans le total (SOMME.SI ÷ SOMME) | videos/2026-11-01-soir.mp4 |
+| 2026-11-02 | 6h | MIN.SI.ENS – prix le plus bas du sac de ciment à Bukavu | videos/2026-11-02-matin.mp4 |
+| 2026-11-02 | 18h | SOMMEPROD – recette d'une ville (qté × prix) en une seule formule | videos/2026-11-02-soir.mp4 |

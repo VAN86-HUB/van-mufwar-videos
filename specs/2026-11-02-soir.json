@@ -1,0 +1,108 @@
+{
+  "file": "Ventes_Nord-Kivu.xlsx",
+  "hook": "Quantité × prix en UNE seule formule !",
+  "question": "Quelle est la recette totale de Goma ?",
+  "headers": [
+    "Vendeur",
+    "Ville",
+    "Qté",
+    "Prix (FC)"
+  ],
+  "col_ratio": [
+    0.25,
+    0.25,
+    0.16,
+    0.34
+  ],
+  "right_cols": [
+    2,
+    3
+  ],
+  "rows": [
+    [
+      "Kahindo",
+      "Goma",
+      "12",
+      "2 500"
+    ],
+    [
+      "Mumbere",
+      "Beni",
+      "8",
+      "3 000"
+    ],
+    [
+      "Kavira",
+      "Goma",
+      "5",
+      "4 000"
+    ],
+    [
+      "Paluku",
+      "Butembo",
+      "10",
+      "2 000"
+    ],
+    [
+      "Masika",
+      "Goma",
+      "7",
+      "3 500"
+    ],
+    [
+      "Kambale",
+      "Beni",
+      "6",
+      "2 500"
+    ],
+    [
+      "Muhindo",
+      "Goma",
+      "4",
+      "5 000"
+    ],
+    [
+      "Kasereka",
+      "Butembo",
+      "9",
+      "3 000"
+    ]
+  ],
+  "criteria": [
+    [
+      1,
+      "Goma"
+    ]
+  ],
+  "sum_col": [
+    2,
+    3
+  ],
+  "label_col": 1,
+  "result_label": "Recette :",
+  "result_col": 3,
+  "formula": "=SOMMEPROD((B2:B9=\"Goma\")*C2:C9*D2:D9)",
+  "typing_caption": "La formule : SOMMEPROD",
+  "result": "94 500",
+  "result_caption": "94 500 FC de recette à Goma !",
+  "explain": [
+    [
+      "(B2:B9=\"Goma\") → garde Goma",
+      "yellow"
+    ],
+    [
+      "C2:C9*D2:D9 → qté × prix",
+      "blue"
+    ],
+    [
+      "SOMMEPROD additionne tout",
+      "white"
+    ],
+    [
+      "Pas de colonne en plus !",
+      "green"
+    ]
+  ],
+  "cta": "Abonne-toi pour une astuce Excel chaque jour !",
+  "next": "Prochaine astuce demain à 6h"
+}

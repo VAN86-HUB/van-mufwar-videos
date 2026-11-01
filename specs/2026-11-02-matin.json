@@ -1,0 +1,94 @@
+{
+  "file": "Ciment_Kivu.xlsx",
+  "hook": "Le prix le plus bas d'une ville ? En 1 seconde !",
+  "question": "Où acheter le sac de ciment le moins cher à Bukavu ?",
+  "headers": [
+    "Fournisseur",
+    "Ville",
+    "Prix sac (FC)"
+  ],
+  "col_ratio": [
+    0.32,
+    0.32,
+    0.36
+  ],
+  "right_cols": [
+    2
+  ],
+  "rows": [
+    [
+      "Bahati",
+      "Bukavu",
+      "38 500"
+    ],
+    [
+      "Amani",
+      "Goma",
+      "36 000"
+    ],
+    [
+      "Furaha",
+      "Bukavu",
+      "35 000"
+    ],
+    [
+      "Neema",
+      "Uvira",
+      "34 500"
+    ],
+    [
+      "Baraka",
+      "Bukavu",
+      "37 000"
+    ],
+    [
+      "Imani",
+      "Goma",
+      "33 000"
+    ],
+    [
+      "Zawadi",
+      "Bukavu",
+      "39 000"
+    ],
+    [
+      "Riziki",
+      "Uvira",
+      "36 500"
+    ]
+  ],
+  "criteria": [
+    [
+      1,
+      "Bukavu"
+    ]
+  ],
+  "sum_col": 2,
+  "label_col": 1,
+  "result_label": "Moins cher :",
+  "result_col": 2,
+  "formula": "=MIN.SI.ENS(C2:C9;B2:B9;\"Bukavu\")",
+  "typing_caption": "La formule : MIN.SI.ENS",
+  "result": "35 000",
+  "result_caption": "35 000 FC chez Furaha !",
+  "explain": [
+    [
+      "MIN.SI.ENS → le plus petit prix",
+      "yellow"
+    ],
+    [
+      "C2:C9 → la colonne des prix",
+      "blue"
+    ],
+    [
+      "B2:B9 ; \"Bukavu\" → la condition",
+      "white"
+    ],
+    [
+      "Le plus cher ? MAX.SI.ENS !",
+      "green"
+    ]
+  ],
+  "cta": "Abonne-toi pour une astuce Excel chaque jour !",
+  "next": "Prochaine astuce à 18h"
+}
