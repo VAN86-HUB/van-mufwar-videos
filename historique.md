@@ -13,3 +13,5 @@
 | 2026-11-01 | 18h | Pourcentage – part d'une ville dans le total (SOMME.SI ÷ SOMME) | videos/2026-11-01-soir.mp4 |
 | 2026-11-02 | 6h | MIN.SI.ENS – prix le plus bas du sac de ciment à Bukavu | videos/2026-11-02-matin.mp4 |
 | 2026-11-02 | 18h | SOMMEPROD – recette d'une ville (qté × prix) en une seule formule | videos/2026-11-02-soir.mp4 |
+| 2026-11-03 | 6h | GRANDE.VALEUR – 2e plus grosse vente (Lubumbashi) (+ PETITE.VALEUR) | videos/2026-11-03-matin.mp4 |
+| 2026-11-03 | 18h | SOMME.SI.ENS entre deux dates – encaissements du 1er au 7 novembre | videos/2026-11-03-soir.mp4 |

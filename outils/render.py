@@ -57,6 +57,8 @@ def main(spec_path, out_path):
     # repères temporels
     t_hook, t_q, t_type, t_res, t_exp, t_cta = 0, 3.5, 7.5, 15.5, 18.5, 25.5
     formula = s["formula"]
+    # début du surlignage des lignes retenues : "question" (défaut) ou "result" (ne dévoile pas la réponse)
+    t_hl = t_res if s.get("highlight_at") == "result" else t_q
     bg = build_background()
 
     # géométrie de la feuille
@@ -74,12 +76,21 @@ def main(spec_path, out_path):
     crit_cols = {c for c, _ in crit}
     sum_cols = set(sum_col) if isinstance(sum_col, list) else {sum_col}  # une ou plusieurs colonnes surlignées
 
+    def as_date(v):  # "JJ/MM/AAAA" -> (AAAA, MM, JJ), sinon None
+        p = str(v).strip().split("/")
+        if len(p) == 3 and all(x.isdigit() for x in p):
+            return (int(p[2]), int(p[1]), int(p[0]))
+        return None
+
     def match(cell, vv):  # égalité, ou comparaison numérique si le critère commence par > < >= <= <>
         if isinstance(vv, str):
             if vv == "<>":  # critère « non vide » (comme NB.SI(...;"<>"))
                 return str(cell).strip() != ""
             for op in (">=", "<=", "<>", ">", "<"):
                 if vv.startswith(op):
+                    da, db = as_date(cell), as_date(vv[len(op):])
+                    if da and db:  # comparaison de dates JJ/MM/AAAA
+                        return {">=": da >= db, "<=": da <= db, "<>": da != db, ">": da > db, "<": da < db}[op]
                     try:
                         a = float(str(cell).replace("\u00a0", "").replace(" ", "").replace(",", "."))
                         b = float(vv[len(op):].replace(" ", "").replace(",", "."))
@@ -136,9 +147,9 @@ def main(spec_path, out_path):
                 if r == 1: fill = (226, 239, 218)
                 excel_row = r
                 data_i = r - 2
-                if t_q <= t < t_exp + 6 and crit and 0 <= data_i < len(rows):
+                if t_hl <= t < t_exp + 6 and crit and 0 <= data_i < len(rows):
                     if all(match(rows[data_i][cc], vv) for cc, vv in crit):
-                        a = ease((t - t_q) / 0.6)
+                        a = ease((t - t_hl) / 0.6)
                         if c in crit_cols: fill = tuple(int(255 - (255 - v) * a) for v in (255, 236, 150))
                         if c in sum_cols and t >= t_exp: fill = (205, 228, 255)
                 d.rectangle([x0, y0, x1, y1], fill=fill, outline=GRID)

@@ -1,0 +1,95 @@
+{
+  "file": "Ventes_Lubumbashi.xlsx",
+  "hook": "Le 2e meilleur vendeur en 1 formule !",
+  "question": "Qui a fait la 2e plus grosse vente du mois ?",
+  "headers": [
+    "Vendeur",
+    "Ville",
+    "Ventes (FC)"
+  ],
+  "col_ratio": [
+    0.32,
+    0.32,
+    0.36
+  ],
+  "right_cols": [
+    2
+  ],
+  "rows": [
+    [
+      "Ilunga",
+      "Lubumbashi",
+      "285 000"
+    ],
+    [
+      "Kabila",
+      "Likasi",
+      "342 500"
+    ],
+    [
+      "Mwamba",
+      "Kolwezi",
+      "198 000"
+    ],
+    [
+      "Kasongo",
+      "Lubumbashi",
+      "410 000"
+    ],
+    [
+      "Ngoy",
+      "Likasi",
+      "375 500"
+    ],
+    [
+      "Banza",
+      "Kolwezi",
+      "226 000"
+    ],
+    [
+      "Mukendi",
+      "Lubumbashi",
+      "398 000"
+    ],
+    [
+      "Kyungu",
+      "Kolwezi",
+      "305 000"
+    ]
+  ],
+  "criteria": [
+    [
+      2,
+      "398 000"
+    ]
+  ],
+  "highlight_at": "result",
+  "sum_col": 2,
+  "label_col": 1,
+  "result_label": "2e vente :",
+  "result_col": 2,
+  "formula": "=GRANDE.VALEUR(C2:C9;2)",
+  "typing_caption": "La formule : GRANDE.VALEUR",
+  "result": "398 000",
+  "result_caption": "398 000 FC pour Mukendi !",
+  "explain": [
+    [
+      "GRANDE.VALEUR → classe du + grand",
+      "yellow"
+    ],
+    [
+      "C2:C9 → la colonne des ventes",
+      "blue"
+    ],
+    [
+      "2 → le 2e plus grand (3 → le 3e…)",
+      "white"
+    ],
+    [
+      "Le 2e plus petit ? PETITE.VALEUR !",
+      "green"
+    ]
+  ],
+  "cta": "Abonne-toi pour une astuce Excel chaque jour !",
+  "next": "Prochaine astuce à 18h"
+}

@@ -1,0 +1,98 @@
+{
+  "file": "Caisse_Kinshasa.xlsx",
+  "hook": "Le total entre 2 dates ? Facile !",
+  "question": "Combien a-t-on encaissé du 1er au 7 novembre ?",
+  "headers": [
+    "Date",
+    "Vendeuse",
+    "Montant (FC)"
+  ],
+  "col_ratio": [
+    0.33,
+    0.31,
+    0.36
+  ],
+  "right_cols": [
+    2
+  ],
+  "rows": [
+    [
+      "29/10/2026",
+      "Mbuyi",
+      "45 000"
+    ],
+    [
+      "01/11/2026",
+      "Nsimba",
+      "62 500"
+    ],
+    [
+      "03/11/2026",
+      "Mbuyi",
+      "38 000"
+    ],
+    [
+      "05/11/2026",
+      "Kalala",
+      "71 000"
+    ],
+    [
+      "07/11/2026",
+      "Nsimba",
+      "54 500"
+    ],
+    [
+      "08/11/2026",
+      "Kalala",
+      "49 000"
+    ],
+    [
+      "04/11/2026",
+      "Mbuyi",
+      "27 500"
+    ],
+    [
+      "10/11/2026",
+      "Nsimba",
+      "66 000"
+    ]
+  ],
+  "criteria": [
+    [
+      0,
+      ">=01/11/2026"
+    ],
+    [
+      0,
+      "<=07/11/2026"
+    ]
+  ],
+  "sum_col": 2,
+  "label_col": 1,
+  "result_label": "Total :",
+  "result_col": 2,
+  "formula": "=SOMME.SI.ENS(C2:C9;A2:A9;\">=01/11/2026\";A2:A9;\"<=07/11/2026\")",
+  "typing_caption": "La formule : SOMME.SI.ENS + dates",
+  "result": "253 500",
+  "result_caption": "253 500 FC encaissés en 1 semaine !",
+  "explain": [
+    [
+      "C2:C9 → les montants à additionner",
+      "blue"
+    ],
+    [
+      "\">=01/11/2026\" → à partir du 1er",
+      "yellow"
+    ],
+    [
+      "\"<=07/11/2026\" → jusqu'au 7 inclus",
+      "yellow"
+    ],
+    [
+      "Change les dates, le total suit !",
+      "green"
+    ]
+  ],
+  "cta": "Abonne-toi pour une astuce Excel chaque jour !",
+  "next": "Prochaine astuce demain à 6h"
+}
