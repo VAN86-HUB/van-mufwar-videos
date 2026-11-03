@@ -1,0 +1,141 @@
+{
+  "theme": "neon",
+  "mode": "steps",
+  "file": "Factures_Matadi.xlsx",
+  "hook": "Erreur fréquente : oublier une facture en retard…",
+  "question": "Comment colorer en rouge les factures échues ET non payées ?",
+  "headers": [
+    "N°",
+    "Client",
+    "Échéance",
+    "Payée ?"
+  ],
+  "col_ratio": [
+    0.16,
+    0.44,
+    0.24,
+    0.16
+  ],
+  "rows": [
+    [
+      "F-101",
+      "Kasongo SARL",
+      "28/10/2026",
+      "Oui"
+    ],
+    [
+      "F-102",
+      "Ets Mukendi",
+      "30/10/2026",
+      "Non"
+    ],
+    [
+      "F-103",
+      "Pharmacie Tuungane",
+      "02/11/2026",
+      "Non"
+    ],
+    [
+      "F-104",
+      "Boutique Mama Nzuzi",
+      "06/11/2026",
+      "Non"
+    ],
+    [
+      "F-105",
+      "Garage Lumbu",
+      "25/10/2026",
+      "Non"
+    ],
+    [
+      "F-106",
+      "Hôtel Kivu Lodge",
+      "01/11/2026",
+      "Oui"
+    ],
+    [
+      "F-107",
+      "Quincaillerie Bosembo",
+      "10/11/2026",
+      "Non"
+    ]
+  ],
+  "steps": [
+    {
+      "at": 7.5,
+      "text": "1. Sélectionne A2:D8 puis va dans :",
+      "path": [
+        "Accueil",
+        "Mise en forme conditionnelle",
+        "Nouvelle règle"
+      ]
+    },
+    {
+      "at": 10.3,
+      "text": "2. « Utiliser une formule… » et tape :",
+      "fx": "=ET($C2<AUJOURDHUI();$D2=\"Non\")",
+      "fx_dur": 2.4
+    },
+    {
+      "at": 13.3,
+      "text": "3. Choisis un fond rouge, puis OK",
+      "fx": "=ET($C2<AUJOURDHUI();$D2=\"Non\")",
+      "fx_dur": 0.01
+    }
+  ],
+  "select": [
+    {
+      "at": 7.5,
+      "range": [
+        2,
+        0,
+        8,
+        3
+      ],
+      "until": 14.0
+    }
+  ],
+  "paints": [
+    {
+      "at": 14.0,
+      "rows": [
+        3,
+        4,
+        6
+      ],
+      "fill": [
+        150,
+        20,
+        60
+      ],
+      "color": [
+        255,
+        190,
+        210
+      ],
+      "stagger": 0.25
+    }
+  ],
+  "result_caption": "3 factures en retard repérées d'un coup d'œil !",
+  "explain": [
+    [
+      "$C2 : le $ bloque la colonne, la ligne avance",
+      "yellow"
+    ],
+    [
+      "AUJOURDHUI() = la date du jour (ici 04/11/2026)",
+      "blue"
+    ],
+    [
+      "ET(…;…) : les 2 conditions en même temps",
+      "green"
+    ],
+    [
+      "Demain ? Le tableau se recolore tout seul !",
+      "white"
+    ]
+  ],
+  "cta": "Abonne-toi pour une astuce Excel chaque jour !",
+  "comment_cta": "Quel tableau veux-tu automatiser ?\nÉcris-le en commentaire !",
+  "next": "Prochaine astuce demain à 6h"
+}

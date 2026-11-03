@@ -1,0 +1,178 @@
+{
+  "theme": "soleil",
+  "mode": "steps",
+  "file": "Inscriptions_Mbandaka.xlsx",
+  "hook": "Tu tapes encore les prénoms un par un ?",
+  "question": "7 élèves inscrits : sortir leurs prénoms en 1 seconde ?",
+  "headers": [
+    "Nom complet",
+    "Prénom",
+    "Classe"
+  ],
+  "col_ratio": [
+    0.44,
+    0.3,
+    0.26
+  ],
+  "rows": [
+    [
+      "KABONGO Patrick",
+      "",
+      "1re A"
+    ],
+    [
+      "MBUYI Grâce",
+      "",
+      "2e B"
+    ],
+    [
+      "NSIMBA Josué",
+      "",
+      "3e A"
+    ],
+    [
+      "ILUNGA Rachel",
+      "",
+      "1re B"
+    ],
+    [
+      "LUKUSA Dieudonné",
+      "",
+      "4e C"
+    ],
+    [
+      "MASIKA Esther",
+      "",
+      "2e A"
+    ],
+    [
+      "AMISI Christian",
+      "",
+      "3e B"
+    ]
+  ],
+  "steps": [
+    {
+      "at": 7.5,
+      "text": "1. En B2, tape le 1er prénom à la main",
+      "fx": "Patrick",
+      "fx_dur": 1.4
+    },
+    {
+      "at": 10.8,
+      "text": "2. Va en B3 et appuie sur :",
+      "keys": [
+        "Ctrl",
+        "E"
+      ]
+    }
+  ],
+  "select": [
+    {
+      "at": 7.5,
+      "cell": [
+        2,
+        1
+      ]
+    },
+    {
+      "at": 10.8,
+      "cell": [
+        3,
+        1
+      ]
+    }
+  ],
+  "fills": [
+    {
+      "at": 9.0,
+      "cells": [
+        [
+          2,
+          1,
+          "Patrick"
+        ]
+      ]
+    },
+    {
+      "at": 12.6,
+      "cells": [
+        [
+          3,
+          1,
+          "Grâce"
+        ],
+        [
+          4,
+          1,
+          "Josué"
+        ],
+        [
+          5,
+          1,
+          "Rachel"
+        ],
+        [
+          6,
+          1,
+          "Dieudonné"
+        ],
+        [
+          7,
+          1,
+          "Esther"
+        ],
+        [
+          8,
+          1,
+          "Christian"
+        ]
+      ],
+      "stagger": 0.15
+    }
+  ],
+  "paints": [
+    {
+      "at": 12.6,
+      "rows": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "cols": [
+        1
+      ],
+      "fill": [
+        220,
+        245,
+        215
+      ],
+      "stagger": 0.15
+    }
+  ],
+  "result_caption": "Et voilà ! 6 prénoms remplis tout seuls",
+  "explain": [
+    [
+      "Ctrl+E = Remplissage instantané",
+      "yellow"
+    ],
+    [
+      "Excel devine le modèle à partir de ton exemple",
+      "blue"
+    ],
+    [
+      "Ça marche aussi pour les noms, initiales, codes…",
+      "green"
+    ],
+    [
+      "Sans raccourci : Données › Remplissage instantané",
+      "white"
+    ]
+  ],
+  "cta": "Abonne-toi : une astuce Excel chaque matin et chaque soir !",
+  "comment_cta": "Quel raccourci veux-tu apprendre ?\nDis-le en commentaire !",
+  "next": "Prochaine astuce à 18h"
+}
