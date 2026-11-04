@@ -1,0 +1,187 @@
+{
+  "theme": "violet",
+  "cta_style": "pulse",
+  "mode": "steps",
+  "file": "Presence_Chantier_Kolwezi.xlsx",
+  "hook": "Défi : zéro faute de frappe dans ta feuille de présence !",
+  "question": "« present », « Présnt »… Comment éviter ces fautes ?",
+  "headers": [
+    "Agent",
+    "Poste",
+    "Présence"
+  ],
+  "col_ratio": [
+    0.38,
+    0.3,
+    0.32
+  ],
+  "rows": [
+    [
+      "KAPEND Jules",
+      "Soudeur",
+      ""
+    ],
+    [
+      "MUJINGA Sarah",
+      "Comptable",
+      ""
+    ],
+    [
+      "TSHIBANGU Éric",
+      "Chauffeur",
+      ""
+    ],
+    [
+      "KALUMBA Ruth",
+      "Magasinier",
+      ""
+    ],
+    [
+      "NGOY Albert",
+      "Électricien",
+      ""
+    ]
+  ],
+  "steps": [
+    {
+      "at": 7.5,
+      "text": "1. Sélectionne C2:C6 puis va dans :",
+      "path": [
+        "Données",
+        "Validation des données"
+      ]
+    },
+    {
+      "at": 10.0,
+      "text": "2. Autoriser : Liste. Dans Source, tape :",
+      "fx": "Présent;Absent;Retard",
+      "fx_dur": 1.8
+    },
+    {
+      "at": 12.4,
+      "text": "3. Clique sur la petite flèche et choisis !"
+    }
+  ],
+  "select": [
+    {
+      "at": 7.5,
+      "range": [
+        2,
+        2,
+        6,
+        2
+      ],
+      "until": 12.4
+    },
+    {
+      "at": 12.4,
+      "cell": [
+        2,
+        2
+      ],
+      "until": 15.5
+    }
+  ],
+  "dropdowns": [
+    {
+      "at": 12.7,
+      "until": 13.7,
+      "cell": [
+        2,
+        2
+      ],
+      "items": [
+        "Présent",
+        "Absent",
+        "Retard"
+      ],
+      "pick": 0,
+      "hover_after": 0.5,
+      "arrow_from": 12.4,
+      "arrow_rows": [
+        2
+      ]
+    }
+  ],
+  "fills": [
+    {
+      "at": 13.7,
+      "cells": [
+        [
+          2,
+          2,
+          "Présent"
+        ]
+      ]
+    },
+    {
+      "at": 14.1,
+      "cells": [
+        [
+          3,
+          2,
+          "Retard"
+        ],
+        [
+          4,
+          2,
+          "Présent"
+        ],
+        [
+          5,
+          2,
+          "Absent"
+        ],
+        [
+          6,
+          2,
+          "Présent"
+        ]
+      ],
+      "stagger": 0.3
+    }
+  ],
+  "paints": [
+    {
+      "at": 14.1,
+      "rows": [
+        5
+      ],
+      "cols": [
+        2
+      ],
+      "fill": [
+        250,
+        215,
+        225
+      ],
+      "color": [
+        160,
+        20,
+        60
+      ]
+    }
+  ],
+  "result_caption": "Et voilà ! Plus aucune faute, juste un clic",
+  "explain": [
+    [
+      "Validation des données = liste déroulante",
+      "yellow"
+    ],
+    [
+      "Sépare les choix par un point-virgule ;",
+      "blue"
+    ],
+    [
+      "Une autre saisie ? Excel affiche une erreur",
+      "green"
+    ],
+    [
+      "Idéal : présences, statuts, classes, villes…",
+      "white"
+    ]
+  ],
+  "cta": "Abonne-toi à @bleuddymufwar : une astuce Excel à 6h et 18h !",
+  "comment_cta": "Quelle liste déroulante veux-tu créer ?\nDis-le en commentaire !",
+  "next": "Prochaine astuce à 18h"
+}

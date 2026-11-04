@@ -1,0 +1,219 @@
+{
+  "theme": "papier",
+  "mode": "steps",
+  "file": "Stock_Boutique_Goma.xlsx",
+  "hook": "Avant / après : ta liste « à commander » se fait toute seule",
+  "question": "Quels articles ont moins de 10 en stock, du plus urgent au moins urgent ?",
+  "headers": [
+    "Article",
+    "Stock",
+    "",
+    "À commander",
+    "Stock"
+  ],
+  "col_ratio": [
+    0.31,
+    0.14,
+    0.05,
+    0.33,
+    0.17
+  ],
+  "right_cols": [
+    1,
+    4
+  ],
+  "rows": [
+    [
+      "Sucre 1 kg",
+      "24",
+      "",
+      "",
+      ""
+    ],
+    [
+      "Huile 5 L",
+      "6",
+      "",
+      "",
+      ""
+    ],
+    [
+      "Riz 25 kg",
+      "3",
+      "",
+      "",
+      ""
+    ],
+    [
+      "Savon",
+      "12",
+      "",
+      "",
+      ""
+    ],
+    [
+      "Lait en poudre",
+      "8",
+      "",
+      "",
+      ""
+    ],
+    [
+      "Farine 2 kg",
+      "15",
+      "",
+      "",
+      ""
+    ],
+    [
+      "Sel 500 g",
+      "9",
+      "",
+      "",
+      ""
+    ],
+    [
+      "Spaghetti",
+      "30",
+      "",
+      "",
+      ""
+    ]
+  ],
+  "steps": [
+    {
+      "at": 7.5,
+      "text": "1. En D2, filtre les stocks < 10 :",
+      "fx": "=FILTRE(A2:B9;B2:B9<10)",
+      "fx_dur": 2.2
+    },
+    {
+      "at": 10.6,
+      "text": "2. Entoure avec TRIER (colonne 2, croissant) :",
+      "fx": "=TRIER(FILTRE(A2:B9;B2:B9<10);2;1)",
+      "fx_dur": 2.0
+    },
+    {
+      "at": 13.2,
+      "text": "3. Entrée… et le résultat se déverse tout seul !",
+      "fx": "=TRIER(FILTRE(A2:B9;B2:B9<10);2;1)",
+      "fx_dur": 0.01
+    }
+  ],
+  "select": [
+    {
+      "at": 7.5,
+      "cell": [
+        2,
+        3
+      ],
+      "until": 13.4
+    },
+    {
+      "at": 13.4,
+      "range": [
+        2,
+        3,
+        5,
+        4
+      ],
+      "until": 15.5
+    }
+  ],
+  "paints": [
+    {
+      "at": 9.6,
+      "rows": [
+        3,
+        4,
+        6,
+        8
+      ],
+      "cols": [
+        0,
+        1
+      ],
+      "fill": [
+        250,
+        222,
+        205
+      ],
+      "color": [
+        150,
+        40,
+        20
+      ],
+      "stagger": 0.15
+    }
+  ],
+  "fills": [
+    {
+      "at": 13.4,
+      "cells": [
+        [
+          2,
+          3,
+          "Riz 25 kg"
+        ],
+        [
+          2,
+          4,
+          "3"
+        ],
+        [
+          3,
+          3,
+          "Huile 5 L"
+        ],
+        [
+          3,
+          4,
+          "6"
+        ],
+        [
+          4,
+          3,
+          "Lait en poudre"
+        ],
+        [
+          4,
+          4,
+          "8"
+        ],
+        [
+          5,
+          3,
+          "Sel 500 g"
+        ],
+        [
+          5,
+          4,
+          "9"
+        ]
+      ],
+      "stagger": 0.12
+    }
+  ],
+  "result_caption": "4 articles à commander, triés par urgence !",
+  "explain": [
+    [
+      "FILTRE garde les lignes où B < 10",
+      "yellow"
+    ],
+    [
+      "TRIER(…;2;1) : colonne 2, ordre croissant",
+      "blue"
+    ],
+    [
+      "Le stock change ? La liste se met à jour",
+      "green"
+    ],
+    [
+      "Excel 365 ou 2021 : formules dynamiques",
+      "white"
+    ]
+  ],
+  "cta": "Abonne-toi à @bleuddymufwar pour une astuce chaque jour !",
+  "comment_cta": "Quelle formule veux-tu demain ?\nÉcris-la en commentaire !",
+  "next": "Prochaine astuce demain à 6h"
+}

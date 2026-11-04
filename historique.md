@@ -20,3 +20,5 @@ Règle : pas de famille déjà utilisée dans les 6 dernières vidéos ; pas le 
 | 2026-11-03 | 18h | DATEDIF – âge exact des employés (vidéo publiée à la place de « SOMME.SI.ENS entre deux dates », non diffusée) | h | ? | ? | (vidéo fournie hors dépôt) |
 | 2026-11-04 | 6h | Ctrl+E Remplissage instantané – extraire les prénoms d'élèves | a | soleil (card) | rumba | videos/2026-11-04-matin.mp4 |
 | 2026-11-04 | 18h | MFC avec formule – factures échues ET non payées en rouge (=ET($C2<AUJOURDHUI();$D2="Non")) | b | neon (laptop) | electro | videos/2026-11-04-soir.mp4 |
+| 2026-11-05 | 6h | Liste déroulante (Validation des données) – feuille de présence Présent/Absent/Retard | c | violet (banner) | percussions | videos/2026-11-05-matin.mp4 |
+| 2026-11-05 | 18h | TRIER(FILTRE()) – liste des articles à commander (stock < 10) triée par urgence | j | papier (classic) | piano | videos/2026-11-05-soir.mp4 |

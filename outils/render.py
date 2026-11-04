@@ -14,6 +14,8 @@ Deux modes :
      "select": [{"at": 7.5, "cell": [ligne, col]} | {"at": .., "range": [l1, c1, l2, c2]}]  (lignes Excel, col 0 = A)
      "fills":  [{"at": 9.0, "cells": [[ligne, col, "valeur"], ...], "stagger": 0.12}]
      "paints": [{"at": 14.0, "rows": [3, 5], "cols": [0,1,2] (défaut : toutes), "fill": [r,g,b], "color": [r,g,b], "stagger": 0.2}]
+     "dropdowns": [{"at": 12.6, "until": 14.0, "cell": [2, 2], "items": ["A","B"], "pick": 0, "arrow_from": 12.0, "arrow_rows": [2,3]}]
+       (liste déroulante ouverte sous une cellule ; flèche ▼ affichée sur arrow_rows à partir de arrow_from)
 """
 import json, math, os, subprocess, sys, wave
 import numpy as np
@@ -628,6 +630,24 @@ def main(spec_path, out_path):
                     td.rectangle([x0, y0, x1, y1], fill=rgba(TH["sel"], 0.16))
                 d.rectangle([x0 - 2, y0 - 2, x1 + 2, y1 + 2], outline=TH["sel"], width=5)
                 d.rectangle([x1 - 7, y1 - 7, x1 + 7, y1 + 7], fill=TH["sel"])
+            for dd in s.get("dropdowns", []):  # liste déroulante ouverte sous une cellule
+                if dd.get("arrow_from") is not None and t >= dd["arrow_from"]:
+                    for rr in dd.get("arrow_rows", [dd["cell"][0]]):
+                        ax0, ay0, ax1, ay1 = cell_xy(dd["cell"][1], rr)
+                        d.rectangle([ax1 - 40, ay0 + 6, ax1 - 6, ay1 - 6], fill=TH["hdr"], outline=TH["grid"])
+                        d.polygon([(ax1 - 33, ay0 + 26), (ax1 - 13, ay0 + 26), (ax1 - 23, ay0 + 38)], fill=TH["hdr_fg"])
+                if not (dd["at"] <= t < dd.get("until", dd["at"] + 1.5)): continue
+                rr, cc = dd["cell"]; x0, y0, x1, y1 = cell_xy(cc, rr)
+                a = ease((t - dd["at"]) / 0.3); items = dd["items"]; ih = 58
+                bh = int(len(items) * ih * a) + 8
+                d.rectangle([x0 + 6, y1 + 8, x1 + 8, y1 + 10 + bh], fill=TH["key_shadow"])
+                d.rectangle([x0, y1, x1, y1 + bh], fill=TH["cell"], outline=TH["sel"], width=3)
+                pick = dd.get("pick", 0); hov = t >= dd["at"] + dd.get("hover_after", 0.6)
+                for k, it in enumerate(items):
+                    iy = y1 + 4 + k * ih
+                    if iy + ih > y1 + bh: break
+                    if hov and k == pick: d.rectangle([x0 + 4, iy, x1 - 4, iy + ih - 2], fill=TH["sel"])
+                    d.text((x0 + 14, iy + 12), it, font=fcell, fill=(255, 255, 255) if (hov and k == pick) else TH["txt"])
         return Image.alpha_composite(L, TL)
 
     proc = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
