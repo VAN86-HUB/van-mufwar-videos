@@ -1,0 +1,308 @@
+{
+ "theme": "vert_excel",
+ "layout": "card",
+ "music": "marimba",
+ "cta_style": "pulse",
+ "mode": "steps",
+ "file": "Tontine_Kalamu.xlsx",
+ "hook": "Ta tontine affiche un total faux ? Cherche les doublons !",
+ "question": "Sarah et Eric sont notés 2 fois : on nettoie en 3 clics ?",
+ "headers": [
+  "Membre",
+  "Quartier",
+  "Cotisation (FC)"
+ ],
+ "col_ratio": [
+  0.42,
+  0.25,
+  0.33
+ ],
+ "right_cols": [
+  2
+ ],
+ "rows": [
+  [
+   "Mujinga Sarah",
+   "Kalamu",
+   "20 000"
+  ],
+  [
+   "Tshibangu Eric",
+   "Lemba",
+   "15 000"
+  ],
+  [
+   "Bolamba Nadine",
+   "Ngaliema",
+   "20 000"
+  ],
+  [
+   "Mujinga Sarah",
+   "Kalamu",
+   "20 000"
+  ],
+  [
+   "Kasongo Albert",
+   "Limete",
+   "10 000"
+  ],
+  [
+   "Tshibangu Eric",
+   "Lemba",
+   "15 000"
+  ],
+  [
+   "Lutete Merveille",
+   "Bandal",
+   "25 000"
+  ],
+  [
+   "Nzuzi Fiston",
+   "Matete",
+   "15 000"
+  ]
+ ],
+ "steps": [
+  {
+   "at": 7.5,
+   "text": "1. Clique dans le tableau (A1:C9)"
+  },
+  {
+   "at": 9.6,
+   "text": "2. Onglet Données › Supprimer les doublons",
+   "path": [
+    "Données",
+    "Supprimer les doublons"
+   ]
+  },
+  {
+   "at": 12.4,
+   "text": "3. Coche seulement « Membre » puis OK",
+   "path": [
+    "☑ Membre",
+    "OK"
+   ]
+  }
+ ],
+ "select": [
+  {
+   "at": 7.5,
+   "range": [
+    1,
+    0,
+    9,
+    2
+   ],
+   "until": 13.8
+  }
+ ],
+ "paints": [
+  {
+   "at": 10.4,
+   "rows": [
+    5,
+    7
+   ],
+   "fill": [
+    255,
+    199,
+    206
+   ],
+   "color": [
+    156,
+    0,
+    6
+   ],
+   "stagger": 0.3
+  },
+  {
+   "at": 13.8,
+   "rows": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "fill": [
+    226,
+    239,
+    218
+   ],
+   "color": [
+    30,
+    30,
+    30
+   ],
+   "stagger": 0.08
+  },
+  {
+   "at": 13.8,
+   "rows": [
+    8,
+    9
+   ],
+   "fill": [
+    255,
+    255,
+    255
+   ],
+   "color": [
+    30,
+    30,
+    30
+   ]
+  }
+ ],
+ "fills": [
+  {
+   "at": 13.8,
+   "cells": [
+    [
+     2,
+     0,
+     "Mujinga Sarah"
+    ],
+    [
+     2,
+     1,
+     "Kalamu"
+    ],
+    [
+     2,
+     2,
+     "20 000"
+    ],
+    [
+     3,
+     0,
+     "Tshibangu Eric"
+    ],
+    [
+     3,
+     1,
+     "Lemba"
+    ],
+    [
+     3,
+     2,
+     "15 000"
+    ],
+    [
+     4,
+     0,
+     "Bolamba Nadine"
+    ],
+    [
+     4,
+     1,
+     "Ngaliema"
+    ],
+    [
+     4,
+     2,
+     "20 000"
+    ],
+    [
+     5,
+     0,
+     "Kasongo Albert"
+    ],
+    [
+     5,
+     1,
+     "Limete"
+    ],
+    [
+     5,
+     2,
+     "10 000"
+    ],
+    [
+     6,
+     0,
+     "Lutete Merveille"
+    ],
+    [
+     6,
+     1,
+     "Bandal"
+    ],
+    [
+     6,
+     2,
+     "25 000"
+    ],
+    [
+     7,
+     0,
+     "Nzuzi Fiston"
+    ],
+    [
+     7,
+     1,
+     "Matete"
+    ],
+    [
+     7,
+     2,
+     "15 000"
+    ],
+    [
+     8,
+     0,
+     ""
+    ],
+    [
+     8,
+     1,
+     ""
+    ],
+    [
+     8,
+     2,
+     ""
+    ],
+    [
+     9,
+     0,
+     ""
+    ],
+    [
+     9,
+     1,
+     ""
+    ],
+    [
+     9,
+     2,
+     ""
+    ]
+   ],
+   "stagger": 0.02
+  }
+ ],
+ "result_caption": "2 doublons supprimés : il reste 6 vrais membres !",
+ "explain": [
+  [
+   "Avant : total gonflé à 140 000 FC",
+   "yellow"
+  ],
+  [
+   "Après : le vrai total, 105 000 FC",
+   "green"
+  ],
+  [
+   "Excel garde la 1re ligne, efface les copies",
+   "blue"
+  ],
+  [
+   "Astuce : fais une copie de la feuille avant",
+   "white"
+  ]
+ ],
+ "cta": "Abonne-toi à @bleuddymufwar : une astuce Excel à 6h et à 18h !",
+ "comment_cta": "Tu veux quelle astuce de nettoyage ?\nDis-le en commentaire !",
+ "next": "Prochaine astuce à 18h"
+}

@@ -1,0 +1,335 @@
+{
+ "theme": "terre",
+ "layout": "laptop",
+ "music": "likembe",
+ "cta_style": "bar",
+ "mode": "steps",
+ "badge": "ASTUCE DU SOIR",
+ "file": "Bulletin_Kisangani.xlsx",
+ "hook": "Défi : 3 SI imbriqués… ou UNE seule formule ?",
+ "question": "Mention de chaque élève :\nBien, Passable ou Échec ?",
+ "headers": [
+  "Élève",
+  "Note /20",
+  "Mention"
+ ],
+ "col_ratio": [
+  0.44,
+  0.22,
+  0.34
+ ],
+ "right_cols": [
+  1
+ ],
+ "rows": [
+  [
+   "Kahindo Ruth",
+   "15",
+   ""
+  ],
+  [
+   "Lokando Junior",
+   "9",
+   ""
+  ],
+  [
+   "Mpia Christelle",
+   "12",
+   ""
+  ],
+  [
+   "Bahati Emmanuel",
+   "17",
+   ""
+  ],
+  [
+   "Ngoy Sylvie",
+   "10",
+   ""
+  ],
+  [
+   "Mukendi Daniel",
+   "8",
+   ""
+  ],
+  [
+   "Furaha Ange",
+   "13",
+   ""
+  ],
+  [
+   "Ekofo Prince",
+   "14",
+   ""
+  ]
+ ],
+ "steps": [
+  {
+   "at": 7.5,
+   "text": "1. En C2, tape SI.CONDITIONS :",
+   "fx": "=SI.CONDITIONS(B2>=14;\"Bien\";B2>=10;\"Passable\";VRAI;\"Échec\")",
+   "fx_dur": 3.0
+  },
+  {
+   "at": 11.2,
+   "text": "2. Entrée, puis double-clic sur la poignée de recopie",
+   "fx": "=SI.CONDITIONS(B2>=14;\"Bien\";B2>=10;\"Passable\";VRAI;\"Échec\")",
+   "fx_dur": 0.01
+  },
+  {
+   "at": 13.6,
+   "text": "3. Toutes les mentions tombent d'un coup !",
+   "fx": "=SI.CONDITIONS(B2>=14;\"Bien\";B2>=10;\"Passable\";VRAI;\"Échec\")",
+   "fx_dur": 0.01
+  }
+ ],
+ "select": [
+  {
+   "at": 7.5,
+   "cell": [
+    2,
+    2
+   ],
+   "until": 12.2
+  },
+  {
+   "at": 12.2,
+   "range": [
+    2,
+    2,
+    9,
+    2
+   ],
+   "until": 15.5
+  }
+ ],
+ "fills": [
+  {
+   "at": 11.2,
+   "cells": [
+    [
+     2,
+     2,
+     "Bien"
+    ]
+   ]
+  },
+  {
+   "at": 12.4,
+   "cells": [
+    [
+     3,
+     2,
+     "Échec"
+    ],
+    [
+     4,
+     2,
+     "Passable"
+    ],
+    [
+     5,
+     2,
+     "Bien"
+    ],
+    [
+     6,
+     2,
+     "Passable"
+    ],
+    [
+     7,
+     2,
+     "Échec"
+    ],
+    [
+     8,
+     2,
+     "Passable"
+    ],
+    [
+     9,
+     2,
+     "Bien"
+    ]
+   ],
+   "stagger": 0.12
+  }
+ ],
+ "paints": [
+  {
+   "at": 13.6,
+   "rows": [
+    2
+   ],
+   "cols": [
+    2
+   ],
+   "fill": [
+    198,
+    239,
+    206
+   ],
+   "color": [
+    0,
+    97,
+    0
+   ]
+  },
+  {
+   "at": 13.719999999999999,
+   "rows": [
+    3
+   ],
+   "cols": [
+    2
+   ],
+   "fill": [
+    255,
+    199,
+    206
+   ],
+   "color": [
+    156,
+    0,
+    6
+   ]
+  },
+  {
+   "at": 13.84,
+   "rows": [
+    4
+   ],
+   "cols": [
+    2
+   ],
+   "fill": [
+    255,
+    235,
+    156
+   ],
+   "color": [
+    156,
+    87,
+    0
+   ]
+  },
+  {
+   "at": 13.959999999999999,
+   "rows": [
+    5
+   ],
+   "cols": [
+    2
+   ],
+   "fill": [
+    198,
+    239,
+    206
+   ],
+   "color": [
+    0,
+    97,
+    0
+   ]
+  },
+  {
+   "at": 14.08,
+   "rows": [
+    6
+   ],
+   "cols": [
+    2
+   ],
+   "fill": [
+    255,
+    235,
+    156
+   ],
+   "color": [
+    156,
+    87,
+    0
+   ]
+  },
+  {
+   "at": 14.2,
+   "rows": [
+    7
+   ],
+   "cols": [
+    2
+   ],
+   "fill": [
+    255,
+    199,
+    206
+   ],
+   "color": [
+    156,
+    0,
+    6
+   ]
+  },
+  {
+   "at": 14.32,
+   "rows": [
+    8
+   ],
+   "cols": [
+    2
+   ],
+   "fill": [
+    255,
+    235,
+    156
+   ],
+   "color": [
+    156,
+    87,
+    0
+   ]
+  },
+  {
+   "at": 14.44,
+   "rows": [
+    9
+   ],
+   "cols": [
+    2
+   ],
+   "fill": [
+    198,
+    239,
+    206
+   ],
+   "color": [
+    0,
+    97,
+    0
+   ]
+  }
+ ],
+ "result_caption": "8 mentions en 1 formule, sans SI imbriqués !",
+ "explain": [
+  [
+   "Excel teste les conditions dans l'ordre",
+   "yellow"
+  ],
+  [
+   "La 1re condition VRAIE donne la mention",
+   "blue"
+  ],
+  [
+   "VRAI;\"Échec\" = « sinon » pour tout le reste",
+   "green"
+  ],
+  [
+   "Dispo dans Excel 2019, 2021 et 365",
+   "white"
+  ]
+ ],
+ "cta": "Abonne-toi à @bleuddymufwar pour progresser chaque jour sur Excel !",
+ "comment_cta": "SI.CONDITIONS ou SI imbriqués ?\nRéponds en commentaire !",
+ "next": "Prochaine astuce demain à 6h"
+}

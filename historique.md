@@ -22,3 +22,5 @@ Règle : pas de famille déjà utilisée dans les 6 dernières vidéos ; pas le 
 | 2026-11-04 | 18h | MFC avec formule – factures échues ET non payées en rouge (=ET($C2<AUJOURDHUI();$D2="Non")) | b | neon (laptop) | electro | videos/2026-11-04-soir.mp4 |
 | 2026-11-05 | 6h | Liste déroulante (Validation des données) – feuille de présence Présent/Absent/Retard | c | violet (banner) | percussions | videos/2026-11-05-matin.mp4 |
 | 2026-11-05 | 18h | TRIER(FILTRE()) – liste des articles à commander (stock < 10) triée par urgence | j | papier (classic) | piano | videos/2026-11-05-soir.mp4 |
+| 2026-11-06 | 6h | Supprimer les doublons (Données › Supprimer les doublons) – membres en double dans une tontine à Kalamu | l | vert_excel (card) | marimba | videos/2026-11-06-matin.mp4 |
+| 2026-11-06 | 18h | SI.CONDITIONS – mention Bien/Passable/Échec des élèves (Kisangani), à la place des SI imbriqués | i | terre (laptop) | likembe | videos/2026-11-06-soir.mp4 |
