@@ -16,3 +16,4 @@ Vidéos TikTok « Astuce Excel du jour » de @bleuddymufwar (Ingénieur Van MUFW
 - Champs facultatifs pour forcer : `"music"` (lofi, lofi_nuit, rumba, electro, piano, marimba, likembe, percussions), `"layout"` (classic, banner, card, laptop), `"cta_style"` (pulse, card, bar).
 - `"mode": "steps"` pour les astuces sans formule (raccourcis, menus, mise en forme) : `steps`, `select`, `fills`, `paints` — voir l'en-tête de `outils/render.py`.
 - Sans `"theme"`, les anciennes specs gardent le look d'origine.
+- Ne pas lancer deux rendus en parallèle : `render.py` écrit `silent.mp4` et `music.wav` dans le dossier courant.

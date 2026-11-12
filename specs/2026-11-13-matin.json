@@ -1,0 +1,185 @@
+{
+ "theme": "bleu_nuit",
+ "layout": "banner",
+ "music": "lofi_nuit",
+ "cta_style": "card",
+ "mode": "steps",
+ "badge": "ASTUCE DU MATIN",
+ "file": "Loyers_Lubumbashi.xlsx",
+ "hook": "Tu tapes « FC » à la main ? Excel ne sait plus calculer !",
+ "question": "Afficher « 150 000 FC »\net garder un vrai nombre ?",
+ "headers": [
+  "Locataire",
+  "Commune",
+  "Loyer"
+ ],
+ "col_ratio": [
+  0.4,
+  0.28,
+  0.32
+ ],
+ "right_cols": [
+  2
+ ],
+ "rows": [
+  [
+   "Mwamba Patrick",
+   "Kampemba",
+   "150000"
+  ],
+  [
+   "Kabila Josée",
+   "Katuba",
+   "85000"
+  ],
+  [
+   "Ilunga Cédric",
+   "Kenya",
+   "120000"
+  ],
+  [
+   "Mbuyi Grâce",
+   "Annexe",
+   "200000"
+  ],
+  [
+   "Banza Olivier",
+   "Rwashi",
+   "95000"
+  ],
+  [
+   "Kalenga Rachel",
+   "Lubumbashi",
+   "175000"
+  ],
+  [
+   "Mutombo Serge",
+   "Kamalondo",
+   "60000"
+  ],
+  [
+   "TOTAL",
+   "",
+   "885000"
+  ]
+ ],
+ "steps": [
+  {
+   "at": 7.5,
+   "text": "1. Sélectionne les loyers (C2:C9)"
+  },
+  {
+   "at": 9.6,
+   "text": "2. Ouvre Format de cellule :",
+   "keys": [
+    "Ctrl",
+    "1"
+   ]
+  },
+  {
+   "at": 12.0,
+   "text": "3. Personnalisée, tape ce code, OK",
+   "path": [
+    "Personnalisée",
+    "# ##0 \"FC\"",
+    "OK"
+   ]
+  }
+ ],
+ "select": [
+  {
+   "at": 7.5,
+   "range": [
+    2,
+    2,
+    9,
+    2
+   ],
+   "until": 15.5
+  }
+ ],
+ "fills": [
+  {
+   "at": 13.8,
+   "cells": [
+    [
+     2,
+     2,
+     "150 000 FC"
+    ],
+    [
+     3,
+     2,
+     "85 000 FC"
+    ],
+    [
+     4,
+     2,
+     "120 000 FC"
+    ],
+    [
+     5,
+     2,
+     "200 000 FC"
+    ],
+    [
+     6,
+     2,
+     "95 000 FC"
+    ],
+    [
+     7,
+     2,
+     "175 000 FC"
+    ],
+    [
+     8,
+     2,
+     "60 000 FC"
+    ],
+    [
+     9,
+     2,
+     "885 000 FC"
+    ]
+   ],
+   "stagger": 0.1
+  }
+ ],
+ "paints": [
+  {
+   "at": 14.6,
+   "rows": [
+    9
+   ],
+   "fill": [
+    255,
+    236,
+    179
+   ],
+   "color": [
+    120,
+    60,
+    0
+   ]
+  }
+ ],
+ "result_caption": "Lisible ET toujours calculable !",
+ "explain": [
+  [
+   "# ##0 = espace des milliers",
+   "yellow"
+  ],
+  [
+   "La cellule reste un vrai nombre",
+   "blue"
+  ],
+  [
+   "Le TOTAL marche : 885 000 FC",
+   "green"
+  ]
+ ],
+ "cta": "Abonne-toi à @bleuddymufwar : une astuce Excel à 6h et à 18h !",
+ "comment_cta": "Tu comptes en FC ou en USD ?\nDis-le en commentaire !",
+ "next": "Prochaine astuce à 18h"
+}

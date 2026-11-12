@@ -1,0 +1,210 @@
+{
+ "theme": "degrade",
+ "layout": "classic",
+ "music": "rumba",
+ "cta_style": "bar",
+ "mode": "steps",
+ "badge": "ASTUCE DU SOIR",
+ "file": "Chantier_Goma.xlsx",
+ "hook": "Erreur fréquente : compter les samedis et dimanches dans la paie !",
+ "question": "Combien de jours de travail\npour chaque ouvrier du chantier ?",
+ "headers": [
+  "Ouvrier",
+  "Début",
+  "Fin",
+  "Jours"
+ ],
+ "col_ratio": [
+  0.32,
+  0.25,
+  0.25,
+  0.18
+ ],
+ "right_cols": [
+  1,
+  2,
+  3
+ ],
+ "rows": [
+  [
+   "Kambale Josué",
+   "02/11/2026",
+   "20/11/2026",
+   ""
+  ],
+  [
+   "Masika Esther",
+   "09/11/2026",
+   "27/11/2026",
+   ""
+  ],
+  [
+   "Paluku David",
+   "04/11/2026",
+   "13/11/2026",
+   ""
+  ],
+  [
+   "Kavira Neema",
+   "16/11/2026",
+   "04/12/2026",
+   ""
+  ],
+  [
+   "Muhindo Elie",
+   "02/11/2026",
+   "30/11/2026",
+   ""
+  ],
+  [
+   "Sikuli Aline",
+   "11/11/2026",
+   "25/11/2026",
+   ""
+  ],
+  [
+   "Bahati Moïse",
+   "18/11/2026",
+   "26/11/2026",
+   ""
+  ]
+ ],
+ "steps": [
+  {
+   "at": 7.5,
+   "text": "1. En D2, tape :",
+   "fx": "=NB.JOURS.OUVRES(B2;C2)",
+   "fx_dur": 2.6
+  },
+  {
+   "at": 10.8,
+   "text": "2. Entrée, puis double-clic sur la poignée",
+   "fx": "=NB.JOURS.OUVRES(B2;C2)",
+   "fx_dur": 0.01
+  },
+  {
+   "at": 13.4,
+   "text": "3. Week-ends retirés automatiquement !",
+   "fx": "=NB.JOURS.OUVRES(B2;C2)",
+   "fx_dur": 0.01
+  }
+ ],
+ "select": [
+  {
+   "at": 7.5,
+   "cell": [
+    2,
+    3
+   ],
+   "until": 11.8
+  },
+  {
+   "at": 11.8,
+   "range": [
+    2,
+    3,
+    8,
+    3
+   ],
+   "until": 15.5
+  }
+ ],
+ "fills": [
+  {
+   "at": 10.8,
+   "cells": [
+    [
+     2,
+     3,
+     "15"
+    ]
+   ]
+  },
+  {
+   "at": 12.0,
+   "cells": [
+    [
+     3,
+     3,
+     "15"
+    ],
+    [
+     4,
+     3,
+     "8"
+    ],
+    [
+     5,
+     3,
+     "15"
+    ],
+    [
+     6,
+     3,
+     "21"
+    ],
+    [
+     7,
+     3,
+     "11"
+    ],
+    [
+     8,
+     3,
+     "7"
+    ]
+   ],
+   "stagger": 0.12
+  }
+ ],
+ "paints": [
+  {
+   "at": 13.4,
+   "rows": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "cols": [
+    3
+   ],
+   "fill": [
+    255,
+    240,
+    180
+   ],
+   "color": [
+    150,
+    40,
+    120
+   ],
+   "stagger": 0.08
+  }
+ ],
+ "result_caption": "Du lundi au vendredi, sans compter à la main !",
+ "explain": [
+  [
+   "Ex. : Kambale, 02/11 → 20/11 = 15 jours",
+   "yellow"
+  ],
+  [
+   "Début et fin sont comptés tous les deux",
+   "blue"
+  ],
+  [
+   "3e argument : tes jours fériés (ex. 30/06)",
+   "green"
+  ],
+  [
+   "Ensuite : Jours × tarif = la paie juste",
+   "white"
+  ]
+ ],
+ "cta": "Abonne-toi à @bleuddymufwar pour maîtriser Excel !",
+ "comment_cta": "Tu calcules la paie comment ?\nRaconte en commentaire !",
+ "next": "Prochaine astuce demain à 6h"
+}
