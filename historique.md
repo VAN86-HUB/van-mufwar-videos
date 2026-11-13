@@ -26,3 +26,5 @@ Règle : pas de famille déjà utilisée dans les 6 dernières vidéos ; pas le 
 | 2026-11-06 | 18h | SI.CONDITIONS – mention Bien/Passable/Échec des élèves (Kisangani), à la place des SI imbriqués | i | terre (laptop) | likembe | videos/2026-11-06-soir.mp4 |
 | 2026-11-13 | 6h | Format personnalisé `# ##0 "FC"` (Ctrl+1) – afficher « FC » sans casser les calculs (loyers à Lubumbashi) | m | bleu_nuit (banner) | lofi_nuit | videos/2026-11-13-matin.mp4 |
 | 2026-11-13 | 18h | NB.JOURS.OUVRES – jours de travail des ouvriers d'un chantier à Goma (week-ends exclus) | h | degrade (classic) | rumba | videos/2026-11-13-soir.mp4 |
+| 2026-11-14 | 6h | Ctrl+; (date du jour) et Ctrl+: (heure) – valeurs figées dans un carnet de carburant à Matadi | a | epure (card) | marimba | videos/2026-11-14-matin.mp4 |
+| 2026-11-14 | 18h | INDEX/EQUIV – chercher à gauche : l'élève du matricule EL-207 (inscriptions à Mbandaka) | f | neon (laptop) | percussions | videos/2026-11-14-soir.mp4 |

@@ -1,0 +1,162 @@
+{
+ "theme": "epure",
+ "layout": "card",
+ "music": "marimba",
+ "cta_style": "pulse",
+ "mode": "steps",
+ "badge": "RACCOURCI DU MATIN",
+ "file": "Carburant_Matadi.xlsx",
+ "hook": "Tu tapes encore la date et l'heure à la main ?",
+ "question": "Noter l'heure du plein\nen 1 seconde chrono ?",
+ "headers": [
+  "Véhicule",
+  "Litres",
+  "Date",
+  "Heure"
+ ],
+ "col_ratio": [
+  0.34,
+  0.16,
+  0.28,
+  0.22
+ ],
+ "right_cols": [
+  1,
+  2,
+  3
+ ],
+ "rows": [
+  [
+   "Toyota Hilux",
+   "45",
+   "10/11/2026",
+   "07:15"
+  ],
+  [
+   "Camion Fuso",
+   "120",
+   "11/11/2026",
+   "09:40"
+  ],
+  [
+   "Moto TVS",
+   "6",
+   "12/11/2026",
+   "12:05"
+  ],
+  [
+   "Bus Hiace",
+   "60",
+   "13/11/2026",
+   "16:30"
+  ],
+  [
+   "Land Cruiser",
+   "70",
+   "",
+   ""
+  ]
+ ],
+ "steps": [
+  {
+   "at": 7.5,
+   "text": "1. Clique en C6 et appuie sur :",
+   "keys": [
+    "Ctrl",
+    ";"
+   ]
+  },
+  {
+   "at": 10.4,
+   "text": "2. Clique en D6 pour l'heure :",
+   "keys": [
+    "Ctrl",
+    ":"
+   ]
+  },
+  {
+   "at": 13.2,
+   "text": "3. Entrée. C'est noté, et ça ne bouge plus !"
+  }
+ ],
+ "select": [
+  {
+   "at": 7.5,
+   "cell": [
+    6,
+    2
+   ],
+   "until": 10.4
+  },
+  {
+   "at": 10.4,
+   "cell": [
+    6,
+    3
+   ],
+   "until": 13.2
+  }
+ ],
+ "fills": [
+  {
+   "at": 8.9,
+   "cells": [
+    [
+     6,
+     2,
+     "14/11/2026"
+    ]
+   ]
+  },
+  {
+   "at": 11.8,
+   "cells": [
+    [
+     6,
+     3,
+     "08:20"
+    ]
+   ]
+  }
+ ],
+ "paints": [
+  {
+   "at": 13.6,
+   "rows": [
+    6
+   ],
+   "fill": [
+    219,
+    234,
+    254
+   ],
+   "color": [
+    29,
+    78,
+    216
+   ]
+  }
+ ],
+ "result_caption": "Date et heure en 2 raccourcis !",
+ "explain": [
+  [
+   "Ctrl + ; → la date du jour",
+   "yellow"
+  ],
+  [
+   "Ctrl + : → l'heure (QWERTY : Ctrl+Maj+;)",
+   "blue"
+  ],
+  [
+   "Valeur figée, pas comme AUJOURDHUI()",
+   "green"
+  ],
+  [
+   "Parfait : caisse, livraisons, carburant…",
+   "white"
+  ]
+ ],
+ "cta": "Abonne-toi : 1 astuce Excel à 6h et 18h !",
+ "comment_cta": "Quel raccourci veux-tu demain ?\nDis-le en commentaire !",
+ "next": "Prochaine astuce à 18h"
+}

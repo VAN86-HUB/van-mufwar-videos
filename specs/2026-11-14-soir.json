@@ -1,0 +1,110 @@
+{
+ "theme": "neon",
+ "layout": "laptop",
+ "music": "percussions",
+ "cta_style": "bar",
+ "badge": "ASTUCE DU SOIR",
+ "file": "Inscriptions_Mbandaka.xlsx",
+ "hook": "Erreur fréquente : RECHERCHEV ne sait pas chercher à gauche !",
+ "question": "Quel élève porte le matricule EL-207 ?",
+ "headers": [
+  "Élève",
+  "Matricule",
+  "Classe",
+  "Frais (USD)"
+ ],
+ "col_ratio": [
+  0.3,
+  0.33,
+  0.14,
+  0.23
+ ],
+ "right_cols": [
+  3
+ ],
+ "rows": [
+  [
+   "Bokele Ruth",
+   "EL-201",
+   "6e A",
+   "120"
+  ],
+  [
+   "Mpia Junior",
+   "EL-202",
+   "5e B",
+   "95"
+  ],
+  [
+   "Ikolo Sarah",
+   "EL-203",
+   "6e A",
+   "120"
+  ],
+  [
+   "Lokuli Daniel",
+   "EL-204",
+   "4e C",
+   "150"
+  ],
+  [
+   "Bomboko Ida",
+   "EL-205",
+   "5e B",
+   "95"
+  ],
+  [
+   "Nkoy Patrick",
+   "EL-206",
+   "4e C",
+   "150"
+  ],
+  [
+   "Lisanga Ève",
+   "EL-207",
+   "6e B",
+   "120"
+  ],
+  [
+   "Mbula Josué",
+   "EL-208",
+   "5e A",
+   "95"
+  ]
+ ],
+ "criteria": [
+  [
+   1,
+   "EL-207"
+  ]
+ ],
+ "sum_col": 0,
+ "label_col": 0,
+ "result_label": "Élève :",
+ "result_col": 1,
+ "formula": "=INDEX(A2:A9;EQUIV(\"EL-207\";B2:B9;0))",
+ "typing_caption": "La formule : INDEX + EQUIV",
+ "result": "Lisanga Ève",
+ "result_caption": "Trouvé, même à gauche !",
+ "explain": [
+  [
+   "EQUIV → la position de EL-207 (7)",
+   "yellow"
+  ],
+  [
+   "0 → correspondance exacte",
+   "blue"
+  ],
+  [
+   "INDEX → le nom à cette position",
+   "green"
+  ],
+  [
+   "Marche dans tous les sens !",
+   "white"
+  ]
+ ],
+ "cta": "Abonne-toi à @bleuddymufwar : une astuce Excel chaque jour à 6h et 18h !",
+ "comment_cta": "Team RECHERCHEV ou team INDEX/EQUIV ?\nRéponds en commentaire !",
+ "next": "Prochaine astuce demain à 6h"
+}
