@@ -28,3 +28,5 @@ Règle : pas de famille déjà utilisée dans les 6 dernières vidéos ; pas le 
 | 2026-11-13 | 18h | NB.JOURS.OUVRES – jours de travail des ouvriers d'un chantier à Goma (week-ends exclus) | h | degrade (classic) | rumba | videos/2026-11-13-soir.mp4 |
 | 2026-11-14 | 6h | Ctrl+; (date du jour) et Ctrl+: (heure) – valeurs figées dans un carnet de carburant à Matadi | a | epure (card) | marimba | videos/2026-11-14-matin.mp4 |
 | 2026-11-14 | 18h | INDEX/EQUIV – chercher à gauche : l'élève du matricule EL-207 (inscriptions à Mbandaka) | f | neon (laptop) | percussions | videos/2026-11-14-soir.mp4 |
+| 2026-11-15 | 6h | MFC « Valeurs en double » – repérer les paiements Mobile Money encaissés 2 fois (pharmacie à Bunia) | b | soleil (banner) | piano | videos/2026-11-15-matin.mp4 |
+| 2026-11-15 | 18h | TEXTE + & – message « Livré à … le 18/11/2026 » sans que la date devienne 46344 (livraisons à Kananga) | g | violet (classic) | electro | videos/2026-11-15-soir.mp4 |

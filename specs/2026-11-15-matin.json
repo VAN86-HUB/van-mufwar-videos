@@ -1,0 +1,146 @@
+{
+ "theme": "soleil",
+ "layout": "banner",
+ "music": "piano",
+ "cta_style": "bar",
+ "mode": "steps",
+ "badge": "ASTUCE EXPRESS DU MATIN",
+ "file": "MobileMoney_Pharmacie_Bunia.xlsx",
+ "hook": "Défi : trouve les paiements encaissés 2 fois… en 3 secondes !",
+ "question": "Des références en double cachées dans ta liste ?",
+ "headers": [
+  "Réf. paiement",
+  "Client",
+  "Montant (FC)"
+ ],
+ "col_ratio": [
+  0.33,
+  0.37,
+  0.3
+ ],
+ "right_cols": [
+  2
+ ],
+ "rows": [
+  [
+   "MP-4512",
+   "Alingi Sarah",
+   "15 000"
+  ],
+  [
+   "MP-4513",
+   "Dhedonga Paul",
+   "8 500"
+  ],
+  [
+   "MP-4518",
+   "Ngabu Christine",
+   "22 000"
+  ],
+  [
+   "MP-4513",
+   "Dhedonga Paul",
+   "8 500"
+  ],
+  [
+   "MP-4520",
+   "Mave Joseph",
+   "5 000"
+  ],
+  [
+   "MP-4518",
+   "Ngabu Christine",
+   "22 000"
+  ],
+  [
+   "MP-4521",
+   "Lonema Jean",
+   "12 000"
+  ]
+ ],
+ "steps": [
+  {
+   "at": 7.5,
+   "text": "1. Sélectionne la colonne A (A2:A8)"
+  },
+  {
+   "at": 9.6,
+   "text": "2. Va dans :",
+   "path": [
+    "Accueil",
+    "Mise en forme conditionnelle"
+   ]
+  },
+  {
+   "at": 11.6,
+   "text": "3. Puis :",
+   "path": [
+    "Règles de mise en surbrillance",
+    "Valeurs en double",
+    "OK"
+   ]
+  },
+  {
+   "at": 13.8,
+   "text": "Les doublons s'allument en rouge !"
+  }
+ ],
+ "select": [
+  {
+   "at": 7.5,
+   "range": [
+    2,
+    0,
+    8,
+    0
+   ]
+  }
+ ],
+ "paints": [
+  {
+   "at": 13.8,
+   "rows": [
+    3,
+    5,
+    4,
+    7
+   ],
+   "cols": [
+    0
+   ],
+   "fill": [
+    255,
+    199,
+    206
+   ],
+   "color": [
+    156,
+    0,
+    6
+   ],
+   "stagger": 0.25
+  }
+ ],
+ "result_caption": "2 paiements en double repérés !",
+ "explain": [
+  [
+   "MP-4513 et MP-4518 apparaissent 2 fois",
+   "yellow"
+  ],
+  [
+   "La couleur se met à jour toute seule",
+   "blue"
+  ],
+  [
+   "Ajoute une ligne : la règle la vérifie aussi",
+   "green"
+  ],
+  [
+   "Idéal pour reçus, factures, matricules",
+   "white"
+  ]
+ ],
+ "cta": "Abonne-toi à @bleuddymufwar : une astuce Excel à 6h et 18h !",
+ "comment_cta": "Tu as déjà payé une facture 2 fois ?\nRaconte en commentaire !",
+ "next": "Prochaine astuce à 18h"
+}

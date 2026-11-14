@@ -1,0 +1,99 @@
+{
+ "theme": "violet",
+ "layout": "classic",
+ "music": "electro",
+ "cta_style": "card",
+ "badge": "ASTUCE DU SOIR",
+ "file": "Livraisons_Kananga.xlsx",
+ "hook": "Ta date devient 46344 dans ton message ? Erreur fréquente !",
+ "question": "Écrire « Livré à Ilunga Marc le 18/11/2026 » automatiquement ?",
+ "headers": [
+  "Client",
+  "Quartier",
+  "Date livraison",
+  "Prix (USD)"
+ ],
+ "col_ratio": [
+  0.29,
+  0.22,
+  0.27,
+  0.22
+ ],
+ "right_cols": [
+  2,
+  3
+ ],
+ "rows": [
+  [
+   "Tshibola Anne",
+   "Katoka",
+   "12/11/2026",
+   "45"
+  ],
+  [
+   "Mukendi Paul",
+   "Nganza",
+   "14/11/2026",
+   "120"
+  ],
+  [
+   "Kanku Rose",
+   "Ndesha",
+   "17/11/2026",
+   "80"
+  ],
+  [
+   "Ilunga Marc",
+   "Lukonga",
+   "18/11/2026",
+   "65"
+  ],
+  [
+   "Mbuyi Esther",
+   "Kananga",
+   "20/11/2026",
+   "150"
+  ],
+  [
+   "Kalala David",
+   "Katoka",
+   "21/11/2026",
+   "30"
+  ]
+ ],
+ "criteria": [
+  [
+   0,
+   "Ilunga Marc"
+  ]
+ ],
+ "sum_col": 2,
+ "label_col": 0,
+ "result_label": "",
+ "result_col": 3,
+ "formula": "=\"Livré à \"&A5&\" le \"&TEXTE(C5;\"jj/mm/aaaa\")",
+ "typing_caption": "La formule avec TEXTE :",
+ "result": "Livré à Ilunga Marc le 18/11/2026",
+ "result_caption": "La date reste une vraie date !",
+ "explain": [
+  [
+   "Sans TEXTE : « …le 46344 » (le n° de série)",
+   "yellow"
+  ],
+  [
+   "& colle les morceaux de texte ensemble",
+   "blue"
+  ],
+  [
+   "TEXTE(C5;\"jj/mm/aaaa\") garde le format date",
+   "green"
+  ],
+  [
+   "Essaie aussi \"jjjj jj mmmm\" → « mercredi 18 novembre »",
+   "white"
+  ]
+ ],
+ "cta": "Abonne-toi à @bleuddymufwar : une astuce Excel chaque jour à 6h et 18h !",
+ "comment_cta": "Quel message veux-tu automatiser ?\nÉcris-le en commentaire !",
+ "next": "Prochaine astuce demain à 6h"
+}
