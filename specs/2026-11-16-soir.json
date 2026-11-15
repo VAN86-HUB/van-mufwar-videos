@@ -1,0 +1,100 @@
+{
+ "theme": "terre",
+ "layout": "laptop",
+ "music": "rumba",
+ "cta_style": "card",
+ "badge": "ASTUCE DU SOIR • NIVEAU +",
+ "file": "Peche_Kalemie.xlsx",
+ "hook": "Avant / après : adieu le #DIV/0! dans tes rapports",
+ "question": "Furaha n'est pas sorti en mer : comment éviter l'erreur ?",
+ "headers": [
+  "Pêcheur",
+  "Kg pêchés",
+  "Sorties",
+  "Kg/sortie"
+ ],
+ "col_ratio": [
+  0.3,
+  0.23,
+  0.2,
+  0.27
+ ],
+ "right_cols": [
+  1,
+  2,
+  3
+ ],
+ "rows": [
+  [
+   "Amisi Jean",
+   "180",
+   "6",
+   "30"
+  ],
+  [
+   "Bahati Esther",
+   "96",
+   "4",
+   "24"
+  ],
+  [
+   "Mwamba Pierre",
+   "210",
+   "7",
+   "30"
+  ],
+  [
+   "Furaha Grâce",
+   "0",
+   "0",
+   "#DIV/0!"
+  ],
+  [
+   "Kasongo Eric",
+   "135",
+   "5",
+   "27"
+  ],
+  [
+   "Neema Ruth",
+   "88",
+   "4",
+   "22"
+  ]
+ ],
+ "criteria": [
+  [
+   0,
+   "Furaha Grâce"
+  ]
+ ],
+ "sum_col": 3,
+ "label_col": 0,
+ "result_label": "Avec SIERREUR",
+ "result_col": 3,
+ "formula": "=SIERREUR(B5/C5;\"Pas de sortie\")",
+ "typing_caption": "On enveloppe la division dans SIERREUR :",
+ "result": "Pas de sortie",
+ "result_caption": "Plus d'erreur, un message clair !",
+ "explain": [
+  [
+   "B5/C5 avec 0 sortie = #DIV/0!",
+   "yellow"
+  ],
+  [
+   "SIERREUR(calcul;valeur si erreur)",
+   "blue"
+  ],
+  [
+   "Mets 0 ou \"\" pour une cellule vide",
+   "green"
+  ],
+  [
+   "Marche aussi avec RECHERCHEX et RECHERCHEV (#N/A)",
+   "white"
+  ]
+ ],
+ "cta": "Abonne-toi pour une astuce Excel chaque jour à 6h et 18h !",
+ "comment_cta": "Quelle erreur Excel te fatigue le plus ?\nÉcris-la en commentaire !",
+ "next": "Prochaine astuce demain à 6h"
+}

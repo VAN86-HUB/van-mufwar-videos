@@ -131,6 +131,15 @@ THEMES = {
         cap_anim="slide", win_bar=(150, 70, 20), sel=(200, 100, 20), row1=(255, 240, 215), layout="laptop",
         entry="slide_up", result_style="stamp", cta_style="bar", music="likembe", cta_bg=(60, 25, 8),
         cta_btn=(255, 190, 60)),
+    "lagon": dict(
+        bg=("vgrad", (0, 150, 160), (0, 62, 92)), pattern="waves", pattern_color=(255, 255, 255, 30),
+        badge_bg=(255, 214, 102), badge_fg=(0, 60, 80), badge_text="ASTUCE RAPIDE", font="inter",
+        cap_fg=(255, 255, 255), accent=(255, 214, 102), accent2=(160, 240, 255), accent3=(180, 255, 200),
+        cap_style="plain", cap_anim="typewriter", win_bar=(0, 110, 130), sel=(0, 150, 170), row1=(220, 245, 248),
+        res_fill=(204, 245, 240), res_txt=(0, 100, 110), key_bg=(255, 255, 255), key_fg=(0, 70, 90),
+        key_shadow=(0, 90, 110), path_bg=(255, 214, 102), path_fg=(0, 60, 80), layout="card", entry="drop",
+        result_style="glow", cta_style="pulse", music="marimba", cta_bg=(0, 60, 85), cta_btn=(255, 90, 95),
+        sig_fg=(255, 255, 255, 220)),
 }
 
 def get_theme(name):
@@ -260,6 +269,10 @@ def build_background(th):
             for a in range(0, 180, 12):
                 a0, a1 = math.radians(a), math.radians(a + 6); R = 3000
                 d.polygon([(cx, cy), (cx + R * math.cos(a0), cy + R * math.sin(a0)), (cx + R * math.cos(a1), cy + R * math.sin(a1))], fill=pc)
+        elif p == "waves":
+            for y0 in range(40, H, 90):
+                pts = [(x, y0 + 18 * math.sin(x / 70 + y0 / 50)) for x in range(0, W + 20, 20)]
+                d.line(pts, fill=pc, width=4)
         elif p == "kente":
             for y in range(0, H, 160):
                 d.rectangle([0, y, W, y + 18], fill=pc)

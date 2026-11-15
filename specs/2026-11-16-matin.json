@@ -1,0 +1,213 @@
+{
+ "theme": "lagon",
+ "layout": "card",
+ "music": "marimba",
+ "cta_style": "pulse",
+ "mode": "steps",
+ "badge": "ASTUCE RAPIDE DU MATIN",
+ "file": "Stock_Boutique_Kolwezi.xlsx",
+ "hook": "Tu remplis encore les cases vides une par une ?",
+ "question": "Ta colonne « Rayon » est à moitié vide ? Remplis-la en 4 gestes !",
+ "headers": [
+  "Rayon",
+  "Article",
+  "Stock"
+ ],
+ "col_ratio": [
+  0.34,
+  0.44,
+  0.22
+ ],
+ "right_cols": [
+  2
+ ],
+ "rows": [
+  [
+   "Boissons",
+   "Coca 33 cl",
+   "48"
+  ],
+  [
+   "",
+   "Fanta orange",
+   "36"
+  ],
+  [
+   "",
+   "Eau minérale 1,5 L",
+   "60"
+  ],
+  [
+   "Alimentation",
+   "Riz 25 kg",
+   "12"
+  ],
+  [
+   "",
+   "Huile 5 L",
+   "20"
+  ],
+  [
+   "",
+   "Sucre 1 kg",
+   "45"
+  ],
+  [
+   "Hygiène",
+   "Savon de ménage",
+   "70"
+  ],
+  [
+   "",
+   "Dentifrice",
+   "25"
+  ]
+ ],
+ "steps": [
+  {
+   "at": 7.5,
+   "text": "1. Sélectionne la colonne A (A2:A9)"
+  },
+  {
+   "at": 9.4,
+   "text": "2. Appuie sur F5, puis :",
+   "path": [
+    "Cellules…",
+    "Cellules vides",
+    "OK"
+   ]
+  },
+  {
+   "at": 12.0,
+   "text": "3. Tape =A2 (la cellule du dessus)",
+   "fx": "=A2",
+   "fx_dur": 0.8
+  },
+  {
+   "at": 13.4,
+   "text": "4. Valide avec :",
+   "keys": [
+    "Ctrl",
+    "Entrée"
+   ]
+  }
+ ],
+ "select": [
+  {
+   "at": 7.5,
+   "range": [
+    2,
+    0,
+    9,
+    0
+   ]
+  },
+  {
+   "at": 11.0,
+   "cell": [
+    3,
+    0
+   ]
+  }
+ ],
+ "paints": [
+  {
+   "at": 10.8,
+   "rows": [
+    3,
+    4,
+    6,
+    7,
+    9
+   ],
+   "cols": [
+    0
+   ],
+   "fill": [
+    190,
+    232,
+    240
+   ],
+   "stagger": 0.08
+  },
+  {
+   "at": 13.9,
+   "rows": [
+    3,
+    4,
+    6,
+    7,
+    9
+   ],
+   "cols": [
+    0
+   ],
+   "fill": [
+    198,
+    239,
+    206
+   ],
+   "color": [
+    0,
+    97,
+    0
+   ],
+   "stagger": 0.12
+  }
+ ],
+ "fills": [
+  {
+   "at": 13.9,
+   "cells": [
+    [
+     3,
+     0,
+     "Boissons"
+    ],
+    [
+     4,
+     0,
+     "Boissons"
+    ],
+    [
+     6,
+     0,
+     "Alimentation"
+    ],
+    [
+     7,
+     0,
+     "Alimentation"
+    ],
+    [
+     9,
+     0,
+     "Hygiène"
+    ]
+   ],
+   "stagger": 0.12
+  }
+ ],
+ "result_caption": "5 cases vides remplies d'un coup !",
+ "explain": [
+  [
+   "Chaque case vide reprend la valeur du dessus",
+   "yellow"
+  ],
+  [
+   "Ctrl+Entrée = même saisie dans toute la sélection",
+   "blue"
+  ],
+  [
+   "Puis Copier › Collage spécial › Valeurs",
+   "green"
+  ],
+  [
+   "Parfait avant un tri, un filtre ou un TCD",
+   "white"
+  ]
+ ],
+ "cta": "Abonne-toi à @bleuddymufwar : une astuce Excel à 6h et 18h !",
+ "comment_cta": "Quelle tâche répétitive veux-tu éliminer ?\nDis-le en commentaire !",
+ "next": "Prochaine astuce à 18h"
+}
