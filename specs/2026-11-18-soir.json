@@ -1,0 +1,221 @@
+{
+ "theme": "bleu_nuit",
+ "layout": "classic",
+ "music": "percussions",
+ "cta_style": "pulse",
+ "mode": "steps",
+ "badge": "FORMULE DYNAMIQUE DU SOIR",
+ "file": "Prets_Bibliotheque_MbujiMayi.xlsx",
+ "hook": "Erreur fréquente : recopier une liste à la main pour enlever les doublons",
+ "question": "Quels élèves ont emprunté un livre ? Kabeya apparaît 3 fois…",
+ "headers": [
+  "Date",
+  "Élève",
+  "Livre",
+  "Lecteurs"
+ ],
+ "col_ratio": [
+  0.15,
+  0.3,
+  0.28,
+  0.27
+ ],
+ "right_cols": [
+  0
+ ],
+ "rows": [
+  [
+   "02/11",
+   "Tshibola Ruth",
+   "Une vie de boy",
+   ""
+  ],
+  [
+   "03/11",
+   "Kabeya Jonas",
+   "L'Enfant noir",
+   ""
+  ],
+  [
+   "04/11",
+   "Mukendi Grâce",
+   "Le Petit Prince",
+   ""
+  ],
+  [
+   "05/11",
+   "Kabeya Jonas",
+   "Maths 6e",
+   ""
+  ],
+  [
+   "06/11",
+   "Ngalula Esther",
+   "L'Enfant noir",
+   ""
+  ],
+  [
+   "09/11",
+   "Tshibola Ruth",
+   "Le Petit Prince",
+   ""
+  ],
+  [
+   "10/11",
+   "Mukendi Grâce",
+   "Une vie de boy",
+   ""
+  ],
+  [
+   "12/11",
+   "Kabeya Jonas",
+   "Le Petit Prince",
+   ""
+  ]
+ ],
+ "steps": [
+  {
+   "at": 7.5,
+   "text": "1. En D2, une seule formule :",
+   "fx": "=TRIER(UNIQUE(B2:B9))",
+   "fx_dur": 2.2
+  },
+  {
+   "at": 10.2,
+   "text": "2. Valide avec :",
+   "keys": [
+    "Entrée"
+   ],
+   "fx": "=TRIER(UNIQUE(B2:B9))",
+   "fx_dur": 0.01
+  },
+  {
+   "at": 11.6,
+   "text": "3. La liste « déborde » toute seule vers le bas",
+   "fx": "=TRIER(UNIQUE(B2:B9))",
+   "fx_dur": 0.01
+  },
+  {
+   "at": 13.6,
+   "text": "Sans doublon et triée de A à Z !",
+   "fx": "=TRIER(UNIQUE(B2:B9))",
+   "fx_dur": 0.01
+  }
+ ],
+ "select": [
+  {
+   "at": 7.5,
+   "cell": [
+    2,
+    3
+   ]
+  },
+  {
+   "at": 10.7,
+   "range": [
+    2,
+    3,
+    5,
+    3
+   ]
+  }
+ ],
+ "paints": [
+  {
+   "at": 4.6,
+   "rows": [
+    5,
+    7,
+    8,
+    9
+   ],
+   "cols": [
+    1
+   ],
+   "fill": [
+    255,
+    205,
+    210
+   ],
+   "color": [
+    170,
+    20,
+    40
+   ],
+   "stagger": 0.2
+  },
+  {
+   "at": 10.7,
+   "rows": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "cols": [
+    3
+   ],
+   "fill": [
+    255,
+    236,
+    179
+   ],
+   "color": [
+    120,
+    60,
+    0
+   ],
+   "stagger": 0.15
+  }
+ ],
+ "fills": [
+  {
+   "at": 10.7,
+   "cells": [
+    [
+     2,
+     3,
+     "Kabeya Jonas"
+    ],
+    [
+     3,
+     3,
+     "Mukendi Grâce"
+    ],
+    [
+     4,
+     3,
+     "Ngalula Esther"
+    ],
+    [
+     5,
+     3,
+     "Tshibola Ruth"
+    ]
+   ],
+   "stagger": 0.15
+  }
+ ],
+ "result_caption": "8 prêts → 4 lecteurs, sans aucun doublon !",
+ "explain": [
+  [
+   "UNIQUE garde chaque nom une seule fois",
+   "yellow"
+  ],
+  [
+   "TRIER range la liste de A à Z",
+   "blue"
+  ],
+  [
+   "=NBVAL(UNIQUE(B2:B9)) compte les lecteurs : 4",
+   "green"
+  ],
+  [
+   "Ajoute un prêt : la liste se met à jour seule (Excel 365/2021)",
+   "white"
+  ]
+ ],
+ "cta": "Abonne-toi : une astuce Excel chaque jour à 6h et 18h !",
+ "comment_cta": "Quelle liste veux-tu nettoyer ?\nDis-le en commentaire !",
+ "next": "Prochaine astuce demain à 6h"
+}

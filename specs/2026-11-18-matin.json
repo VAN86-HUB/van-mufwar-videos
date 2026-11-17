@@ -1,0 +1,200 @@
+{
+ "theme": "vert_excel",
+ "layout": "banner",
+ "music": "piano",
+ "cta_style": "bar",
+ "mode": "steps",
+ "badge": "ASTUCE RAPIDE DU MATIN",
+ "file": "Factures_Atelier_Likasi.xlsx",
+ "hook": "Tu comptes encore les jours sur un calendrier ?",
+ "question": "Paiement à la fin du mois suivant : quelle échéance pour chaque facture ?",
+ "headers": [
+  "N°",
+  "Client",
+  "Date",
+  "Échéance"
+ ],
+ "col_ratio": [
+  0.16,
+  0.3,
+  0.27,
+  0.27
+ ],
+ "right_cols": [
+  2,
+  3
+ ],
+ "rows": [
+  [
+   "F-101",
+   "Ilunga Marc",
+   "12/01/2026",
+   ""
+  ],
+  [
+   "F-102",
+   "Mbuyi Chantal",
+   "30/01/2026",
+   ""
+  ],
+  [
+   "F-103",
+   "Kalenga Paul",
+   "03/03/2026",
+   ""
+  ],
+  [
+   "F-104",
+   "Nday Esther",
+   "17/05/2026",
+   ""
+  ],
+  [
+   "F-105",
+   "Kyungu Joël",
+   "31/08/2026",
+   ""
+  ],
+  [
+   "F-106",
+   "Tshibangu Ali",
+   "09/11/2026",
+   ""
+  ]
+ ],
+ "steps": [
+  {
+   "at": 7.5,
+   "text": "1. Clique en D2 et tape :",
+   "fx": "=FIN.MOIS(C2;1)",
+   "fx_dur": 2.0
+  },
+  {
+   "at": 10.0,
+   "text": "2. Valide avec :",
+   "keys": [
+    "Entrée"
+   ],
+   "fx": "=FIN.MOIS(C2;1)",
+   "fx_dur": 0.01
+  },
+  {
+   "at": 11.4,
+   "text": "3. Double-clic sur la poignée de recopie (coin de D2)",
+   "fx": "=FIN.MOIS(C2;1)",
+   "fx_dur": 0.01
+  },
+  {
+   "at": 13.6,
+   "text": "Février ? Excel sait qu'il n'a que 28 jours !",
+   "fx": "=FIN.MOIS(C2;1)",
+   "fx_dur": 0.01
+  }
+ ],
+ "select": [
+  {
+   "at": 7.5,
+   "cell": [
+    2,
+    3
+   ]
+  },
+  {
+   "at": 12.0,
+   "range": [
+    2,
+    3,
+    7,
+    3
+   ]
+  }
+ ],
+ "fills": [
+  {
+   "at": 10.4,
+   "cells": [
+    [
+     2,
+     3,
+     "28/02/2026"
+    ]
+   ]
+  },
+  {
+   "at": 12.2,
+   "cells": [
+    [
+     3,
+     3,
+     "28/02/2026"
+    ],
+    [
+     4,
+     3,
+     "30/04/2026"
+    ],
+    [
+     5,
+     3,
+     "30/06/2026"
+    ],
+    [
+     6,
+     3,
+     "30/09/2026"
+    ],
+    [
+     7,
+     3,
+     "31/12/2026"
+    ]
+   ],
+   "stagger": 0.15
+  }
+ ],
+ "paints": [
+  {
+   "at": 13.6,
+   "rows": [
+    2,
+    3
+   ],
+   "cols": [
+    3
+   ],
+   "fill": [
+    255,
+    224,
+    200
+   ],
+   "color": [
+    170,
+    50,
+    30
+   ],
+   "stagger": 0.15
+  }
+ ],
+ "result_caption": "6 échéances calculées en 2 secondes !",
+ "explain": [
+  [
+   "FIN.MOIS(date;1) = dernier jour du mois suivant",
+   "yellow"
+  ],
+  [
+   "0 = fin du mois en cours, 2 = dans deux mois",
+   "blue"
+  ],
+  [
+   "Tu vois 46081 ? Ctrl+1 › Date courte",
+   "green"
+  ],
+  [
+   "Parfait pour loyers, salaires et crédits",
+   "white"
+  ]
+ ],
+ "cta": "Abonne-toi à @bleuddymufwar : une astuce Excel à 6h et 18h !",
+ "comment_cta": "Quelle date te donne du mal dans Excel ?\nÉcris-la en commentaire !",
+ "next": "Prochaine astuce à 18h"
+}

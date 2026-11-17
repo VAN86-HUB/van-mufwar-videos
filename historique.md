@@ -32,3 +32,6 @@ Règle : pas de famille déjà utilisée dans les 6 dernières vidéos ; pas le 
 | 2026-11-15 | 18h | TEXTE + & – message « Livré à … le 18/11/2026 » sans que la date devienne 46344 (livraisons à Kananga) | g | violet (classic) | electro | videos/2026-11-15-soir.mp4 |
 | 2026-11-16 | 6h | Atteindre les cellules vides (F5 › Cellules › Vides, =A2 puis Ctrl+Entrée) – compléter la colonne « Rayon » d'un stock de boutique à Kolwezi | l | lagon (card) | marimba | videos/2026-11-16-matin.mp4 |
 | 2026-11-16 | 18h | SIERREUR – remplacer #DIV/0! par « Pas de sortie » (kg/sortie d'une coopérative de pêche à Kalemie) | i | terre (laptop) | rumba | videos/2026-11-16-soir.mp4 |
+| 2026-11-17 | 6h/18h | (aucune vidéo : la tâche du 16/11 au soir n'a rien produit ni programmé) | – | – | – | – |
+| 2026-11-18 | 6h | FIN.MOIS – échéance « fin du mois suivant » des factures d'un atelier à Likasi (=FIN.MOIS(C2;1), février géré) | h | vert_excel (banner) | piano | videos/2026-11-18-matin.mp4 |
+| 2026-11-18 | 18h | TRIER(UNIQUE()) – liste des lecteurs sans doublon (prêts d'une bibliothèque scolaire à Mbuji-Mayi) | j | bleu_nuit (classic) | percussions | videos/2026-11-18-soir.mp4 |
