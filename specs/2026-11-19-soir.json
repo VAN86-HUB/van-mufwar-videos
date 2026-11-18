@@ -1,0 +1,243 @@
+{
+ "theme": "neon",
+ "layout": "laptop",
+ "music": "electro",
+ "cta_style": "card",
+ "mode": "steps",
+ "badge": "ASTUCE DU SOIR • NIVEAU +",
+ "file": "Remises_Quincaillerie_Kikwit.xlsx",
+ "hook": "Défi : 6 remises, 0 SI imbriqué. Tu relèves ?",
+ "question": "Quelle remise pour chaque client selon le barème D:E ?",
+ "headers": [
+  "Client",
+  "Achat $",
+  "Remise",
+  "Seuil $",
+  "Taux"
+ ],
+ "col_ratio": [
+  0.29,
+  0.18,
+  0.17,
+  0.19,
+  0.17
+ ],
+ "right_cols": [
+  1,
+  2,
+  3,
+  4
+ ],
+ "rows": [
+  [
+   "Kabeya Rose",
+   "80",
+   "",
+   "0",
+   "0 %"
+  ],
+  [
+   "Lukusa Jean",
+   "350",
+   "",
+   "100",
+   "5 %"
+  ],
+  [
+   "Ngalula Ève",
+   "1 200",
+   "",
+   "500",
+   "10 %"
+  ],
+  [
+   "Mutombo Guy",
+   "600",
+   "",
+   "1 000",
+   "15 %"
+  ],
+  [
+   "Kiala Désiré",
+   "100",
+   "",
+   "",
+   ""
+  ],
+  [
+   "Mavungu Lyse",
+   "999",
+   "",
+   "",
+   ""
+  ]
+ ],
+ "steps": [
+  {
+   "at": 7.5,
+   "text": "1. En C2, tape :",
+   "fx": "=RECHERCHEV(B2;$D$2:$E$5;2;VRAI)",
+   "fx_dur": 2.2
+  },
+  {
+   "at": 10.0,
+   "text": "2. F4 sur D2:E5 pour figer le barème ($)",
+   "keys": [
+    "F4"
+   ],
+   "fx": "=RECHERCHEV(B2;$D$2:$E$5;2;VRAI)",
+   "fx_dur": 0.01
+  },
+  {
+   "at": 11.6,
+   "text": "3. Entrée puis double-clic sur la poignée",
+   "keys": [
+    "Entrée"
+   ],
+   "fx": "=RECHERCHEV(B2;$D$2:$E$5;2;VRAI)",
+   "fx_dur": 0.01
+  },
+  {
+   "at": 13.4,
+   "text": "100 $ pile → 5 % · 999 $ → 10 %",
+   "fx": "=RECHERCHEV(B2;$D$2:$E$5;2;VRAI)",
+   "fx_dur": 0.01
+  }
+ ],
+ "select": [
+  {
+   "at": 7.5,
+   "cell": [
+    2,
+    2
+   ]
+  },
+  {
+   "at": 10.0,
+   "range": [
+    2,
+    3,
+    5,
+    4
+   ]
+  },
+  {
+   "at": 12.2,
+   "range": [
+    2,
+    2,
+    7,
+    2
+   ]
+  }
+ ],
+ "fills": [
+  {
+   "at": 12.0,
+   "cells": [
+    [
+     2,
+     2,
+     "0 %"
+    ]
+   ]
+  },
+  {
+   "at": 12.4,
+   "cells": [
+    [
+     3,
+     2,
+     "5 %"
+    ],
+    [
+     4,
+     2,
+     "15 %"
+    ],
+    [
+     5,
+     2,
+     "10 %"
+    ],
+    [
+     6,
+     2,
+     "5 %"
+    ],
+    [
+     7,
+     2,
+     "10 %"
+    ]
+   ],
+   "stagger": 0.15
+  }
+ ],
+ "paints": [
+  {
+   "at": 10.0,
+   "rows": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "cols": [
+    3,
+    4
+   ],
+   "fill": [
+    90,
+    30,
+    110
+   ],
+   "stagger": 0.05
+  },
+  {
+   "at": 13.4,
+   "rows": [
+    6,
+    7
+   ],
+   "cols": [
+    0,
+    1,
+    2
+   ],
+   "fill": [
+    0,
+    90,
+    80
+   ],
+   "color": [
+    0,
+    255,
+    230
+   ],
+   "stagger": 0.2
+  }
+ ],
+ "result_caption": "Toutes les remises, sans un seul SI !",
+ "explain": [
+  [
+   "VRAI = le seuil juste en dessous",
+   "yellow"
+  ],
+  [
+   "Barème trié du plus petit au plus grand",
+   "blue"
+  ],
+  [
+   "Les $ figent le barème",
+   "green"
+  ],
+  [
+   "Idéal pour primes et commissions",
+   "white"
+  ]
+ ],
+ "cta": "Abonne-toi à @bleuddymufwar : une astuce Excel chaque jour à 6h et 18h !",
+ "comment_cta": "Team SI ou team RECHERCHEV ? Commente !",
+ "next": "Prochaine astuce demain à 6h"
+}

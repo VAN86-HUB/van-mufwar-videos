@@ -1,0 +1,229 @@
+{
+ "theme": "soleil",
+ "layout": "card",
+ "music": "likembe",
+ "cta_style": "bar",
+ "mode": "steps",
+ "badge": "ASTUCE RAPIDE DU MATIN",
+ "file": "Budget_Famille_Kindu.xlsx",
+ "hook": "Tu additionnes encore case par case ?",
+ "question": "Budget de la famille Kasongo : tous les totaux en 1 seul raccourci !",
+ "headers": [
+  "Dépense",
+  "Janv.",
+  "Févr.",
+  "Mars",
+  "Total"
+ ],
+ "col_ratio": [
+  0.28,
+  0.17,
+  0.17,
+  0.17,
+  0.21
+ ],
+ "right_cols": [
+  1,
+  2,
+  3,
+  4
+ ],
+ "rows": [
+  [
+   "Loyer",
+   "150",
+   "150",
+   "150",
+   ""
+  ],
+  [
+   "Nourriture",
+   "220",
+   "245",
+   "230",
+   ""
+  ],
+  [
+   "Écolage",
+   "90",
+   "90",
+   "90",
+   ""
+  ],
+  [
+   "Transport",
+   "60",
+   "75",
+   "70",
+   ""
+  ],
+  [
+   "Électricité",
+   "25",
+   "30",
+   "28",
+   ""
+  ],
+  [
+   "TOTAL",
+   "",
+   "",
+   "",
+   ""
+  ]
+ ],
+ "steps": [
+  {
+   "at": 7.5,
+   "text": "1. Sélectionne B2:E7 (avec la ligne et la colonne vides)"
+  },
+  {
+   "at": 10.0,
+   "text": "2. Appuie sur :",
+   "keys": [
+    "Alt",
+    "="
+   ]
+  },
+  {
+   "at": 12.4,
+   "text": "Excel écrit les =SOMME() tout seul !",
+   "fx": "=SOMME(B2:B6)",
+   "fx_dur": 0.01
+  }
+ ],
+ "select": [
+  {
+   "at": 7.5,
+   "range": [
+    2,
+    1,
+    7,
+    4
+   ]
+  }
+ ],
+ "fills": [
+  {
+   "at": 10.9,
+   "cells": [
+    [
+     2,
+     4,
+     "450"
+    ],
+    [
+     3,
+     4,
+     "695"
+    ],
+    [
+     4,
+     4,
+     "270"
+    ],
+    [
+     5,
+     4,
+     "205"
+    ],
+    [
+     6,
+     4,
+     "83"
+    ]
+   ],
+   "stagger": 0.12
+  },
+  {
+   "at": 11.6,
+   "cells": [
+    [
+     7,
+     1,
+     "545"
+    ],
+    [
+     7,
+     2,
+     "590"
+    ],
+    [
+     7,
+     3,
+     "568"
+    ],
+    [
+     7,
+     4,
+     "1 703"
+    ]
+   ],
+   "stagger": 0.12
+  }
+ ],
+ "paints": [
+  {
+   "at": 12.4,
+   "rows": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "cols": [
+    4
+   ],
+   "fill": [
+    255,
+    224,
+    178
+   ],
+   "color": [
+    150,
+    50,
+    0
+   ],
+   "stagger": 0.08
+  },
+  {
+   "at": 12.9,
+   "rows": [
+    7
+   ],
+   "fill": [
+    255,
+    204,
+    128
+   ],
+   "color": [
+    120,
+    30,
+    0
+   ]
+  }
+ ],
+ "result_caption": "9 totaux en une seconde ! Total : 1 703 $",
+ "explain": [
+  [
+   "Alt + = lance la Somme automatique",
+   "yellow"
+  ],
+  [
+   "Sélectionne aussi les cases vides du total",
+   "blue"
+  ],
+  [
+   "Excel remplit la ligne ET la colonne",
+   "green"
+  ],
+  [
+   "Marche pour budgets, stocks, notes…",
+   "white"
+  ]
+ ],
+ "cta": "Abonne-toi à @bleuddymufwar : une astuce Excel à 6h et 18h !",
+ "comment_cta": "Quel raccourci utilises-tu le plus ?\nPartage-le en commentaire !",
+ "next": "Prochaine astuce à 18h"
+}
