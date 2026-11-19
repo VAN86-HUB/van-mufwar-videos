@@ -37,3 +37,5 @@ Règle : pas de famille déjà utilisée dans les 6 dernières vidéos ; pas le 
 | 2026-11-18 | 18h | TRIER(UNIQUE()) – liste des lecteurs sans doublon (prêts d'une bibliothèque scolaire à Mbuji-Mayi) | j | bleu_nuit (classic) | percussions | videos/2026-11-18-soir.mp4 |
 | 2026-11-19 | 6h | Alt+= (Somme automatique) – tous les totaux d'un budget familial à Kindu en un raccourci (ligne ET colonne) | a | soleil (card) | likembe | videos/2026-11-19-matin.mp4 |
 | 2026-11-19 | 18h | RECHERCHEV approchée (VRAI) – remise selon un barème par tranches (quincaillerie à Kikwit), sans SI imbriqués | f | neon (laptop) | electro | videos/2026-11-19-soir.mp4 |
+| 2026-11-20 | 6h | PLAFOND(C4;500) – arrondir un prix de vente (+25 %) au 500 FC supérieur (boutique à Uvira) ; PLANCHER en bonus | m | epure (banner) | piano | videos/2026-11-20-matin.mp4 |
+| 2026-11-20 | 18h | MFC Nuances de couleurs Vert–Jaune–Rouge – carte de chaleur des absences des agents d'un centre de santé à Bukavu | b | violet (classic) | rumba | videos/2026-11-20-soir.mp4 |

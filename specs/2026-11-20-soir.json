@@ -1,0 +1,680 @@
+{
+ "theme": "violet",
+ "layout": "classic",
+ "music": "rumba",
+ "cta_style": "bar",
+ "mode": "steps",
+ "badge": "ASTUCE DU SOIR • NIVEAU +",
+ "file": "Absences_CentreSante_Bukavu.xlsx",
+ "hook": "Défi : trouve l'agent le plus absent en 2 secondes !",
+ "question": "28 chiffres d'absences… lequel doit t'alerter ?",
+ "headers": [
+  "Agent",
+  "Août",
+  "Sept.",
+  "Oct.",
+  "Nov."
+ ],
+ "col_ratio": [
+  0.36,
+  0.16,
+  0.16,
+  0.16,
+  0.16
+ ],
+ "right_cols": [
+  1,
+  2,
+  3,
+  4
+ ],
+ "rows": [
+  [
+   "Amani Josué",
+   "1",
+   "0",
+   "2",
+   "1"
+  ],
+  [
+   "Bisimwa Claire",
+   "0",
+   "1",
+   "0",
+   "0"
+  ],
+  [
+   "Cirhuza Paul",
+   "3",
+   "2",
+   "4",
+   "5"
+  ],
+  [
+   "Furaha Neema",
+   "0",
+   "0",
+   "1",
+   "0"
+  ],
+  [
+   "Kalala Didier",
+   "2",
+   "4",
+   "5",
+   "7"
+  ],
+  [
+   "Mapendo Sarah",
+   "1",
+   "1",
+   "0",
+   "2"
+  ],
+  [
+   "Zihindula Eric",
+   "0",
+   "2",
+   "1",
+   "1"
+  ]
+ ],
+ "steps": [
+  {
+   "at": 7.5,
+   "text": "1. Sélectionne les chiffres B2:E8"
+  },
+  {
+   "at": 9.4,
+   "text": "2. Ouvre le menu :",
+   "path": [
+    "Accueil",
+    "Mise en forme conditionnelle",
+    "Nuances de couleurs"
+   ]
+  },
+  {
+   "at": 11.6,
+   "text": "3. Choisis Vert – Jaune – Rouge"
+  },
+  {
+   "at": 13.6,
+   "text": "Le rouge saute aux yeux : Kalala, puis Cirhuza"
+  }
+ ],
+ "select": [
+  {
+   "at": 7.5,
+   "range": [
+    2,
+    1,
+    8,
+    4
+   ]
+  },
+  {
+   "at": 11.7,
+   "cell": [
+    2,
+    1
+   ],
+   "until": 11.71
+  }
+ ],
+ "paints": [
+  {
+   "at": 11.8,
+   "rows": [
+    2
+   ],
+   "cols": [
+    1
+   ],
+   "fill": [
+    255,
+    235,
+    132
+   ],
+   "color": [
+    40,
+    40,
+    40
+   ]
+  },
+  {
+   "at": 11.86,
+   "rows": [
+    2
+   ],
+   "cols": [
+    2
+   ],
+   "fill": [
+    99,
+    190,
+    123
+   ],
+   "color": [
+    40,
+    40,
+    40
+   ]
+  },
+  {
+   "at": 11.92,
+   "rows": [
+    2
+   ],
+   "cols": [
+    3
+   ],
+   "fill": [
+    254,
+    213,
+    128
+   ],
+   "color": [
+    40,
+    40,
+    40
+   ]
+  },
+  {
+   "at": 11.98,
+   "rows": [
+    2
+   ],
+   "cols": [
+    4
+   ],
+   "fill": [
+    255,
+    235,
+    132
+   ],
+   "color": [
+    40,
+    40,
+    40
+   ]
+  },
+  {
+   "at": 11.98,
+   "rows": [
+    3
+   ],
+   "cols": [
+    1
+   ],
+   "fill": [
+    99,
+    190,
+    123
+   ],
+   "color": [
+    40,
+    40,
+    40
+   ]
+  },
+  {
+   "at": 12.04,
+   "rows": [
+    3
+   ],
+   "cols": [
+    2
+   ],
+   "fill": [
+    255,
+    235,
+    132
+   ],
+   "color": [
+    40,
+    40,
+    40
+   ]
+  },
+  {
+   "at": 12.1,
+   "rows": [
+    3
+   ],
+   "cols": [
+    3
+   ],
+   "fill": [
+    99,
+    190,
+    123
+   ],
+   "color": [
+    40,
+    40,
+    40
+   ]
+  },
+  {
+   "at": 12.16,
+   "rows": [
+    3
+   ],
+   "cols": [
+    4
+   ],
+   "fill": [
+    99,
+    190,
+    123
+   ],
+   "color": [
+    40,
+    40,
+    40
+   ]
+  },
+  {
+   "at": 12.16,
+   "rows": [
+    4
+   ],
+   "cols": [
+    1
+   ],
+   "fill": [
+    253,
+    192,
+    124
+   ],
+   "color": [
+    40,
+    40,
+    40
+   ]
+  },
+  {
+   "at": 12.22,
+   "rows": [
+    4
+   ],
+   "cols": [
+    2
+   ],
+   "fill": [
+    254,
+    213,
+    128
+   ],
+   "color": [
+    40,
+    40,
+    40
+   ]
+  },
+  {
+   "at": 12.28,
+   "rows": [
+    4
+   ],
+   "cols": [
+    3
+   ],
+   "fill": [
+    252,
+    170,
+    120
+   ],
+   "color": [
+    40,
+    40,
+    40
+   ]
+  },
+  {
+   "at": 12.34,
+   "rows": [
+    4
+   ],
+   "cols": [
+    4
+   ],
+   "fill": [
+    250,
+    148,
+    115
+   ],
+   "color": [
+    40,
+    40,
+    40
+   ]
+  },
+  {
+   "at": 12.34,
+   "rows": [
+    5
+   ],
+   "cols": [
+    1
+   ],
+   "fill": [
+    99,
+    190,
+    123
+   ],
+   "color": [
+    40,
+    40,
+    40
+   ]
+  },
+  {
+   "at": 12.4,
+   "rows": [
+    5
+   ],
+   "cols": [
+    2
+   ],
+   "fill": [
+    99,
+    190,
+    123
+   ],
+   "color": [
+    40,
+    40,
+    40
+   ]
+  },
+  {
+   "at": 12.46,
+   "rows": [
+    5
+   ],
+   "cols": [
+    3
+   ],
+   "fill": [
+    255,
+    235,
+    132
+   ],
+   "color": [
+    40,
+    40,
+    40
+   ]
+  },
+  {
+   "at": 12.52,
+   "rows": [
+    5
+   ],
+   "cols": [
+    4
+   ],
+   "fill": [
+    99,
+    190,
+    123
+   ],
+   "color": [
+    40,
+    40,
+    40
+   ]
+  },
+  {
+   "at": 12.52,
+   "rows": [
+    6
+   ],
+   "cols": [
+    1
+   ],
+   "fill": [
+    254,
+    213,
+    128
+   ],
+   "color": [
+    40,
+    40,
+    40
+   ]
+  },
+  {
+   "at": 12.58,
+   "rows": [
+    6
+   ],
+   "cols": [
+    2
+   ],
+   "fill": [
+    252,
+    170,
+    120
+   ],
+   "color": [
+    40,
+    40,
+    40
+   ]
+  },
+  {
+   "at": 12.64,
+   "rows": [
+    6
+   ],
+   "cols": [
+    3
+   ],
+   "fill": [
+    250,
+    148,
+    115
+   ],
+   "color": [
+    40,
+    40,
+    40
+   ]
+  },
+  {
+   "at": 12.7,
+   "rows": [
+    6
+   ],
+   "cols": [
+    4
+   ],
+   "fill": [
+    248,
+    105,
+    107
+   ],
+   "color": [
+    120,
+    0,
+    0
+   ]
+  },
+  {
+   "at": 12.7,
+   "rows": [
+    7
+   ],
+   "cols": [
+    1
+   ],
+   "fill": [
+    255,
+    235,
+    132
+   ],
+   "color": [
+    40,
+    40,
+    40
+   ]
+  },
+  {
+   "at": 12.76,
+   "rows": [
+    7
+   ],
+   "cols": [
+    2
+   ],
+   "fill": [
+    255,
+    235,
+    132
+   ],
+   "color": [
+    40,
+    40,
+    40
+   ]
+  },
+  {
+   "at": 12.82,
+   "rows": [
+    7
+   ],
+   "cols": [
+    3
+   ],
+   "fill": [
+    99,
+    190,
+    123
+   ],
+   "color": [
+    40,
+    40,
+    40
+   ]
+  },
+  {
+   "at": 12.88,
+   "rows": [
+    7
+   ],
+   "cols": [
+    4
+   ],
+   "fill": [
+    254,
+    213,
+    128
+   ],
+   "color": [
+    40,
+    40,
+    40
+   ]
+  },
+  {
+   "at": 12.88,
+   "rows": [
+    8
+   ],
+   "cols": [
+    1
+   ],
+   "fill": [
+    99,
+    190,
+    123
+   ],
+   "color": [
+    40,
+    40,
+    40
+   ]
+  },
+  {
+   "at": 12.94,
+   "rows": [
+    8
+   ],
+   "cols": [
+    2
+   ],
+   "fill": [
+    254,
+    213,
+    128
+   ],
+   "color": [
+    40,
+    40,
+    40
+   ]
+  },
+  {
+   "at": 13.0,
+   "rows": [
+    8
+   ],
+   "cols": [
+    3
+   ],
+   "fill": [
+    255,
+    235,
+    132
+   ],
+   "color": [
+    40,
+    40,
+    40
+   ]
+  },
+  {
+   "at": 13.06,
+   "rows": [
+    8
+   ],
+   "cols": [
+    4
+   ],
+   "fill": [
+    255,
+    235,
+    132
+   ],
+   "color": [
+    40,
+    40,
+    40
+   ]
+  }
+ ],
+ "result_caption": "Kalala : 7 absences en novembre, repérées en 1 seconde !",
+ "explain": [
+  [
+   "Vert = peu d'absences, rouge = beaucoup",
+   "yellow"
+  ],
+  [
+   "Excel calcule la couleur selon le min, le milieu et le max",
+   "blue"
+  ],
+  [
+   "Gérer les règles › Modifier : fixe toi-même le seuil rouge (ex. 5)",
+   "green"
+  ],
+  [
+   "Change un chiffre : la couleur suit toute seule",
+   "white"
+  ]
+ ],
+ "cta": "Abonne-toi pour une astuce Excel chaque jour à 6h et 18h !",
+ "comment_cta": "Tu veux colorer quel tableau ?\nÉcris-le en commentaire !",
+ "next": "Prochaine astuce demain à 6h"
+}
