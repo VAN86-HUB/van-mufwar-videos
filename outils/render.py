@@ -14,6 +14,13 @@ Deux modes :
      "select": [{"at": 7.5, "cell": [ligne, col]} | {"at": .., "range": [l1, c1, l2, c2]}]  (lignes Excel, col 0 = A)
      "fills":  [{"at": 9.0, "cells": [[ligne, col, "valeur"], ...], "stagger": 0.12}]
      "paints": [{"at": 14.0, "rows": [3, 5], "cols": [0,1,2] (défaut : toutes), "fill": [r,g,b], "color": [r,g,b], "stagger": 0.2}]
+     "charts": [{"at": 10, "labels": [..], "values": [..], "title": "..", "highlight": 5, "highlight_at": 12}]
+       (graphique en colonnes qui apparaît sous la fenêtre, ou dans "box": [x0,y0,x1,y1])
+     "alerts": [{"at": 13, "until": 15, "message": "..", "title": "Microsoft Excel", "buttons": ["Réessayer","Annuler"]}]
+       (boîte d'erreur Excel par-dessus la grille)
+     "charts": [{"at": 10, "labels": [..], "values": [..], "title": "..", "highlight": 5, "highlight_at": 12}]
+       (graphique en colonnes qui apparaît sous la fenêtre, ou dans "box": [x0,y0,x1,y1])
+     "alerts": [{"at": 13, "until": 15, "message": "..", "buttons": ["Réessayer","Annuler"]}]  (boîte d'erreur Excel)
      "dropdowns": [{"at": 12.6, "until": 14.0, "cell": [2, 2], "items": ["A","B"], "pick": 0, "arrow_from": 12.0, "arrow_rows": [2,3]}]
        (liste déroulante ouverte sous une cellule ; flèche ▼ affichée sur arrow_rows à partir de arrow_from)
 """
@@ -30,13 +37,17 @@ FONTS = {
     "poppins": ("/usr/share/fonts/truetype/google-fonts/Poppins-Regular.ttf", "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf"),
     "carlito": ("/usr/share/fonts/truetype/crosextra/Carlito-Regular.ttf", "/usr/share/fonts/truetype/crosextra/Carlito-Bold.ttf"),
     "serif": ("/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf", "/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf"),
+    "lora": ("/usr/share/fonts/truetype/google-fonts/Lora-Variable.ttf", "/usr/share/fonts/truetype/google-fonts/Lora-Variable.ttf#700"),
 }
 MONO = ("/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf", "/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf")
 _FC = {}
 def _load(path, size, fallback):
     key = (path, size)
     if key not in _FC:
-        try: _FC[key] = ImageFont.truetype(path, size)
+        real, _, wght = path.partition("#")  # « fichier#700 » : police variable à graisse imposée
+        try:
+            _FC[key] = ImageFont.truetype(real, size)
+            if wght: _FC[key].set_variation_by_axes([int(wght)])
         except OSError: _FC[key] = ImageFont.truetype(fallback, size)
     return _FC[key]
 DISPLAY = "dejavu"  # police des titres/légendes (changée par le thème)
@@ -140,6 +151,16 @@ THEMES = {
         key_shadow=(0, 90, 110), path_bg=(255, 214, 102), path_fg=(0, 60, 80), layout="card", entry="drop",
         result_style="glow", cta_style="pulse", music="marimba", cta_bg=(0, 60, 85), cta_btn=(255, 90, 95),
         sig_fg=(255, 255, 255, 220)),
+    "ardoise": dict(  # tableau noir de salle de classe, écriture à la craie
+        bg=("radial", (52, 70, 62), (20, 30, 26)), pattern="chalk", pattern_color=(255, 255, 255, 30),
+        badge_bg=(255, 255, 255), badge_fg=(30, 45, 40), badge_text="LEÇON EXCEL DU SOIR", font="lora",
+        cap_fg=(245, 245, 235), accent=(255, 226, 120), accent2=(150, 210, 255), accent3=(255, 160, 170),
+        cap_style="underline", cap_anim="typewriter",
+        win_bar=(120, 85, 50), win_bar_fg=(255, 245, 225), sel=(200, 120, 40), row1=(250, 240, 220),
+        res_fill=(255, 243, 205), res_txt=(150, 80, 0), key_bg=(250, 250, 240), key_fg=(30, 45, 40),
+        key_shadow=(120, 85, 50), path_bg=(255, 226, 120), path_fg=(30, 45, 40),
+        layout="laptop", entry="fade", result_style="marker", cta_style="card", music="lofi",
+        cta_bg=(24, 36, 31), cta_btn=(200, 120, 40), sig_fg=(245, 245, 235, 210)),
 }
 
 def get_theme(name):
@@ -278,6 +299,18 @@ def build_background(th):
                 d.rectangle([0, y, W, y + 18], fill=pc)
                 for x in range(0, W, 80):
                     d.polygon([(x, y + 40), (x + 40, y + 80), (x + 80, y + 40), (x + 40, y + 120)], outline=pc, width=3)
+        elif p == "chalk":  # poussière de craie + traces effacées
+            for _ in range(26):
+                x, y = int(rng.integers(-200, W)), int(rng.integers(0, H)); w = int(rng.integers(200, 520))
+                d.rounded_rectangle([x, y, x + w, y + int(rng.integers(40, 110))], 40, fill=pc[:3] + (int(pc[3] * 0.35),))
+            for _ in range(900):
+                x, y = rng.integers(0, W), rng.integers(0, H)
+                d.point((int(x), int(y)), fill=pc[:3] + (int(rng.integers(30, 110)),))
+            ov = ov.filter(ImageFilter.GaussianBlur(6))
+            d = ImageDraw.Draw(ov)
+            for _ in range(500):
+                x, y = rng.integers(0, W), rng.integers(0, H)
+                d.point((int(x), int(y)), fill=pc[:3] + (int(rng.integers(40, 120)),))
         bg = Image.alpha_composite(bg, ov)
     return bg
 
@@ -661,6 +694,57 @@ def main(spec_path, out_path):
                     if iy + ih > y1 + bh: break
                     if hov and k == pick: d.rectangle([x0 + 4, iy, x1 - 4, iy + ih - 2], fill=TH["sel"])
                     d.text((x0 + 14, iy + 12), it, font=fcell, fill=(255, 255, 255) if (hov and k == pick) else TH["txt"])
+            for ch in s.get("charts", []):  # graphique (ex. Alt+F1) sous la fenêtre ou à la position « box »
+                if not (ch["at"] <= t < ch.get("until", 1e9)): continue
+                bx0, by0, bx1, by1 = ch.get("box", [wx, wy + wh + (70 if layout == "laptop" else 30), wx + ww, wy + wh + (70 if layout == "laptop" else 30) + 380])
+                a = ease((t - ch["at"]) / 0.35); oy = int((1 - a) * 60)
+                by0 += oy; by1 += oy
+                d.rounded_rectangle([bx0 + 8, by0 + 12, bx1 + 8, by1 + 12], 14, fill=rgba(TH["key_shadow"], 0.6 * a))
+                d.rounded_rectangle([bx0, by0, bx1, by1], 14, fill=rgba((255, 255, 255), a), outline=rgba(TH["sel"], a), width=4)
+                for hx, hy in ((bx0, by0), (bx1, by0), (bx0, by1), (bx1, by1), ((bx0 + bx1) / 2, by0), ((bx0 + bx1) / 2, by1)):
+                    d.ellipse([hx - 7, hy - 7, hx + 7, hy + 7], fill=rgba((255, 255, 255), a), outline=rgba(TH["sel"], a), width=3)
+                ft = font(30, True); tt = ch.get("title", "")
+                d.text(((bx0 + bx1 - d.textlength(tt, font=ft)) / 2, by0 + 16), tt, font=ft, fill=rgba((60, 60, 60), a))
+                vals, labs = ch["values"], ch["labels"]; vmax = ch.get("max", max(vals) * 1.15)
+                px0, px1, py0, py1 = bx0 + 90, bx1 - 30, by0 + 70, by1 - 56
+                fl = font(22)
+                for k in range(5):
+                    gv = vmax * k / 4; gy = py1 - (py1 - py0) * k / 4
+                    d.line([px0, gy, px1, gy], fill=rgba((217, 217, 217), a), width=2)
+                    lbl = f"{int(round(gv)):,}".replace(",", " ")
+                    d.text((px0 - 12 - d.textlength(lbl, font=fl), gy - 13), lbl, font=fl, fill=rgba((110, 110, 110), a))
+                n = len(vals); slot = (px1 - px0) / n; bw = slot * 0.58
+                hi, hi_at = ch.get("highlight"), ch.get("highlight_at", 1e9)
+                for k, (v, lb) in enumerate(zip(vals, labs)):
+                    g = ease((t - ch["at"] - 0.25 - k * 0.08) / 0.5)
+                    cx = px0 + slot * (k + 0.5); top = py1 - (py1 - py0) * v / vmax * g
+                    col = tuple(ch.get("color", (68, 114, 196)))
+                    if hi == k and t >= hi_at: col = tuple(ch.get("hl_color", TH["sel"]))
+                    if g > 0: d.rectangle([cx - bw / 2, top, cx + bw / 2, py1], fill=rgba(col, a))
+                    d.text((cx - d.textlength(lb, font=fl) / 2, py1 + 10), lb, font=fl, fill=rgba((80, 80, 80), a))
+                    if g >= 0.99 and ch.get("data_labels", True):
+                        vl = f"{v:,}".replace(",", " "); fv = font(22, True)
+                        d.text((cx - d.textlength(vl, font=fv) / 2, top - 30), vl, font=fv, fill=rgba((60, 60, 60), a))
+            for al in s.get("alerts", []):  # boîte de dialogue d'erreur Excel
+                if not (al["at"] <= t < al.get("until", 1e9)): continue
+                a = ease((t - al["at"]) / 0.25); sc = 0.85 + 0.15 * a
+                bw_, bh_ = 820 * sc, 330 * sc; cx, cy = W / 2, al.get("y", wy + wh * 0.55)
+                x0, y0, x1, y1 = cx - bw_ / 2, cy - bh_ / 2, cx + bw_ / 2, cy + bh_ / 2
+                d.rectangle([x0 + 10, y0 + 14, x1 + 10, y1 + 14], fill=(0, 0, 0, int(90 * a)))
+                d.rectangle([x0, y0, x1, y1], fill=(250, 250, 250, int(255 * a)), outline=(120, 120, 120, int(255 * a)), width=2)
+                d.text((x0 + 26, y0 + 18), al.get("title", "Microsoft Excel"), font=font(28), fill=(40, 40, 40, int(255 * a)))
+                d.text((x1 - 50, y0 + 14), "✕", font=font(30), fill=(90, 90, 90, int(255 * a)))
+                ic = (x0 + 70, y0 + 140); d.ellipse([ic[0] - 40, ic[1] - 40, ic[0] + 40, ic[1] + 40], fill=(215, 40, 40, int(255 * a)))
+                d.text((ic[0] - 17, ic[1] - 30), "✕", font=font(44, True), fill=(255, 255, 255, int(255 * a)))
+                fm = font(30, True); yy = y0 + 92
+                for ln in wrap(d, al["message"], fm, bw_ - 190):
+                    d.text((x0 + 140, yy), ln, font=fm, fill=(30, 30, 30, int(255 * a))); yy += 42
+                bx = x1 - 30
+                for k, lb in enumerate(reversed(al.get("buttons", ["Réessayer", "Annuler"]))):
+                    fb_ = font(26); tw = d.textlength(lb, font=fb_) + 50; prim = k == len(al.get("buttons", [0, 0])) - 1
+                    d.rectangle([bx - tw, y1 - 80, bx, y1 - 28], fill=(255, 255, 255, int(255 * a)),
+                                outline=(0, 103, 192, int(255 * a)) if prim else (160, 160, 160, int(255 * a)), width=3 if prim else 2)
+                    d.text((bx - tw + 25, y1 - 70), lb, font=fb_, fill=(30, 30, 30, int(255 * a))); bx -= tw + 20
         return Image.alpha_composite(L, TL)
 
     proc = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",

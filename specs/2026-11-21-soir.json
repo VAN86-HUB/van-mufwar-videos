@@ -1,0 +1,158 @@
+{
+ "theme": "ardoise",
+ "layout": "laptop",
+ "music": "lofi",
+ "cta_style": "pulse",
+ "mode": "steps",
+ "file": "Paie_Agents_Gemena.xlsx",
+ "hook": "Erreur fréquente : payer 2 fois le même agent !",
+ "question": "Comment empêcher Excel d'accepter un matricule en double ?",
+ "headers": [
+  "Matricule",
+  "Agent",
+  "Salaire (USD)"
+ ],
+ "col_ratio": [
+  0.27,
+  0.43,
+  0.3
+ ],
+ "right_cols": [
+  2
+ ],
+ "rows": [
+  [
+   "AG-101",
+   "Mbombo Grâce",
+   "350"
+  ],
+  [
+   "AG-102",
+   "Ngbanda Patrick",
+   "420"
+  ],
+  [
+   "AG-103",
+   "Yakanza Rose",
+   "380"
+  ],
+  [
+   "AG-104",
+   "Ndekeli Jonas",
+   "450"
+  ],
+  [
+   "AG-105",
+   "Kongolo Ruth",
+   "400"
+  ],
+  [
+   "AG-106",
+   "Libanza Moïse",
+   "360"
+  ],
+  [
+   "",
+   "",
+   ""
+  ]
+ ],
+ "steps": [
+  {
+   "at": 7.5,
+   "text": "1. Sélectionne les matricules (A2:A100)"
+  },
+  {
+   "at": 9.2,
+   "text": "2. Ouvre :",
+   "path": [
+    "Données",
+    "Validation des données",
+    "Personnalisé"
+   ]
+  },
+  {
+   "at": 11.0,
+   "text": "3. Tape la formule de contrôle",
+   "fx": "=NB.SI($A$2:$A$100;A2)=1",
+   "fx_dur": 1.8
+  },
+  {
+   "at": 13.1,
+   "text": "4. Test : on retape AG-104…"
+  }
+ ],
+ "select": [
+  {
+   "at": 7.5,
+   "range": [
+    2,
+    0,
+    8,
+    0
+   ]
+  },
+  {
+   "at": 13.1,
+   "cell": [
+    8,
+    0
+   ]
+  }
+ ],
+ "fills": [
+  {
+   "at": 13.5,
+   "cells": [
+    [
+     8,
+     0,
+     "AG-104"
+    ]
+   ]
+  },
+  {
+   "at": 15.6,
+   "cells": [
+    [
+     8,
+     0,
+     ""
+    ]
+   ]
+  }
+ ],
+ "alerts": [
+  {
+   "at": 14.0,
+   "until": 15.6,
+   "message": "Ce matricule existe déjà ! Un agent = un seul matricule.",
+   "buttons": [
+    "Réessayer",
+    "Annuler"
+   ]
+  }
+ ],
+ "result_caption": "Doublon bloqué dès la saisie : ta paie reste propre !",
+ "explain": [
+  [
+   "NB.SI compte combien de fois le matricule apparaît",
+   "yellow"
+  ],
+  [
+   "=1 : accepté une seule fois, sinon refusé",
+   "blue"
+  ],
+  [
+   "Onglet « Alerte d'erreur » : écris ton propre message",
+   "green"
+  ],
+  [
+   "Marche aussi pour les n° de facture ou de téléphone",
+   "white"
+  ]
+ ],
+ "cta": "Abonne-toi pour une astuce Excel chaque jour à 6h et 18h !",
+ "comment_cta": "Quel contrôle veux-tu ajouter à ta paie ?\nÉcris-le en commentaire !",
+ "next": "Prochaine astuce demain à 6h"
+}

@@ -39,3 +39,5 @@ Règle : pas de famille déjà utilisée dans les 6 dernières vidéos ; pas le 
 | 2026-11-19 | 18h | RECHERCHEV approchée (VRAI) – remise selon un barème par tranches (quincaillerie à Kikwit), sans SI imbriqués | f | neon (laptop) | electro | videos/2026-11-19-soir.mp4 |
 | 2026-11-20 | 6h | PLAFOND(C4;500) – arrondir un prix de vente (+25 %) au 500 FC supérieur (boutique à Uvira) ; PLANCHER en bonus | m | epure (banner) | piano | videos/2026-11-20-matin.mp4 |
 | 2026-11-20 | 18h | MFC Nuances de couleurs Vert–Jaune–Rouge – carte de chaleur des absences des agents d'un centre de santé à Bukavu | b | violet (classic) | rumba | videos/2026-11-20-soir.mp4 |
+| 2026-11-21 | 6h | Alt+F1 – graphique en colonnes en 1 seconde (pains vendus par jour d'une boulangerie à Butembo) ; F11 en bonus | e | lagon (card) | marimba | videos/2026-11-21-matin.mp4 |
+| 2026-11-21 | 18h | Validation personnalisée =NB.SI($A$2:$A$100;A2)=1 – bloquer un matricule en double dans la paie des agents à Gemena (alerte d'erreur) | c | ardoise (laptop) | lofi | videos/2026-11-21-soir.mp4 |

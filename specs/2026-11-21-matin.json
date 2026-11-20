@@ -1,0 +1,140 @@
+{
+ "theme": "lagon",
+ "layout": "card",
+ "music": "marimba",
+ "cta_style": "card",
+ "mode": "steps",
+ "badge": "GRAPHIQUE EN 1 SECONDE",
+ "file": "Pains_Boulangerie_Butembo.xlsx",
+ "hook": "Tu dessines encore tes graphiques à la main ?",
+ "question": "Boulangerie à Butembo : quel jour vend le plus de pains ?",
+ "headers": [
+  "Jour",
+  "Pains vendus"
+ ],
+ "col_ratio": [
+  0.5,
+  0.5
+ ],
+ "right_cols": [
+  1
+ ],
+ "rows": [
+  [
+   "Lundi",
+   "420"
+  ],
+  [
+   "Mardi",
+   "380"
+  ],
+  [
+   "Mercredi",
+   "455"
+  ],
+  [
+   "Jeudi",
+   "400"
+  ],
+  [
+   "Vendredi",
+   "520"
+  ],
+  [
+   "Samedi",
+   "690"
+  ]
+ ],
+ "steps": [
+  {
+   "at": 7.5,
+   "text": "1. Clique n'importe où dans le tableau"
+  },
+  {
+   "at": 9.6,
+   "text": "2. Appuie sur",
+   "keys": [
+    "Alt",
+    "F1"
+   ]
+  },
+  {
+   "at": 12.8,
+   "text": "Le samedi saute aux yeux : 690 pains !"
+  }
+ ],
+ "select": [
+  {
+   "at": 7.5,
+   "cell": [
+    4,
+    1
+   ]
+  }
+ ],
+ "charts": [
+  {
+   "at": 10.7,
+   "title": "Pains vendus",
+   "labels": [
+    "Lun",
+    "Mar",
+    "Mer",
+    "Jeu",
+    "Ven",
+    "Sam"
+   ],
+   "values": [
+    420,
+    380,
+    455,
+    400,
+    520,
+    690
+   ],
+   "max": 800,
+   "highlight": 5,
+   "highlight_at": 12.8
+  }
+ ],
+ "paints": [
+  {
+   "at": 12.8,
+   "rows": [
+    7
+   ],
+   "fill": [
+    255,
+    214,
+    102
+   ],
+   "color": [
+    0,
+    60,
+    80
+   ]
+  }
+ ],
+ "result_caption": "Un graphique complet en 1 seconde, sans ouvrir un seul menu !",
+ "explain": [
+  [
+   "Alt+F1 : graphique en colonnes sur la même feuille",
+   "yellow"
+  ],
+  [
+   "F11 : le graphique s'ouvre dans une nouvelle feuille",
+   "blue"
+  ],
+  [
+   "Change un chiffre : la colonne bouge toute seule",
+   "green"
+  ],
+  [
+   "Clic droit › Modifier le type : courbe, secteurs…",
+   "white"
+  ]
+ ],
+ "cta": "Abonne-toi : une astuce Excel chaque jour à 6h et 18h !",
+ "comment_cta": "Quel graphique veux-tu voir demain ?\nDis-le en commentaire !",
+ "next": "Prochaine astuce à 18h"
+}
