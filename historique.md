@@ -41,3 +41,5 @@ Règle : pas de famille déjà utilisée dans les 6 dernières vidéos ; pas le 
 | 2026-11-20 | 18h | MFC Nuances de couleurs Vert–Jaune–Rouge – carte de chaleur des absences des agents d'un centre de santé à Bukavu | b | violet (classic) | rumba | videos/2026-11-20-soir.mp4 |
 | 2026-11-21 | 6h | Alt+F1 – graphique en colonnes en 1 seconde (pains vendus par jour d'une boulangerie à Butembo) ; F11 en bonus | e | lagon (card) | marimba | videos/2026-11-21-matin.mp4 |
 | 2026-11-21 | 18h | Validation personnalisée =NB.SI($A$2:$A$100;A2)=1 – bloquer un matricule en double dans la paie des agents à Gemena (alerte d'erreur) | c | ardoise (laptop) | lofi | videos/2026-11-21-soir.mp4 |
+| 2026-11-22 | 6h | NOMPROPRE(SUPPRESPACE(A2)) – nettoyer les noms mal saisis (majuscules, espaces en trop) des inscrits d'un club de foot à Tshikapa ; MAJUSCULE en bonus | g | terre (banner) | percussions | videos/2026-11-22-matin.mp4 |
+| 2026-11-22 | 18h | =MOD(C2-B2;1)*24 – heures travaillées des gardiens de nuit à Limete (passage de minuit sans #####), salaire × 2 500 FC/h | h | degrade (classic) | electro | videos/2026-11-22-soir.mp4 |

@@ -1,0 +1,210 @@
+{
+ "theme": "terre",
+ "layout": "banner",
+ "music": "percussions",
+ "cta_style": "pulse",
+ "mode": "steps",
+ "badge": "ASTUCE TEXTE DU MATIN",
+ "file": "Inscriptions_Club_Foot_Tshikapa.xlsx",
+ "hook": "Des noms mal tapés ? Une formule suffit !",
+ "question": "Club de foot à Tshikapa : majuscules et espaces en vrac",
+ "headers": [
+  "Nom saisi",
+  "Nom propre"
+ ],
+ "col_ratio": [
+  0.5,
+  0.5
+ ],
+ "right_cols": [],
+ "rows": [
+  [
+   "  kabongo   jean-paul",
+   ""
+  ],
+  [
+   "MUJINGA  esther",
+   ""
+  ],
+  [
+   "ilunga PATRICK ",
+   ""
+  ],
+  [
+   "  tshilombo  GRÂCE",
+   ""
+  ],
+  [
+   "nsimba   marie-claire",
+   ""
+  ],
+  [
+   "KAPINGA   rose  ",
+   ""
+  ]
+ ],
+ "steps": [
+  {
+   "at": 7.5,
+   "text": "1. En B2, tape :",
+   "fx": "=NOMPROPRE(SUPPRESPACE(A2))",
+   "fx_dur": 2.4
+  },
+  {
+   "at": 10.3,
+   "text": "2. Valide avec :",
+   "keys": [
+    "Entrée"
+   ],
+   "fx": "=NOMPROPRE(SUPPRESPACE(A2))",
+   "fx_dur": 0.01
+  },
+  {
+   "at": 11.8,
+   "text": "3. Double-clic sur la poignée ■ pour recopier",
+   "fx": "=NOMPROPRE(SUPPRESPACE(A2))",
+   "fx_dur": 0.01
+  },
+  {
+   "at": 13.6,
+   "text": "Tous les noms sont propres !",
+   "fx": "=NOMPROPRE(SUPPRESPACE(A2))",
+   "fx_dur": 0.01
+  }
+ ],
+ "select": [
+  {
+   "at": 7.5,
+   "cell": [
+    2,
+    1
+   ]
+  },
+  {
+   "at": 11.8,
+   "range": [
+    2,
+    1,
+    7,
+    1
+   ]
+  }
+ ],
+ "paints": [
+  {
+   "at": 4.6,
+   "rows": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "cols": [
+    0
+   ],
+   "fill": [
+    255,
+    224,
+    204
+   ],
+   "color": [
+    170,
+    40,
+    20
+   ],
+   "stagger": 0.12
+  },
+  {
+   "at": 12.3,
+   "rows": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "cols": [
+    1
+   ],
+   "fill": [
+    214,
+    236,
+    214
+   ],
+   "color": [
+    20,
+    100,
+    40
+   ],
+   "stagger": 0.12
+  }
+ ],
+ "fills": [
+  {
+   "at": 10.8,
+   "cells": [
+    [
+     2,
+     1,
+     "Kabongo Jean-Paul"
+    ]
+   ]
+  },
+  {
+   "at": 12.3,
+   "cells": [
+    [
+     3,
+     1,
+     "Mujinga Esther"
+    ],
+    [
+     4,
+     1,
+     "Ilunga Patrick"
+    ],
+    [
+     5,
+     1,
+     "Tshilombo Grâce"
+    ],
+    [
+     6,
+     1,
+     "Nsimba Marie-Claire"
+    ],
+    [
+     7,
+     1,
+     "Kapinga Rose"
+    ]
+   ],
+   "stagger": 0.12
+  }
+ ],
+ "result_caption": "6 noms nettoyés sans rien retaper !",
+ "explain": [
+  [
+   "SUPPRESPACE : fini les espaces en trop",
+   "yellow"
+  ],
+  [
+   "NOMPROPRE : une majuscule par mot",
+   "blue"
+  ],
+  [
+   "MAJUSCULE(A2) : tout en capitales",
+   "green"
+  ],
+  [
+   "Puis Collage spécial › Valeurs",
+   "white"
+  ]
+ ],
+ "cta": "Abonne-toi : une astuce Excel à 6h et 18h !",
+ "comment_cta": "Quelle liste veux-tu nettoyer ?\nDis-le en commentaire !",
+ "next": "Prochaine astuce à 18h"
+}
