@@ -1,0 +1,196 @@
+{
+ "theme": "bleu_nuit",
+ "layout": "laptop",
+ "music": "lofi_nuit",
+ "cta_style": "card",
+ "mode": "steps",
+ "badge": "TABLEAU CROISÉ DYNAMIQUE",
+ "file": "Inscriptions_Mwene-Ditu.xlsx",
+ "hook": "Tu comptes encore les élèves à la main ?",
+ "question": "École à Mwene-Ditu : combien de filles et de garçons par classe ?",
+ "headers": [
+  "Élève",
+  "Classe",
+  "Sexe"
+ ],
+ "col_ratio": [
+  0.5,
+  0.25,
+  0.25
+ ],
+ "right_cols": [],
+ "rows": [
+  [
+   "Mukendi Paul",
+   "7e A",
+   "G"
+  ],
+  [
+   "Kanku Ruth",
+   "7e A",
+   "F"
+  ],
+  [
+   "Tshibola Anne",
+   "7e B",
+   "F"
+  ],
+  [
+   "Ngalula Sarah",
+   "7e A",
+   "F"
+  ],
+  [
+   "Kabeya Joël",
+   "7e B",
+   "G"
+  ],
+  [
+   "Mbuyi Esther",
+   "8e A",
+   "F"
+  ],
+  [
+   "Kalala David",
+   "8e A",
+   "G"
+  ],
+  [
+   "Ilunga Marc",
+   "7e B",
+   "G"
+  ]
+ ],
+ "steps": [
+  {
+   "at": 7.5,
+   "text": "1. Clique dans les données, puis :",
+   "path": [
+    "Insertion",
+    "Tableau croisé dynamique",
+    "OK"
+   ]
+  },
+  {
+   "at": 10.0,
+   "text": "2. Glisse les champs :",
+   "path": [
+    "Classe › Lignes",
+    "Sexe › Colonnes",
+    "Élève › Valeurs"
+   ]
+  },
+  {
+   "at": 13.4,
+   "text": "Excel compte tout seul !"
+  }
+ ],
+ "select": [
+  {
+   "at": 7.5,
+   "range": [
+    1,
+    0,
+    9,
+    2
+   ],
+   "until": 10.6
+  }
+ ],
+ "paints": [
+  {
+   "at": 4.6,
+   "rows": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "cols": [
+    1,
+    2
+   ],
+   "fill": [
+    255,
+    236,
+    179
+   ],
+   "stagger": 0.08
+  }
+ ],
+ "pivots": [
+  {
+   "at": 10.6,
+   "caption": "Nombre de Élève",
+   "headers": [
+    "Étiquettes de lignes",
+    "F",
+    "G",
+    "Total général"
+   ],
+   "rows": [
+    [
+     "7e A",
+     "2",
+     "1",
+     "3"
+    ],
+    [
+     "7e B",
+     "1",
+     "2",
+     "3"
+    ],
+    [
+     "8e A",
+     "1",
+     "1",
+     "2"
+    ],
+    [
+     "Total général",
+     "4",
+     "4",
+     "8"
+    ]
+   ],
+   "col_ratio": [
+    0.42,
+    0.14,
+    0.14,
+    0.3
+   ],
+   "first": 0.8,
+   "stagger": 0.5,
+   "highlight": 0,
+   "highlight_at": 15.5,
+   "y": 954
+  }
+ ],
+ "result_caption": "7e A : 2 filles, 1 garçon. Total : 8 élèves !",
+ "explain": [
+  [
+   "« Nombre de Élève » : Excel compte les noms",
+   "yellow"
+  ],
+  [
+   "Sexe en Colonnes : le tableau se croise",
+   "blue"
+  ],
+  [
+   "Nouveaux inscrits ? Clic droit › Actualiser",
+   "green"
+  ],
+  [
+   "Double-clic sur un chiffre = la liste des élèves",
+   "white"
+  ]
+ ],
+ "cta": "Abonne-toi : une astuce Excel à 6h et 18h !",
+ "comment_cta": "Tu veux plus d'astuces TCD ?\nDis-le en commentaire !",
+ "next": "Prochaine astuce demain à 6h"
+}

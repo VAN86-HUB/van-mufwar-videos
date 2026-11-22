@@ -1,0 +1,290 @@
+{
+ "theme": "papier",
+ "layout": "card",
+ "music": "piano",
+ "cta_style": "pulse",
+ "mode": "steps",
+ "badge": "RACCOURCI DU MATIN",
+ "file": "Stock_Alimentation_Boma.xlsx",
+ "hook": "Ton tableau est tout gris et tu recopies chaque formule ?",
+ "question": "Alimentation à Boma : 6 articles en stock",
+ "headers": [
+  "Article",
+  "Qté",
+  "Prix",
+  "Valeur"
+ ],
+ "col_ratio": [
+  0.38,
+  0.14,
+  0.21,
+  0.27
+ ],
+ "right_cols": [
+  1,
+  2,
+  3
+ ],
+ "rows": [
+  [
+   "Sac de riz 25 kg",
+   "12",
+   "65 000",
+   ""
+  ],
+  [
+   "Huile 5 L",
+   "20",
+   "28 000",
+   ""
+  ],
+  [
+   "Sucre 1 kg",
+   "45",
+   "3 500",
+   ""
+  ],
+  [
+   "Lait en poudre",
+   "18",
+   "12 500",
+   ""
+  ],
+  [
+   "Savon (carton)",
+   "9",
+   "32 000",
+   ""
+  ],
+  [
+   "Farine 10 kg",
+   "15",
+   "22 000",
+   ""
+  ]
+ ],
+ "steps": [
+  {
+   "at": 7.5,
+   "text": "1. Clique dans le tableau, puis :",
+   "keys": [
+    "Ctrl",
+    "T"
+   ]
+  },
+  {
+   "at": 9.6,
+   "text": "2. Coche « Mon tableau comporte des en-têtes »",
+   "path": [
+    "Créer un tableau",
+    "Avec en-têtes",
+    "OK"
+   ]
+  },
+  {
+   "at": 11.6,
+   "text": "3. En D2, tape une seule fois :",
+   "fx": "=[@Qté]*[@Prix]",
+   "fx_dur": 1.6
+  },
+  {
+   "at": 13.4,
+   "text": "4. Entrée… toute la colonne se remplit seule !",
+   "keys": [
+    "Entrée"
+   ],
+   "fx": "=[@Qté]*[@Prix]",
+   "fx_dur": 0.01
+  }
+ ],
+ "select": [
+  {
+   "at": 7.5,
+   "range": [
+    1,
+    0,
+    7,
+    3
+   ]
+  },
+  {
+   "at": 11.6,
+   "cell": [
+    2,
+    3
+   ]
+  },
+  {
+   "at": 13.6,
+   "range": [
+    2,
+    3,
+    7,
+    3
+   ]
+  }
+ ],
+ "dropdowns": [
+  {
+   "at": 999,
+   "until": 999,
+   "cell": [
+    0,
+    0
+   ],
+   "items": [
+    "x"
+   ],
+   "arrow_from": 10.2,
+   "arrow_rows": [
+    1
+   ]
+  },
+  {
+   "at": 999,
+   "until": 999,
+   "cell": [
+    0,
+    1
+   ],
+   "items": [
+    "x"
+   ],
+   "arrow_from": 10.2,
+   "arrow_rows": [
+    1
+   ]
+  },
+  {
+   "at": 999,
+   "until": 999,
+   "cell": [
+    0,
+    2
+   ],
+   "items": [
+    "x"
+   ],
+   "arrow_from": 10.2,
+   "arrow_rows": [
+    1
+   ]
+  },
+  {
+   "at": 999,
+   "until": 999,
+   "cell": [
+    0,
+    3
+   ],
+   "items": [
+    "x"
+   ],
+   "arrow_from": 10.2,
+   "arrow_rows": [
+    1
+   ]
+  }
+ ],
+ "paints": [
+  {
+   "at": 10.2,
+   "rows": [
+    2,
+    4,
+    6
+   ],
+   "fill": [
+    221,
+    235,
+    247
+   ],
+   "stagger": 0.1
+  },
+  {
+   "at": 13.6,
+   "rows": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "cols": [
+    3
+   ],
+   "fill": [
+    255,
+    236,
+    179
+   ],
+   "color": [
+    150,
+    70,
+    0
+   ],
+   "stagger": 0.1
+  }
+ ],
+ "fills": [
+  {
+   "at": 13.6,
+   "cells": [
+    [
+     2,
+     3,
+     "780 000"
+    ],
+    [
+     3,
+     3,
+     "560 000"
+    ],
+    [
+     4,
+     3,
+     "157 500"
+    ],
+    [
+     5,
+     3,
+     "225 000"
+    ],
+    [
+     6,
+     3,
+     "288 000"
+    ],
+    [
+     7,
+     3,
+     "330 000"
+    ]
+   ],
+   "stagger": 0.1
+  }
+ ],
+ "result_caption": "Valeur du stock : 6 lignes calculées d'un coup !",
+ "explain": [
+  [
+   "Ctrl+T : couleurs alternées + filtres",
+   "yellow"
+  ],
+  [
+   "Une formule tapée = toute la colonne",
+   "blue"
+  ],
+  [
+   "Nouvelle ligne ? Le tableau s'agrandit seul",
+   "green"
+  ],
+  [
+   "Bonus : Ctrl+Maj+T ajoute la ligne Total",
+   "white"
+  ]
+ ],
+ "cta": "Abonne-toi : une astuce Excel à 6h et 18h !",
+ "comment_cta": "Tu connaissais Ctrl+T ?\nDis-le en commentaire !",
+ "next": "Prochaine astuce à 18h"
+}

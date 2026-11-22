@@ -23,6 +23,9 @@ Deux modes :
      "alerts": [{"at": 13, "until": 15, "message": "..", "buttons": ["Réessayer","Annuler"]}]  (boîte d'erreur Excel)
      "dropdowns": [{"at": 12.6, "until": 14.0, "cell": [2, 2], "items": ["A","B"], "pick": 0, "arrow_from": 12.0, "arrow_rows": [2,3]}]
        (liste déroulante ouverte sous une cellule ; flèche ▼ affichée sur arrow_rows à partir de arrow_from)
+     "pivots": [{"at": 10, "caption": "Nombre de Élève", "headers": [..], "rows": [[..], .., [total]], "col_ratio": [..],
+                 "first": 0.5, "stagger": 0.35, "highlight": 0, "highlight_at": 15.5, "y": .., "x": [x0, x1]}]
+       (tableau croisé dynamique dans un panneau « Feuil2 » par-dessus la grille ; dernière ligne = Total général)
 """
 import json, math, os, subprocess, sys, wave
 import numpy as np
@@ -725,6 +728,39 @@ def main(spec_path, out_path):
                     if g >= 0.99 and ch.get("data_labels", True):
                         vl = f"{v:,}".replace(",", " "); fv = font(22, True)
                         d.text((cx - d.textlength(vl, font=fv) / 2, top - 30), vl, font=fv, fill=rgba((60, 60, 60), a))
+            for pv in s.get("pivots", []):  # tableau croisé dynamique (panneau « nouvelle feuille » par-dessus la grille)
+                if not (pv["at"] <= t < pv.get("until", 1e9)): continue
+                a = ease((t - pv["at"]) / 0.4); prow = pv["rows"]; ph_ = 62
+                bx0, bx1 = pv.get("x", [wx + 24, wx + ww - 24])
+                bh_ = 66 + 56 + ph_ * (len(prow) + 1) + 24
+                by0 = pv.get("y", grid_top + 20) + int((1 - a) * 80); by1 = by0 + bh_
+                d.rounded_rectangle([bx0 + 10, by0 + 16, bx1 + 10, by1 + 16], 16, fill=rgba((0, 0, 0), 0.35 * a))
+                d.rounded_rectangle([bx0, by0, bx1, by1], 16, fill=rgba((255, 255, 255), a), outline=rgba(TH["sel"], a), width=4)
+                d.rounded_rectangle([bx0, by0, bx1, by0 + 66], 16, fill=rgba(TH["win_bar"], a)); d.rectangle([bx0, by0 + 46, bx1, by0 + 66], fill=rgba(TH["win_bar"], a))
+                d.text((bx0 + 24, by0 + 14), pv.get("title", "Feuil2 – Tableau croisé dynamique"), font=font(30, True), fill=rgba(TH["win_bar_fg"], a))
+                d.text((bx0 + 24, by0 + 80), pv.get("caption", ""), font=font(28, True), fill=rgba((40, 40, 40), a))
+                pw_ = bx1 - bx0 - 40; pcw = [pw_ * c for c in pv.get("col_ratio", [1 / len(pv["headers"])] * len(pv["headers"]))]
+                gy0 = by0 + 66 + 56; hdr_bg = tuple(pv.get("hdr_fill", (221, 235, 247))); fpb, fpn = font(29, True), font(30)
+                hi, hi_at = pv.get("highlight"), pv.get("highlight_at", 1e9)
+                for ri, rowv in enumerate([pv["headers"]] + prow):
+                    ra = 1.0 if ri == 0 else ease((t - pv["at"] - pv.get("first", 0.5) - (ri - 1) * pv.get("stagger", 0.35)) / 0.35)
+                    if ra <= 0: continue
+                    ry = gy0 + ri * ph_; x = bx0 + 20
+                    last = ri == len(prow)
+                    if ri == 0 or last: d.rectangle([bx0 + 20, ry, bx1 - 20, ry + ph_], fill=rgba(hdr_bg, a * ra))
+                    if hi is not None and ri == hi + 1 and t >= hi_at:
+                        d.rectangle([bx0 + 20, ry, bx1 - 20, ry + ph_], fill=rgba(TH["res_fill"], a))
+                        d.rectangle([bx0 + 18, ry - 2, bx1 - 18, ry + ph_ + 2], outline=rgba(TH["sel"], a), width=4)
+                    if last: d.line([bx0 + 20, ry, bx1 - 20, ry], fill=rgba((90, 140, 200), a), width=3)
+                    for ci, v in enumerate(rowv):
+                        fnt = fpb if (ri == 0 or last) else fpn
+                        col_ = (30, 30, 30)
+                        if hi is not None and ri == hi + 1 and t >= hi_at: col_ = TH["res_txt"]; fnt = fpb
+                        v = str(v)
+                        if ci == 0: d.text((x + 12, ry + 14), v, font=fnt, fill=rgba(col_, a * ra))
+                        else: d.text((x + pcw[ci] - 14 - d.textlength(v, font=fnt), ry + 14), v, font=fnt, fill=rgba(col_, a * ra))
+                        x += pcw[ci]
+                    d.line([bx0 + 20, ry + ph_, bx1 - 20, ry + ph_], fill=rgba((200, 215, 230), a * ra), width=1)
             for al in s.get("alerts", []):  # boîte de dialogue d'erreur Excel
                 if not (al["at"] <= t < al.get("until", 1e9)): continue
                 a = ease((t - al["at"]) / 0.25); sc = 0.85 + 0.15 * a
