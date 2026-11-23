@@ -1,0 +1,287 @@
+{
+ "theme": "soleil",
+ "layout": "banner",
+ "music": "rumba",
+ "cta_style": "bar",
+ "mode": "steps",
+ "badge": "ASTUCE RAPIDE DU MATIN",
+ "file": "Mutuelle_Kamina_200_membres.xlsx",
+ "hook": "Tu descends en ligne 150… et tu ne sais plus quelle colonne c'est ?",
+ "question": "Mutuelle à Kamina : 200 membres, une seule ligne de titres",
+ "headers": [
+  "N°",
+  "Membre",
+  "Mois",
+  "Cotisation (FC)"
+ ],
+ "col_ratio": [
+  0.12,
+  0.4,
+  0.16,
+  0.32
+ ],
+ "right_cols": [
+  0,
+  3
+ ],
+ "rows": [
+  [
+   "1",
+   "Asani Bora",
+   "Nov",
+   "10 000"
+  ],
+  [
+   "2",
+   "Lumbu Chantal",
+   "Nov",
+   "15 000"
+  ],
+  [
+   "3",
+   "Ngoie Fiston",
+   "Nov",
+   "10 000"
+  ],
+  [
+   "4",
+   "Kitenge Mamie",
+   "Nov",
+   "20 000"
+  ],
+  [
+   "5",
+   "Ilunga Serge",
+   "Nov",
+   "10 000"
+  ],
+  [
+   "6",
+   "Mwamba Nadège",
+   "Nov",
+   "15 000"
+  ],
+  [
+   "7",
+   "Kalenga Dieu-Merci",
+   "Nov",
+   "10 000"
+  ],
+  [
+   "8",
+   "Mbuyi Prisca",
+   "Nov",
+   "20 000"
+  ]
+ ],
+ "steps": [
+  {
+   "at": 7.5,
+   "text": "1. Onglet Affichage, puis :",
+   "path": [
+    "Affichage",
+    "Figer les volets",
+    "Figer la ligne supérieure"
+   ]
+  },
+  {
+   "at": 10.4,
+   "text": "2. Descends tout en bas du fichier :",
+   "keys": [
+    "Ctrl",
+    "Flèche bas"
+   ]
+  },
+  {
+   "at": 13.2,
+   "text": "3. Ligne 200… et les titres sont toujours là !"
+  }
+ ],
+ "select": [
+  {
+   "at": 7.5,
+   "range": [
+    1,
+    0,
+    1,
+    3
+   ]
+  },
+  {
+   "at": 10.4,
+   "cell": [
+    9,
+    3
+   ]
+  }
+ ],
+ "paints": [
+  {
+   "at": 9.4,
+   "rows": [
+    1
+   ],
+   "fill": [
+    120,
+    30,
+    0
+   ],
+   "color": [
+    255,
+    230,
+    160
+   ],
+   "stagger": 0.05
+  }
+ ],
+ "fills": [
+  {
+   "at": 11.0,
+   "cells": [
+    [
+     2,
+     0,
+     "193"
+    ],
+    [
+     2,
+     1,
+     "Kyungu Aimé"
+    ],
+    [
+     2,
+     3,
+     "20 000"
+    ],
+    [
+     3,
+     0,
+     "194"
+    ],
+    [
+     3,
+     1,
+     "Banza Judith"
+    ],
+    [
+     3,
+     3,
+     "10 000"
+    ],
+    [
+     4,
+     0,
+     "195"
+    ],
+    [
+     4,
+     1,
+     "Numbi Olivier"
+    ],
+    [
+     4,
+     3,
+     "15 000"
+    ],
+    [
+     5,
+     0,
+     "196"
+    ],
+    [
+     5,
+     1,
+     "Kabila Ruth"
+    ],
+    [
+     5,
+     3,
+     "10 000"
+    ],
+    [
+     6,
+     0,
+     "197"
+    ],
+    [
+     6,
+     1,
+     "Mukendi Thierry"
+    ],
+    [
+     6,
+     3,
+     "20 000"
+    ],
+    [
+     7,
+     0,
+     "198"
+    ],
+    [
+     7,
+     1,
+     "Tshibola Anne"
+    ],
+    [
+     7,
+     3,
+     "10 000"
+    ],
+    [
+     8,
+     0,
+     "199"
+    ],
+    [
+     8,
+     1,
+     "Kapinga Jules"
+    ],
+    [
+     8,
+     3,
+     "15 000"
+    ],
+    [
+     9,
+     0,
+     "200"
+    ],
+    [
+     9,
+     1,
+     "Lenge Béatrice"
+    ],
+    [
+     9,
+     3,
+     "10 000"
+    ]
+   ],
+   "stagger": 0.02
+  }
+ ],
+ "result_caption": "La ligne 1 reste figée pendant que tu défiles !",
+ "explain": [
+  [
+   "Fini de remonter pour lire les titres",
+   "yellow"
+  ],
+  [
+   "Figer la première colonne : même menu",
+   "blue"
+  ],
+  [
+   "Annuler : Libérer les volets",
+   "green"
+  ],
+  [
+   "Bonus : clique en B2 → Figer les volets = ligne ET colonne",
+   "white"
+  ]
+ ],
+ "cta": "Abonne-toi à @bleuddymufwar : une astuce Excel à 6h et 18h !",
+ "comment_cta": "Tu faisais défiler sans titres ?\nAvoue en commentaire !",
+ "next": "Prochaine astuce à 18h"
+}

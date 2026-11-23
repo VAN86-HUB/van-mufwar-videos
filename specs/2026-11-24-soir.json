@@ -1,0 +1,114 @@
+{
+ "theme": "vert_excel",
+ "layout": "card",
+ "music": "percussions",
+ "cta_style": "pulse",
+ "badge": "DÉFI DU SOIR",
+ "file": "Primes_Transport_Isiro.xlsx",
+ "hook": "Défi : trouve la plus grosse prime… mais seulement à la Logistique, de nuit !",
+ "question": "Plus grosse prime : service Logistique ET poste de Nuit ?",
+ "headers": [
+  "Agent",
+  "Service",
+  "Poste",
+  "Prime (USD)"
+ ],
+ "col_ratio": [
+  0.32,
+  0.27,
+  0.16,
+  0.25
+ ],
+ "right_cols": [
+  3
+ ],
+ "rows": [
+  [
+   "Likambo Rose",
+   "Logistique",
+   "Nuit",
+   "180"
+  ],
+  [
+   "Amisi Patrick",
+   "Logistique",
+   "Jour",
+   "210"
+  ],
+  [
+   "Baraka Esther",
+   "Atelier",
+   "Nuit",
+   "240"
+  ],
+  [
+   "Mulumba Jean",
+   "Logistique",
+   "Nuit",
+   "225"
+  ],
+  [
+   "Mapendo Grâce",
+   "Atelier",
+   "Jour",
+   "150"
+  ],
+  [
+   "Kasongo Éric",
+   "Logistique",
+   "Nuit",
+   "195"
+  ],
+  [
+   "Zawadi Aline",
+   "Logistique",
+   "Jour",
+   "260"
+  ],
+  [
+   "Bahati Moïse",
+   "Atelier",
+   "Nuit",
+   "205"
+  ]
+ ],
+ "criteria": [
+  [
+   1,
+   "Logistique"
+  ],
+  [
+   2,
+   "Nuit"
+  ]
+ ],
+ "sum_col": 3,
+ "label_col": 0,
+ "result_label": "Prime max :",
+ "result_col": 3,
+ "formula": "=MAX.SI.ENS(D2:D9;B2:B9;\"Logistique\";C2:C9;\"Nuit\")",
+ "typing_caption": "MAX.SI.ENS : le maximum avec plusieurs conditions",
+ "result": "225 USD",
+ "result_caption": "Mulumba Jean : 225 USD (pas 260 ni 240 !)",
+ "explain": [
+  [
+   "D2:D9 → où chercher le maximum",
+   "yellow"
+  ],
+  [
+   "B2:B9 = \"Logistique\" → 1re condition",
+   "blue"
+  ],
+  [
+   "C2:C9 = \"Nuit\" → 2e condition",
+   "green"
+  ],
+  [
+   "Le minimum ? Même chose avec MIN.SI.ENS",
+   "white"
+  ]
+ ],
+ "cta": "Abonne-toi à @bleuddymufwar : une astuce Excel chaque jour à 6h et 18h !",
+ "comment_cta": "Tu aurais trouvé 225 ?\nRéponds en commentaire !",
+ "next": "Prochaine astuce demain à 6h"
+}
