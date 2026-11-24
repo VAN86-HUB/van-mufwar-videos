@@ -1,0 +1,211 @@
+{
+ "theme": "violet",
+ "layout": "laptop",
+ "music": "likembe",
+ "cta_style": "card",
+ "mode": "steps",
+ "badge": "ASTUCE DU SOIR • NIVEAU +",
+ "file": "Motos_Bandundu.xlsx",
+ "hook": "Une moto s'use avec les kilomètres… OU avec le temps. Ta formule voit les deux ?",
+ "question": "Motos-taxis à Bandundu : qui doit faire la vidange ?",
+ "headers": [
+  "Chauffeur",
+  "Km",
+  "Jours",
+  "Contrôle"
+ ],
+ "col_ratio": [
+  0.36,
+  0.19,
+  0.16,
+  0.29
+ ],
+ "right_cols": [
+  1,
+  2
+ ],
+ "rows": [
+  [
+   "Mpia Junior",
+   "3 450",
+   "40",
+   ""
+  ],
+  [
+   "Mbo Didier",
+   "1 200",
+   "25",
+   ""
+  ],
+  [
+   "Kamanda Héritier",
+   "2 100",
+   "75",
+   ""
+  ],
+  [
+   "Lokwa Bienvenu",
+   "2 980",
+   "58",
+   ""
+  ],
+  [
+   "Mongo Freddy",
+   "3 000",
+   "10",
+   ""
+  ],
+  [
+   "Ipanga Gloire",
+   "800",
+   "45",
+   ""
+  ],
+  [
+   "Bosenge Daniel",
+   "1 950",
+   "30",
+   ""
+  ],
+  [
+   "Ekofo Patrick",
+   "3 700",
+   "90",
+   ""
+  ]
+ ],
+ "steps": [
+  {
+   "at": 7.5,
+   "text": "1. En D2, tape :",
+   "fx": "=SI(OU(B2>=3000;C2>60);\"Vidange !\";\"OK\")",
+   "fx_dur": 2.3
+  },
+  {
+   "at": 10.6,
+   "text": "2. Double-clic sur la poignée de recopie"
+  },
+  {
+   "at": 13.0,
+   "text": "3. Il suffit d'UNE condition pour l'alerte !"
+  }
+ ],
+ "select": [
+  {
+   "at": 7.5,
+   "cell": [
+    2,
+    3
+   ]
+  },
+  {
+   "at": 10.6,
+   "range": [
+    2,
+    3,
+    9,
+    3
+   ]
+  }
+ ],
+ "fills": [
+  {
+   "at": 10.0,
+   "cells": [
+    [
+     2,
+     3,
+     "Vidange !"
+    ]
+   ]
+  },
+  {
+   "at": 11.2,
+   "cells": [
+    [
+     3,
+     3,
+     "OK"
+    ],
+    [
+     4,
+     3,
+     "Vidange !"
+    ],
+    [
+     5,
+     3,
+     "OK"
+    ],
+    [
+     6,
+     3,
+     "Vidange !"
+    ],
+    [
+     7,
+     3,
+     "OK"
+    ],
+    [
+     8,
+     3,
+     "OK"
+    ],
+    [
+     9,
+     3,
+     "Vidange !"
+    ]
+   ],
+   "stagger": 0.15
+  }
+ ],
+ "paints": [
+  {
+   "at": 13.0,
+   "rows": [
+    2,
+    4,
+    6,
+    9
+   ],
+   "cols": [
+    3
+   ],
+   "fill": [
+    220,
+    38,
+    38
+   ],
+   "color": [
+    255,
+    255,
+    255
+   ],
+   "stagger": 0.25
+  }
+ ],
+ "result_caption": "4 motos au garage, même Kamanda (2 100 km seulement)",
+ "explain": [
+  [
+   "OU(…) = VRAI si au moins UNE condition est vraie",
+   "yellow"
+  ],
+  [
+   "B2>=3000 : trop de kilomètres",
+   "blue"
+  ],
+  [
+   "C2>60 : plus de 2 mois sans vidange",
+   "green"
+  ],
+  [
+   "Les deux obligatoires ? Utilise ET",
+   "white"
+  ]
+ ],
+ "cta": "Abonne-toi : une astuce Excel chaque jour à 6h et 18h !",
+ "comment_cta": "Tu utilises plutôt ET ou OU ?\nRéponds en commentaire !",
+ "next": "Prochaine astuce demain à 6h"
+}

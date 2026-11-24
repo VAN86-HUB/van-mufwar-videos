@@ -1,0 +1,253 @@
+{
+ "theme": "ardoise",
+ "layout": "classic",
+ "music": "marimba",
+ "cta_style": "bar",
+ "mode": "steps",
+ "badge": "ASTUCE EXPRESS DU MATIN",
+ "file": "Salon_MbanzaNgungu.xlsx",
+ "hook": "Ton tableau est à la verticale… et ton patron le veut à l'horizontale ?",
+ "question": "Salon de coiffure à Mbanza-Ngungu : clients par jour, à mettre en ligne",
+ "headers": [
+  "Jour",
+  "Clients",
+  "",
+  "",
+  "",
+  ""
+ ],
+ "col_ratio": [
+  0.2,
+  0.16,
+  0.16,
+  0.16,
+  0.16,
+  0.16
+ ],
+ "right_cols": [],
+ "rows": [
+  [
+   "Lun",
+   "12",
+   "",
+   "",
+   "",
+   ""
+  ],
+  [
+   "Mar",
+   "9",
+   "",
+   "",
+   "",
+   ""
+  ],
+  [
+   "Mer",
+   "14",
+   "",
+   "",
+   "",
+   ""
+  ],
+  [
+   "Jeu",
+   "11",
+   "",
+   "",
+   "",
+   ""
+  ],
+  [
+   "Ven",
+   "18",
+   "",
+   "",
+   "",
+   ""
+  ],
+  [
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  [
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  [
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ]
+ ],
+ "steps": [
+  {
+   "at": 7.5,
+   "text": "1. Sélectionne A1:B6 et copie :",
+   "keys": [
+    "Ctrl",
+    "C"
+   ]
+  },
+  {
+   "at": 10.0,
+   "text": "2. Clique en A8, puis :",
+   "path": [
+    "Accueil",
+    "Coller",
+    "Transposer"
+   ]
+  },
+  {
+   "at": 13.0,
+   "text": "3. Les lignes deviennent des colonnes !"
+  }
+ ],
+ "select": [
+  {
+   "at": 7.5,
+   "range": [
+    1,
+    0,
+    6,
+    1
+   ]
+  },
+  {
+   "at": 10.0,
+   "cell": [
+    8,
+    0
+   ]
+  },
+  {
+   "at": 11.4,
+   "range": [
+    8,
+    0,
+    9,
+    5
+   ]
+  }
+ ],
+ "fills": [
+  {
+   "at": 11.4,
+   "cells": [
+    [
+     8,
+     0,
+     "Jour"
+    ],
+    [
+     8,
+     1,
+     "Lun"
+    ],
+    [
+     8,
+     2,
+     "Mar"
+    ],
+    [
+     8,
+     3,
+     "Mer"
+    ],
+    [
+     8,
+     4,
+     "Jeu"
+    ],
+    [
+     8,
+     5,
+     "Ven"
+    ],
+    [
+     9,
+     0,
+     "Clients"
+    ],
+    [
+     9,
+     1,
+     "12"
+    ],
+    [
+     9,
+     2,
+     "9"
+    ],
+    [
+     9,
+     3,
+     "14"
+    ],
+    [
+     9,
+     4,
+     "11"
+    ],
+    [
+     9,
+     5,
+     "18"
+    ]
+   ],
+   "stagger": 0.08
+  }
+ ],
+ "paints": [
+  {
+   "at": 12.6,
+   "rows": [
+    8
+   ],
+   "fill": [
+    255,
+    226,
+    120
+   ],
+   "color": [
+    30,
+    45,
+    40
+   ],
+   "stagger": 0
+  }
+ ],
+ "result_caption": "5 lignes deviennent 5 colonnes, sans rien retaper !",
+ "explain": [
+  [
+   "Ctrl+Alt+V puis coche « Transposer » : même résultat",
+   "yellow"
+  ],
+  [
+   "Le tableau d'origine ne bouge pas",
+   "blue"
+  ],
+  [
+   "Colle toujours sur une zone vide",
+   "green"
+  ],
+  [
+   "Version formule qui se met à jour : =TRANSPOSE(A1:B6)",
+   "white"
+  ]
+ ],
+ "cta": "Abonne-toi à @bleuddymufwar : une astuce Excel chaque jour à 6h et 18h !",
+ "comment_cta": "Tu retapais tout à la main ?\nAvoue en commentaire !",
+ "next": "Prochaine astuce à 18h"
+}

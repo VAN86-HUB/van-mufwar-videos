@@ -894,7 +894,7 @@ def draw_cta(d, s, style, dt, a):
     q = s.get("comment_cta", "Quelle formule veux-tu demain ?\nÉcris-la en commentaire !")
     p = 1 + 0.06 * math.sin(dt * 6)
     if style == "card":
-        cy0, cy1 = 520, 1470
+        cy0, cy1 = 520, 1600  # assez haut pour les 2 lignes de comment_cta
         d.rounded_rectangle([90, cy0, W - 90, cy1], 46, fill=(255, 255, 255, int(245 * a)))
         d.ellipse([W / 2 - 85, cy0 + 50, W / 2 + 85, cy0 + 220], fill=rgba(TH["cta_btn"], a))
         f = dfont(90); d.text((W / 2 - d.textlength("V", font=f) / 2, cy0 + 72), "V", font=f, fill=(255, 255, 255, int(255 * a)))
