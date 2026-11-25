@@ -1,0 +1,179 @@
+{
+ "theme": "neon",
+ "layout": "banner",
+ "music": "electro",
+ "cta_style": "pulse",
+ "mode": "steps",
+ "badge": "ASTUCE EXPRESS DU MATIN",
+ "file": "Notes_Institut_Kenge.xlsx",
+ "hook": "Défi : ton fichier accepte une note de 25/20 ?",
+ "question": "Notes d'élèves à Kenge : bloquer toute note hors de 0 à 20",
+ "headers": [
+  "Élève",
+  "Classe",
+  "Note /20"
+ ],
+ "col_ratio": [
+  0.46,
+  0.24,
+  0.3
+ ],
+ "right_cols": [
+  2
+ ],
+ "rows": [
+  [
+   "Mbala Christelle",
+   "3e A",
+   "14"
+  ],
+  [
+   "Kabeya Josué",
+   "3e A",
+   "9"
+  ],
+  [
+   "Nzuzi Merveille",
+   "3e B",
+   "17"
+  ],
+  [
+   "Lukusa Daniel",
+   "3e B",
+   "12"
+  ],
+  [
+   "Makiese Prisca",
+   "3e A",
+   "8"
+  ],
+  [
+   "Mutombo Fiston",
+   "3e B",
+   "11"
+  ],
+  [
+   "Tshibangu Elie",
+   "3e A",
+   ""
+  ]
+ ],
+ "steps": [
+  {
+   "at": 7.5,
+   "text": "1. Sélectionne les notes (C2:C100)"
+  },
+  {
+   "at": 9.2,
+   "text": "2. Ouvre :",
+   "path": [
+    "Données",
+    "Validation des données",
+    "Nombre entier"
+   ]
+  },
+  {
+   "at": 11.0,
+   "text": "3. Choisis « comprise entre » 0 et 20"
+  },
+  {
+   "at": 13.1,
+   "text": "4. Test : on tape 25 pour Elie…"
+  }
+ ],
+ "select": [
+  {
+   "at": 7.5,
+   "range": [
+    2,
+    2,
+    8,
+    2
+   ]
+  },
+  {
+   "at": 13.1,
+   "cell": [
+    8,
+    2
+   ]
+  }
+ ],
+ "fills": [
+  {
+   "at": 13.5,
+   "cells": [
+    [
+     8,
+     2,
+     "25"
+    ]
+   ]
+  },
+  {
+   "at": 15.6,
+   "cells": [
+    [
+     8,
+     2,
+     "15"
+    ]
+   ]
+  }
+ ],
+ "alerts": [
+  {
+   "at": 14.0,
+   "until": 15.6,
+   "message": "Note impossible ! Tape un nombre entier entre 0 et 20.",
+   "buttons": [
+    "Réessayer",
+    "Annuler"
+   ]
+  }
+ ],
+ "paints": [
+  {
+   "at": 15.8,
+   "rows": [
+    8
+   ],
+   "cols": [
+    2
+   ],
+   "fill": [
+    0,
+    90,
+    80
+   ],
+   "color": [
+    0,
+    255,
+    230
+   ],
+   "stagger": 0
+  }
+ ],
+ "result_caption": "25 refusé, 15 accepté : ton bulletin reste juste !",
+ "explain": [
+  [
+   "« Décimal » au lieu de « Nombre entier » : 12,5 accepté",
+   "yellow"
+  ],
+  [
+   "Onglet « Message de saisie » : une bulle d'aide",
+   "blue"
+  ],
+  [
+   "Onglet « Alerte d'erreur » : écris ton message",
+   "green"
+  ],
+  [
+   "Marche aussi pour un âge, une quantité, un prix",
+   "white"
+  ]
+ ],
+ "cta": "Abonne-toi à @bleuddymufwar : une astuce Excel chaque jour à 6h et 18h !",
+ "comment_cta": "Quelle note maximale dans ton école ?\nRéponds en commentaire !",
+ "next": "Prochaine astuce à 18h"
+}

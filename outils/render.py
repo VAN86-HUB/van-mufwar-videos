@@ -920,20 +920,22 @@ def draw_cta(d, s, style, dt, a):
         d.text((bx + (W - d.textlength(hnd, font=f)) / 2, yy + 82), hnd, font=f, fill=(255, 255, 255, int(255 * a)))
         y2 = caption(d, nxt, yy + 250, 46, TH["cap_fg"] if sum(TH["cta_bg"][:3]) < 300 else (30, 30, 30), a, box=False)
         bw, bh = 420 * p, 110 * p; by = y2 + 110
-        d.rounded_rectangle([W / 2 - bw / 2, by - bh / 2, W / 2 + bw / 2, by + bh / 2], 55, outline=(255, 255, 255, int(255 * a)), width=6)
+        ink = (255, 255, 255) if sum(TH["cta_bg"][:3]) < 500 else TH["cta_btn"]  # fond clair : bouton coloré visible
+        d.rounded_rectangle([W / 2 - bw / 2, by - bh / 2, W / 2 + bw / 2, by + bh / 2], 55, outline=rgba(ink, a), width=6)
         fb = dfont(int(50 * p)); tx = "+ S'abonner"
-        d.text((W / 2 - d.textlength(tx, font=fb) / 2, by - 32 * p), tx, font=fb, fill=(255, 255, 255, int(255 * a)))
+        d.text((W / 2 - d.textlength(tx, font=fb) / 2, by - 32 * p), tx, font=fb, fill=rgba(ink, a))
         if q: caption(d, q, by + 110, 44, TH["accent"], a, box=False)
     else:  # pulse (style d'origine)
         light = sum(TH["cta_bg"][:3]) > 500
         yy = caption(d, cta, 700, 72, TH["accent"], a, box=False)
         caption(d, "@bleuddymufwar", yy + 40, 64, (30, 30, 30) if light else (255, 255, 255), a, box=False)
-        caption(d, nxt, yy + 150, 46, (30, 30, 30) if light else (255, 255, 255), a, box=False)
+        y3 = caption(d, nxt, yy + 150, 46, (30, 30, 30) if light else (255, 255, 255), a, box=False)
+        by = max(1250, y3 + 110)  # le bouton descend si le texte d'appel est long (pas de chevauchement)
         bw, bh = 420 * p, 110 * p
-        d.rounded_rectangle([W / 2 - bw / 2, 1250 - bh / 2, W / 2 + bw / 2, 1250 + bh / 2], 55, fill=rgba(TH["cta_btn"], a))
+        d.rounded_rectangle([W / 2 - bw / 2, by - bh / 2, W / 2 + bw / 2, by + bh / 2], 55, fill=rgba(TH["cta_btn"], a))
         fb = dfont(int(50 * p)); tx = "+ S'abonner"
-        d.text((W / 2 - d.textlength(tx, font=fb) / 2, 1250 - 30 * p), tx, font=fb, fill=(255, 255, 255, int(255 * a)))
-        if q: caption(d, q, 1380, 46, TH["accent"], a, box=False)
+        d.text((W / 2 - d.textlength(tx, font=fb) / 2, by - 30 * p), tx, font=fb, fill=(255, 255, 255, int(255 * a)))
+        if q: caption(d, q, by + 130, 46, TH["accent"], a, box=False)
 
 if __name__ == "__main__":
     main(sys.argv[1], sys.argv[2])

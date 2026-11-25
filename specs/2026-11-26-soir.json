@@ -1,0 +1,251 @@
+{
+ "theme": "epure",
+ "layout": "card",
+ "music": "rumba",
+ "cta_style": "bar",
+ "mode": "steps",
+ "badge": "ASTUCE DU SOIR • NIVEAU +",
+ "file": "Microcredits_Beni.xlsx",
+ "hook": "Erreur fréquente : ta date d'échéance devient 46280 !",
+ "question": "Microcrédits à Beni : date d'échéance = début + nombre de mois",
+ "headers": [
+  "Client",
+  "Début",
+  "Mois",
+  "Échéance"
+ ],
+ "col_ratio": [
+  0.33,
+  0.26,
+  0.13,
+  0.28
+ ],
+ "right_cols": [
+  1,
+  2,
+  3
+ ],
+ "rows": [
+  [
+   "Kahindo Esther",
+   "15/03/2026",
+   "6",
+   ""
+  ],
+  [
+   "Paluku Josué",
+   "31/01/2026",
+   "1",
+   ""
+  ],
+  [
+   "Masika Nadine",
+   "10/06/2026",
+   "12",
+   ""
+  ],
+  [
+   "Kambale Eric",
+   "05/08/2026",
+   "3",
+   ""
+  ],
+  [
+   "Muhindo Grâce",
+   "20/10/2026",
+   "9",
+   ""
+  ],
+  [
+   "Kavira Sarah",
+   "01/09/2026",
+   "2",
+   ""
+  ],
+  [
+   "Kasereka Jonas",
+   "12/11/2026",
+   "4",
+   ""
+  ]
+ ],
+ "steps": [
+  {
+   "at": 7.5,
+   "text": "1. En D2, tape :",
+   "fx": "=MOIS.DECALER(B2;C2)",
+   "fx_dur": 1.8
+  },
+  {
+   "at": 10.2,
+   "text": "2. Double-clic sur la poignée de recopie"
+  },
+  {
+   "at": 12.0,
+   "text": "3. Des nombres ? Format Date en 1 raccourci :",
+   "keys": [
+    "Ctrl",
+    "Maj",
+    "#"
+   ]
+  },
+  {
+   "at": 14.6,
+   "text": "4. En rouge : échéances dépassées au 26/11"
+  }
+ ],
+ "select": [
+  {
+   "at": 7.5,
+   "cell": [
+    2,
+    3
+   ]
+  },
+  {
+   "at": 10.2,
+   "range": [
+    2,
+    3,
+    8,
+    3
+   ]
+  }
+ ],
+ "fills": [
+  {
+   "at": 9.5,
+   "cells": [
+    [
+     2,
+     3,
+     "46280"
+    ]
+   ]
+  },
+  {
+   "at": 10.6,
+   "cells": [
+    [
+     3,
+     3,
+     "46081"
+    ],
+    [
+     4,
+     3,
+     "46548"
+    ],
+    [
+     5,
+     3,
+     "46331"
+    ],
+    [
+     6,
+     3,
+     "46588"
+    ],
+    [
+     7,
+     3,
+     "46327"
+    ],
+    [
+     8,
+     3,
+     "46458"
+    ]
+   ],
+   "stagger": 0.12
+  },
+  {
+   "at": 12.8,
+   "cells": [
+    [
+     2,
+     3,
+     "15/09/2026"
+    ],
+    [
+     3,
+     3,
+     "28/02/2026"
+    ],
+    [
+     4,
+     3,
+     "10/06/2027"
+    ],
+    [
+     5,
+     3,
+     "05/11/2026"
+    ],
+    [
+     6,
+     3,
+     "20/07/2027"
+    ],
+    [
+     7,
+     3,
+     "01/11/2026"
+    ],
+    [
+     8,
+     3,
+     "12/03/2027"
+    ]
+   ],
+   "stagger": 0.1
+  }
+ ],
+ "paints": [
+  {
+   "at": 14.6,
+   "rows": [
+    2,
+    3,
+    5,
+    7
+   ],
+   "cols": [
+    3
+   ],
+   "fill": [
+    254,
+    226,
+    226
+   ],
+   "color": [
+    185,
+    28,
+    28
+   ],
+   "stagger": 0.25
+  }
+ ],
+ "result_caption": "31/01 + 1 mois = 28/02 : la fin de mois est gérée !",
+ "explain": [
+  [
+   "MOIS.DECALER(date;mois) : avance de N mois",
+   "yellow"
+  ],
+  [
+   "Un nombre négatif recule : -3 = 3 mois avant",
+   "blue"
+  ],
+  [
+   "Ctrl+1 › Date marche aussi pour le format",
+   "green"
+  ],
+  [
+   "Rouge auto : MFC =$D2<AUJOURDHUI()",
+   "white"
+  ]
+ ],
+ "cta": "Abonne-toi à @bleuddymufwar : une astuce Excel chaque jour à 6h et 18h !",
+ "comment_cta": "Tu calcules tes échéances à la main ?\nAvoue en commentaire !",
+ "next": "Prochaine astuce demain à 6h"
+}
