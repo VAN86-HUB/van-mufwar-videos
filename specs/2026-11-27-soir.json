@@ -1,0 +1,218 @@
+{
+ "theme": "terre",
+ "layout": "laptop",
+ "music": "piano",
+ "cta_style": "pulse",
+ "mode": "steps",
+ "badge": "FORMULE DYNAMIQUE • NIVEAU +",
+ "file": "Factures_Grossiste_Kisangani.xlsx",
+ "hook": "Défi : sortir les gros impayés en UNE formule ?",
+ "question": "Grossiste à Kisangani : factures NON payées ET de plus de 500 USD",
+ "headers": [
+  "Client",
+  "Montant",
+  "Payé",
+  "Impayés > 500"
+ ],
+ "col_ratio": [
+  0.3,
+  0.22,
+  0.14,
+  0.34
+ ],
+ "right_cols": [
+  1
+ ],
+ "rows": [
+  [
+   "Ets Bolingo",
+   "820",
+   "Non",
+   ""
+  ],
+  [
+   "Alim. Tumaini",
+   "350",
+   "Non",
+   ""
+  ],
+  [
+   "Ets Lokuli",
+   "1 200",
+   "Oui",
+   ""
+  ],
+  [
+   "Boutique Amani",
+   "640",
+   "Non",
+   ""
+  ],
+  [
+   "Pharma Elikya",
+   "280",
+   "Oui",
+   ""
+  ],
+  [
+   "Ets Baraka",
+   "950",
+   "Non",
+   ""
+  ],
+  [
+   "Dépôt Sifa",
+   "510",
+   "Oui",
+   ""
+  ],
+  [
+   "Kiosque Upendo",
+   "470",
+   "Non",
+   ""
+  ]
+ ],
+ "steps": [
+  {
+   "at": 7.5,
+   "text": "1. En D2, une seule formule :",
+   "fx": "=FILTRE(A2:A9;(B2:B9>500)*(C2:C9=\"Non\");\"Aucune\")",
+   "fx_dur": 2.6
+  },
+  {
+   "at": 10.8,
+   "text": "2. Le * veut dire ET : les 2 conditions",
+   "fx": "=FILTRE(A2:A9;(B2:B9>500)*(C2:C9=\"Non\");\"Aucune\")",
+   "fx_dur": 0.01
+  },
+  {
+   "at": 12.6,
+   "text": "3. Valide avec :",
+   "keys": [
+    "Entrée"
+   ],
+   "fx": "=FILTRE(A2:A9;(B2:B9>500)*(C2:C9=\"Non\");\"Aucune\")",
+   "fx_dur": 0.01
+  },
+  {
+   "at": 14.4,
+   "text": "3 clients à relancer, en une seconde !",
+   "fx": "=FILTRE(A2:A9;(B2:B9>500)*(C2:C9=\"Non\");\"Aucune\")",
+   "fx_dur": 0.01
+  }
+ ],
+ "select": [
+  {
+   "at": 7.5,
+   "cell": [
+    2,
+    3
+   ],
+   "until": 13.0
+  },
+  {
+   "at": 13.0,
+   "range": [
+    2,
+    3,
+    4,
+    3
+   ],
+   "until": 16.0
+  }
+ ],
+ "paints": [
+  {
+   "at": 10.8,
+   "rows": [
+    2,
+    5,
+    7
+   ],
+   "cols": [
+    0,
+    1,
+    2
+   ],
+   "fill": [
+    255,
+    224,
+    178
+   ],
+   "color": [
+    140,
+    50,
+    0
+   ],
+   "stagger": 0.2
+  },
+  {
+   "at": 13.0,
+   "rows": [
+    2,
+    3,
+    4
+   ],
+   "cols": [
+    3
+   ],
+   "fill": [
+    255,
+    240,
+    200
+   ],
+   "color": [
+    120,
+    40,
+    0
+   ],
+   "stagger": 0.15
+  }
+ ],
+ "fills": [
+  {
+   "at": 13.0,
+   "cells": [
+    [
+     2,
+     3,
+     "Ets Bolingo"
+    ],
+    [
+     3,
+     3,
+     "Boutique Amani"
+    ],
+    [
+     4,
+     3,
+     "Ets Baraka"
+    ]
+   ],
+   "stagger": 0.15
+  }
+ ],
+ "result_caption": "3 factures à relancer : 2 410 USD à encaisser !",
+ "explain": [
+  [
+   "* entre 2 conditions = ET",
+   "yellow"
+  ],
+  [
+   "+ entre 2 conditions = OU",
+   "blue"
+  ],
+  [
+   "\"Aucune\" s'affiche si rien ne correspond",
+   "green"
+  ],
+  [
+   "=SOMME(FILTRE(B2:B9;…)) donne 2 410",
+   "white"
+  ]
+ ],
+ "cta": "Abonne-toi à @bleuddymufwar : une astuce Excel chaque jour à 6h et 18h !",
+ "comment_cta": "Team ET ou team OU ?\nRéponds en commentaire !",
+ "next": "Prochaine astuce demain à 6h"
+}
