@@ -1,0 +1,181 @@
+{
+ "theme": "bleu_nuit",
+ "layout": "card",
+ "music": "lofi_nuit",
+ "cta_style": "bar",
+ "mode": "steps",
+ "badge": "ASTUCE TEXTE • NIVEAU +",
+ "file": "Cotisations_Chorale_Zongo.xlsx",
+ "hook": "Tu recopies les noms un par un dans WhatsApp ? Stop !",
+ "question": "Chorale à Zongo : la liste de ceux qui n'ont pas cotisé, dans UNE cellule",
+ "headers": [
+  "Membre",
+  "Payé",
+  "Retardataires"
+ ],
+ "col_ratio": [
+  0.27,
+  0.17,
+  0.56
+ ],
+ "right_cols": [],
+ "rows": [
+  [
+   "Aimé",
+   "Oui",
+   ""
+  ],
+  [
+   "Clarisse",
+   "Non",
+   ""
+  ],
+  [
+   "Éric",
+   "Oui",
+   ""
+  ],
+  [
+   "Rose",
+   "Non",
+   ""
+  ],
+  [
+   "Paul",
+   "Oui",
+   ""
+  ],
+  [
+   "Grâce",
+   "Non",
+   ""
+  ],
+  [
+   "Jules",
+   "Oui",
+   ""
+  ],
+  [
+   "Anne",
+   "Non",
+   ""
+  ]
+ ],
+ "steps": [
+  {
+   "at": 7.5,
+   "text": "1. En C2, tape :",
+   "fx": "=JOINDRE.TEXTE(\", \";VRAI;SI(B2:B9=\"Non\";A2:A9;\"\"))",
+   "fx_dur": 2.8
+  },
+  {
+   "at": 10.8,
+   "text": "2. SI garde seulement les « Non »",
+   "fx": "=JOINDRE.TEXTE(\", \";VRAI;SI(B2:B9=\"Non\";A2:A9;\"\"))",
+   "fx_dur": 0.01
+  },
+  {
+   "at": 12.6,
+   "text": "3. Valide avec :",
+   "keys": [
+    "Entrée"
+   ],
+   "fx": "=JOINDRE.TEXTE(\", \";VRAI;SI(B2:B9=\"Non\";A2:A9;\"\"))",
+   "fx_dur": 0.01
+  },
+  {
+   "at": 14.0,
+   "text": "Tous les noms, séparés par des virgules !",
+   "fx": "=JOINDRE.TEXTE(\", \";VRAI;SI(B2:B9=\"Non\";A2:A9;\"\"))",
+   "fx_dur": 0.01
+  }
+ ],
+ "select": [
+  {
+   "at": 7.5,
+   "cell": [
+    2,
+    2
+   ]
+  }
+ ],
+ "paints": [
+  {
+   "at": 10.8,
+   "rows": [
+    3,
+    5,
+    7,
+    9
+   ],
+   "cols": [
+    0,
+    1
+   ],
+   "fill": [
+    255,
+    224,
+    178
+   ],
+   "color": [
+    150,
+    60,
+    0
+   ],
+   "stagger": 0.15
+  },
+  {
+   "at": 13.4,
+   "rows": [
+    2
+   ],
+   "cols": [
+    2
+   ],
+   "fill": [
+    255,
+    243,
+    205
+   ],
+   "color": [
+    120,
+    60,
+    0
+   ]
+  }
+ ],
+ "fills": [
+  {
+   "at": 13.4,
+   "cells": [
+    [
+     2,
+     2,
+     "Clarisse, Rose, Grâce, Anne"
+    ]
+   ]
+  }
+ ],
+ "result_caption": "4 retardataires listés : copie, colle dans WhatsApp, c'est envoyé !",
+ "explain": [
+  [
+   "\", \" = le séparateur entre les noms",
+   "yellow"
+  ],
+  [
+   "VRAI = ignorer les cellules vides",
+   "blue"
+  ],
+  [
+   "Excel 2019 : valide avec Ctrl+Maj+Entrée",
+   "green"
+  ],
+  [
+   "Bonus : =\"Retard : \"&JOINDRE.TEXTE(…)",
+   "white"
+  ]
+ ],
+ "cta": "Rejoins @bleuddymufwar : une astuce Excel chaque jour à 6h et 18h !",
+ "comment_cta": "Quelle liste veux-tu fusionner ?\nÉcris-le en commentaire !",
+ "next": "Prochaine astuce demain à 6h"
+}

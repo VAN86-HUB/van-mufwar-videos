@@ -26,6 +26,8 @@ Deux modes :
      "pivots": [{"at": 10, "caption": "Nombre de Élève", "headers": [..], "rows": [[..], .., [total]], "col_ratio": [..],
                  "first": 0.5, "stagger": 0.35, "highlight": 0, "highlight_at": 15.5, "y": .., "x": [x0, x1]}]
        (tableau croisé dynamique dans un panneau « Feuil2 » par-dessus la grille ; dernière ligne = Total général)
+     "bars": [{"at": 11, "col": 2, "rows": [2,3,...], "color": [r,g,b], "stagger": 0.1, "max": (facultatif)}]
+       (barres de données de mise en forme conditionnelle, proportionnelles à la valeur de la cellule)
 """
 import json, math, os, subprocess, sys, wave
 import numpy as np
@@ -564,6 +566,28 @@ def main(spec_path, out_path):
                 at = p["at"] + k * p.get("stagger", 0)
                 if rr == r_excel and t >= at: res = (p, ease((t - at) / 0.4))
         return res
+    def num(v):
+        try: return float(str(v).replace(" ", "").replace("\u00a0", "").replace("\u202f", "").replace(",", "."))
+        except ValueError: return None
+    def draw_bars(d, r_excel, c, t, x0, y0, x1, y1):
+        """Barres de données (MFC) : "bars": [{"at", "col", "rows", "color", "stagger", "max"}]."""
+        for b in s.get("bars", []):
+            if b["col"] != c or r_excel not in b["rows"]: continue
+            k = b["rows"].index(r_excel); at = b["at"] + k * b.get("stagger", 0.1)
+            if t < at: continue
+            vals = [num(rows[rr - 2][c]) or 0 for rr in b["rows"]]
+            mx = b.get("max") or max(vals) or 1
+            v = num(cell_value(r_excel, c, t)[0]) or 0
+            frac = max(0.0, min(1.0, v / mx)) * ease((t - at) / 0.7)
+            col = tuple(b.get("color", TH["sel"]))
+            bx0, by0, by1 = x0 + 5, y0 + 9, y1 - 9; bx1 = bx0 + (x1 - x0 - 10) * frac
+            if bx1 <= bx0 + 1: continue
+            n = max(1, int(bx1 - bx0))
+            for i in range(0, n, 3):  # dégradé plein → clair, comme dans Excel
+                a = 1 - 0.75 * i / max(1, (x1 - x0 - 10))
+                cc = tuple(int(255 + (cv - 255) * a) for cv in col)
+                d.rectangle([bx0 + i, by0, min(bx1, bx0 + i + 3), by1], fill=cc)
+            d.rectangle([bx0, by0, bx1, by1], outline=col, width=2)
     def current_step(t):
         cur = None
         for st in steps:
@@ -623,6 +647,7 @@ def main(spec_path, out_path):
                         fill = tuple(int(b0 + (h - b0) * a) for b0, h in zip(TH["cell"], pf))
                         if p.get("color"): tcol = tuple(p["color"])
                 d.rectangle([x0, y0, x1, y1], fill=fill, outline=TH["grid"])
+                if mode == "steps" and 0 <= data_i < len(rows): draw_bars(d, r, c, t, x0, y0, x1, y1)
                 if r == 0:
                     Lt = chr(65 + c); d.text((x0 + (x1 - x0 - d.textlength(Lt, font=fsmall)) / 2, y0 + 18), Lt, font=fsmall, fill=TH["hdr_fg"])
                 elif r == 1:

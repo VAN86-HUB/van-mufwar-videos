@@ -1,0 +1,189 @@
+{
+ "theme": "lagon",
+ "layout": "banner",
+ "music": "likembe",
+ "cta_style": "card",
+ "mode": "steps",
+ "badge": "ASTUCE VISUELLE DU MATIN",
+ "file": "Recolte_Mais_Kabinda.xlsx",
+ "hook": "Des chiffres partout… et tu ne vois rien ? Mets des barres !",
+ "question": "Coopérative de maïs à Kabinda : qui a récolté le plus de sacs ?",
+ "headers": [
+  "Planteur",
+  "Village",
+  "Sacs"
+ ],
+ "col_ratio": [
+  0.42,
+  0.3,
+  0.28
+ ],
+ "right_cols": [
+  2
+ ],
+ "rows": [
+  [
+   "Kalala Joseph",
+   "Lubao",
+   "64"
+  ],
+  [
+   "Mbuyi Thérèse",
+   "Kamiji",
+   "18"
+  ],
+  [
+   "Ngoyi Patrice",
+   "Lubao",
+   "37"
+  ],
+  [
+   "Kasongo Rachel",
+   "Ngandajika",
+   "52"
+  ],
+  [
+   "Ilunga Moïse",
+   "Kamiji",
+   "25"
+  ],
+  [
+   "Mukala Agnès",
+   "Kabinda",
+   "41"
+  ],
+  [
+   "Kabeya Daniel",
+   "Ngandajika",
+   "12"
+  ],
+  [
+   "Tshibangu Esther",
+   "Kabinda",
+   "30"
+  ]
+ ],
+ "steps": [
+  {
+   "at": 7.5,
+   "text": "1. Sélectionne la colonne Sacs (C2:C9)"
+  },
+  {
+   "at": 9.3,
+   "text": "2. Accueil, puis :",
+   "path": [
+    "Accueil",
+    "Mise en forme conditionnelle",
+    "Barres de données"
+   ]
+  },
+  {
+   "at": 11.4,
+   "text": "3. Choisis une couleur… c'est fait !"
+  },
+  {
+   "at": 13.4,
+   "text": "4. Change un chiffre : la barre suit !",
+   "fx": "45",
+   "fx_dur": 0.6
+  }
+ ],
+ "select": [
+  {
+   "at": 7.5,
+   "range": [
+    2,
+    2,
+    9,
+    2
+   ],
+   "until": 13.4
+  },
+  {
+   "at": 13.4,
+   "cell": [
+    8,
+    2
+   ]
+  }
+ ],
+ "bars": [
+  {
+   "at": 11.0,
+   "col": 2,
+   "rows": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "color": [
+    255,
+    140,
+    40
+   ],
+   "stagger": 0.09,
+   "max": 64
+  }
+ ],
+ "fills": [
+  {
+   "at": 14.0,
+   "cells": [
+    [
+     8,
+     2,
+     "45"
+    ]
+   ]
+  }
+ ],
+ "paints": [
+  {
+   "at": 15.6,
+   "rows": [
+    2
+   ],
+   "cols": [
+    0,
+    1
+   ],
+   "fill": [
+    255,
+    236,
+    190
+   ],
+   "color": [
+    150,
+    70,
+    0
+   ]
+  }
+ ],
+ "result_caption": "Kalala Joseph, 64 sacs : le champion se voit en 1 seconde !",
+ "explain": [
+  [
+   "Barre = taille de la valeur",
+   "yellow"
+  ],
+  [
+   "Change un chiffre : la barre suit",
+   "blue"
+  ],
+  [
+   "Option : afficher la barre seule",
+   "green"
+  ],
+  [
+   "Enlever : Effacer les règles",
+   "white"
+  ]
+ ],
+ "cta": "Abonne-toi à @bleuddymufwar : une astuce Excel chaque jour à 6h et 18h !",
+ "comment_cta": "Quel tableau veux-tu rendre visuel ?\nDis-le en commentaire !",
+ "next": "Prochaine astuce à 18h"
+}
