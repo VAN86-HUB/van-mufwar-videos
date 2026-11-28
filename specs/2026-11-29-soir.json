@@ -1,0 +1,251 @@
+{
+ "theme": "neon",
+ "layout": "laptop",
+ "music": "electro",
+ "cta_style": "card",
+ "mode": "steps",
+ "badge": "RECHERCHE • NIVEAU +",
+ "file": "Tarifs_Bus_Matadi.xlsx",
+ "hook": "RECHERCHEV te donne le mauvais prix ? Normal !",
+ "question": "Agence de bus à Matadi : prix d'un billet Muanda en classe Standard ?",
+ "headers": [
+  "Destination",
+  "Classe",
+  "Prix (FC)"
+ ],
+ "col_ratio": [
+  0.42,
+  0.3,
+  0.28
+ ],
+ "right_cols": [
+  2
+ ],
+ "rows": [
+  [
+   "Kinshasa",
+   "VIP",
+   "45 000"
+  ],
+  [
+   "Kinshasa",
+   "Standard",
+   "30 000"
+  ],
+  [
+   "Boma",
+   "VIP",
+   "25 000"
+  ],
+  [
+   "Boma",
+   "Standard",
+   "15 000"
+  ],
+  [
+   "Muanda",
+   "VIP",
+   "40 000"
+  ],
+  [
+   "Muanda",
+   "Standard",
+   "28 000"
+  ],
+  [
+   "Mbanza-Ngungu",
+   "VIP",
+   "20 000"
+  ],
+  [
+   "Muanda",
+   "Standard",
+   ""
+  ]
+ ],
+ "steps": [
+  {
+   "at": 7.5,
+   "text": "1. En A9 et B9 : les 2 critères"
+  },
+  {
+   "at": 9.2,
+   "text": "2. En C9, tape :",
+   "fx": "=RECHERCHEX(1;(A2:A8=A9)*(B2:B8=B9);C2:C8;\"Introuvable\")",
+   "fx_dur": 3.0
+  },
+  {
+   "at": 12.5,
+   "text": "3. (A=A9)*(B=B9) vaut 1 seulement sur la bonne ligne",
+   "fx": "=RECHERCHEX(1;(A2:A8=A9)*(B2:B8=B9);C2:C8;\"Introuvable\")",
+   "fx_dur": 0.01
+  },
+  {
+   "at": 14.6,
+   "text": "4. Valide :",
+   "keys": [
+    "Entrée"
+   ],
+   "fx": "=RECHERCHEX(1;(A2:A8=A9)*(B2:B8=B9);C2:C8;\"Introuvable\")",
+   "fx_dur": 0.01
+  }
+ ],
+ "select": [
+  {
+   "at": 7.5,
+   "range": [
+    9,
+    0,
+    9,
+    1
+   ],
+   "until": 9.2
+  },
+  {
+   "at": 9.2,
+   "cell": [
+    9,
+    2
+   ]
+  }
+ ],
+ "paints": [
+  {
+   "at": 7.8,
+   "rows": [
+    9
+   ],
+   "cols": [
+    0,
+    1
+   ],
+   "fill": [
+    90,
+    30,
+    110
+   ],
+   "color": [
+    255,
+    200,
+    255
+   ]
+  },
+  {
+   "at": 12.5,
+   "rows": [
+    6,
+    7
+   ],
+   "cols": [
+    0
+   ],
+   "fill": [
+    60,
+    40,
+    20
+   ],
+   "color": [
+    255,
+    200,
+    120
+   ],
+   "stagger": 0.15
+  },
+  {
+   "at": 13.3,
+   "rows": [
+    3,
+    5,
+    7
+   ],
+   "cols": [
+    1
+   ],
+   "fill": [
+    60,
+    40,
+    20
+   ],
+   "color": [
+    255,
+    200,
+    120
+   ],
+   "stagger": 0.15
+  },
+  {
+   "at": 14.0,
+   "rows": [
+    7
+   ],
+   "cols": [
+    0,
+    1,
+    2
+   ],
+   "fill": [
+    0,
+    90,
+    80
+   ],
+   "color": [
+    0,
+    255,
+    230
+   ]
+  },
+  {
+   "at": 15.2,
+   "rows": [
+    9
+   ],
+   "cols": [
+    2
+   ],
+   "fill": [
+    0,
+    90,
+    80
+   ],
+   "color": [
+    0,
+    255,
+    230
+   ]
+  }
+ ],
+ "fills": [
+  {
+   "at": 15.0,
+   "cells": [
+    [
+     9,
+     2,
+     "28 000"
+    ]
+   ]
+  }
+ ],
+ "result_caption": "28 000 FC : le bon prix, même avec 2 Muanda et 3 Standard !",
+ "explain": [
+  [
+   "RECHERCHEV s'arrête au 1er Muanda (VIP, 40 000)",
+   "yellow"
+  ],
+  [
+   "* = ET : les 2 conditions doivent être vraies",
+   "blue"
+  ],
+  [
+   "On cherche 1 dans le résultat VRAI×VRAI",
+   "green"
+  ],
+  [
+   "« Introuvable » si aucune ligne ne correspond",
+   "white"
+  ]
+ ],
+ "cta": "Suis @bleuddymufwar : une astuce Excel chaque jour à 6h et 18h !",
+ "comment_cta": "Avec combien de critères cherches-tu ?\nÉcris-le en commentaire !",
+ "next": "Prochaine astuce demain à 6h"
+}

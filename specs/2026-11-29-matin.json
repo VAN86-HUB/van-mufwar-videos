@@ -1,0 +1,225 @@
+{
+ "theme": "violet",
+ "layout": "classic",
+ "music": "percussions",
+ "cta_style": "pulse",
+ "mode": "steps",
+ "badge": "ASTUCE ANTI-CATASTROPHE",
+ "file": "Devis_Quincaillerie_Kananga.xlsx",
+ "hook": "Ton vendeur a encore effacé une formule ? Verrouille-les !",
+ "question": "Quincaillerie à Kananga : on modifie les Qté, mais pas les Totaux",
+ "headers": [
+  "Article",
+  "Qté",
+  "Prix (FC)",
+  "Total (FC)"
+ ],
+ "col_ratio": [
+  0.31,
+  0.13,
+  0.27,
+  0.29
+ ],
+ "right_cols": [
+  1,
+  2,
+  3
+ ],
+ "rows": [
+  [
+   "Ciment",
+   "10",
+   "18 000",
+   "180 000"
+  ],
+  [
+   "Tôle",
+   "6",
+   "25 000",
+   "150 000"
+  ],
+  [
+   "Clous (kg)",
+   "4",
+   "8 500",
+   "34 000"
+  ],
+  [
+   "Peinture (L)",
+   "3",
+   "22 000",
+   "66 000"
+  ],
+  [
+   "Fer à béton",
+   "8",
+   "15 000",
+   "120 000"
+  ],
+  [
+   "Planche",
+   "12",
+   "9 500",
+   "114 000"
+  ]
+ ],
+ "steps": [
+  {
+   "at": 7.5,
+   "text": "1. Sélectionne les cases à remplir (B2:B7)"
+  },
+  {
+   "at": 9.3,
+   "text": "2. Déverrouille-les :",
+   "path": [
+    "Ctrl+1",
+    "Protection",
+    "Décocher « Verrouillée »"
+   ]
+  },
+  {
+   "at": 11.3,
+   "text": "3. Puis protège la feuille :",
+   "path": [
+    "Révision",
+    "Protéger la feuille",
+    "OK"
+   ]
+  },
+  {
+   "at": 13.3,
+   "text": "4. Test : on tape dans un Total…",
+   "fx": "0",
+   "fx_dur": 0.4
+  },
+  {
+   "at": 15.6,
+   "text": "Les Qté, elles, restent modifiables !",
+   "fx": "6",
+   "fx_dur": 0.4
+  }
+ ],
+ "select": [
+  {
+   "at": 7.5,
+   "range": [
+    2,
+    1,
+    7,
+    1
+   ],
+   "until": 13.3
+  },
+  {
+   "at": 13.3,
+   "cell": [
+    4,
+    3
+   ],
+   "until": 15.6
+  },
+  {
+   "at": 15.6,
+   "cell": [
+    4,
+    1
+   ]
+  }
+ ],
+ "paints": [
+  {
+   "at": 12.3,
+   "rows": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "cols": [
+    1
+   ],
+   "fill": [
+    232,
+    222,
+    255
+   ],
+   "color": [
+    80,
+    40,
+    150
+   ],
+   "stagger": 0.06
+  },
+  {
+   "at": 16.4,
+   "rows": [
+    4
+   ],
+   "cols": [
+    3
+   ],
+   "fill": [
+    198,
+    239,
+    206
+   ],
+   "color": [
+    0,
+    97,
+    0
+   ]
+  }
+ ],
+ "alerts": [
+  {
+   "at": 13.9,
+   "until": 15.5,
+   "message": "La cellule que vous essayez de modifier se trouve sur une feuille protégée.",
+   "buttons": [
+    "OK"
+   ]
+  }
+ ],
+ "fills": [
+  {
+   "at": 16.1,
+   "cells": [
+    [
+     4,
+     1,
+     "6"
+    ],
+    [
+     4,
+     3,
+     "51 000"
+    ]
+   ],
+   "stagger": 0.3
+  }
+ ],
+ "result_caption": "Totaux protégés, Qté libres : plus aucune formule effacée !",
+ "explain": [
+  [
+   "Verrouillée = bloquée une fois protégée",
+   "yellow"
+  ],
+  [
+   "Décoche-la pour les cases à saisir",
+   "blue"
+  ],
+  [
+   "Mot de passe possible (ne l'oublie pas !)",
+   "green"
+  ],
+  [
+   "Annuler : Révision › Ôter la protection",
+   "white"
+  ]
+ ],
+ "cta": "Abonne-toi à @bleuddymufwar : une astuce Excel chaque jour à 6h et 18h !",
+ "comment_cta": "Quelle feuille veux-tu protéger ?\nDis-le en commentaire !",
+ "next": "Prochaine astuce à 18h"
+}

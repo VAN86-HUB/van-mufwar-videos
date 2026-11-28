@@ -202,15 +202,21 @@ def caption(d, text, y, size=64, color=None, alpha=1.0, box=True, prog=1.0):
     anim, style = TH["cap_anim"], (TH["cap_style"] if box else "bare")
     total = sum(len(l) for l in lines); shown = int(total * ease(prog) + 0.999) if anim == "typewriter" else 10 ** 6
     dx = int((1 - ease(prog)) * -120) if anim == "slide" else 0
+    # polices à grands jambages (Poppins…) : remonter le texte pour que la boîte suivante ne coupe pas p, g, q
+    lift = max(0, f.getbbox("pgqÉ")[3] - (lh - 8)) if style in ("box", "pill") else 0
+    if style in ("box", "pill"):  # 1er passage : toutes les boîtes, puis le texte par-dessus
+        for i, ln in enumerate(lines):
+            tw = d.textlength(ln, font=f); x = (W - tw) / 2 + dx; yy = y + i * lh
+            if style == "box":
+                d.rounded_rectangle([x - 22, yy - 8, x + tw + 22, yy + lh - 4], 18, fill=rgba(TH["cap_box"], alpha))
+            else:
+                d.rounded_rectangle([x - 30, yy - 6, x + tw + 30, yy + lh - 6], (lh - 2) // 2, fill=rgba(TH["cap_box"], alpha))
     for i, ln in enumerate(lines):
         tw = d.textlength(ln, font=f)
         x = (W - tw) / 2 + dx; yy = y + i * lh
         vis = ln[:max(0, shown)]; shown -= len(ln)
-        if style == "box":
-            d.rounded_rectangle([x - 22, yy - 8, x + tw + 22, yy + lh - 4], 18, fill=rgba(TH["cap_box"], alpha))
-        elif style == "pill":
-            d.rounded_rectangle([x - 30, yy - 6, x + tw + 30, yy + lh - 6], (lh - 2) // 2, fill=rgba(TH["cap_box"], alpha))
-        elif style == "underline" and vis:
+        yy -= lift
+        if style == "underline" and vis:
             uw = d.textlength(vis, font=f)
             d.rectangle([x, yy + lh - 22, x + uw, yy + lh - 10], fill=rgba(TH["accent"], 0.35 * alpha))
         c = rgba(color, alpha)
